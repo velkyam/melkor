@@ -19,9 +19,7 @@ import NextLink from "next/link";
 import clsx from "clsx";
 
 import { ThemeSwitch } from "@/components/theme-switch";
-
-
-import { Logo } from "@/components/icons";
+import { MelkorLogo} from "@/components/icons";
 
 export const Navbar = () => {
 
@@ -32,12 +30,11 @@ export const Navbar = () => {
 	}
 
 	return (
-		<NextUINavbar isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen} maxWidth="xl" position="sticky">
+		<NextUINavbar isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen} maxWidth="xl" position="sticky" className="shadow-sm">
 			<NavbarContent className="basis-1/5 sm:basis-full" justify="start">
 				<NavbarBrand as="li" className="gap-3 max-w-fit">
 					<NextLink className="flex justify-start items-center gap-1" href="/">
-						<Logo />
-						<p className="font-bold text-inherit">Melkor</p>
+						<MelkorLogo />
 					</NextLink>
 				</NavbarBrand>
 
@@ -47,6 +44,9 @@ export const Navbar = () => {
 				className="hidden sm:flex basis-1/5 sm:basis-full"
 				justify="end"
 			>
+				<NavbarItem>
+				<ThemeSwitch className="mr-8" />
+				</NavbarItem>
 
 				<ul className="hidden lg:flex gap-10 justify-start ml-2 mr-8">
 					{siteConfig.navItems.map((item) => (
@@ -66,18 +66,18 @@ export const Navbar = () => {
 				</ul>
 
 				<NavbarItem>
-				<Button color="secondary" as={Link} href={siteConfig.links.kontakt} radius="full" size="lg">
-							Kontaktujte nás
-						</Button>
+					<Button color="secondary" className="bg-melkorPurple" as={Link} href={siteConfig.links.kontakt} radius="full" size="md">
+						Kontaktujte nás
+					</Button>
 				</NavbarItem>
 
 
-				<ThemeSwitch />
+				
 			</NavbarContent>
 
 			<NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
 
-				<ThemeSwitch />
+				
 				<NavbarMenuToggle
 					aria-label={isMenuOpen ? "Close menu" : "Open menu"}
 					className="sm:hidden"
@@ -86,6 +86,9 @@ export const Navbar = () => {
 
 			<NavbarMenu>
 				<div className="mx-auto flex flex-col gap-6 items-center ">
+			<NavbarMenuItem>
+					<ThemeSwitch className="mt-6"/>
+					</NavbarMenuItem>
 					{siteConfig.navMenuItems.map((item) => (
 						<NavbarMenuItem key={item.href}>
 							<Link
@@ -99,10 +102,11 @@ export const Navbar = () => {
 						</NavbarMenuItem>
 					))}
 					<NavbarMenuItem>
-						<Button color="secondary" as={Link} href={siteConfig.links.kontakt} onPress={closeMenu} radius="full" size="lg" variant="shadow">
+						<Button color="secondary" className="bg-melkorPurple" as={Link} href={siteConfig.links.kontakt} onPress={closeMenu} radius="full" size="lg" >
 							Kontaktujte nás
 						</Button>
 					</NavbarMenuItem>
+
 				</div>
 			</NavbarMenu>
 		</NextUINavbar>

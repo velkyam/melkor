@@ -9,8 +9,30 @@ module.exports = {
     './node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}'
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'hero-pattern': "url('../public/wave.svg')",
+      },
+      colors:{
+        "cl1": "#1a1a1a",
+        "cl2": "#2e3192",
+        "cl3": "#4f52b0",
+        "cl4": "#ffffff",
+        "cl5": "#4f52b0",
+        "cl6": "#2e3192",
+        "melkorPurple": "#2E3192",
+      }
+    },
   },
+  
   darkMode: "class",
-  plugins: [nextui()],
+  plugins: [nextui({
+      themes:{
+        light:{
+        },
+        dark:{
+        },
+      },
+    }
+  )],
 }
