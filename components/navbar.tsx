@@ -30,7 +30,7 @@ export const Navbar = () => {
 	}
 
 	return (
-		<NextUINavbar isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen} maxWidth="xl" position="sticky" className="shadow-sm">
+		<NextUINavbar isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen} maxWidth="xl" position="sticky" className="shadow-sm dark:border-b border-slate-700">
 			<NavbarContent className="basis-1/5 sm:basis-full" justify="start">
 				<NavbarBrand as="li" className="gap-3 max-w-fit">
 					<NextLink className="flex justify-start items-center gap-1" href="/">
@@ -95,7 +95,7 @@ export const Navbar = () => {
 								color="foreground"
 								href={item.href}
 								size="lg"
-								onPress={closeMenu}
+								onClick={closeMenu}
 							>
 								{item.label}
 							</Link>
