@@ -6,8 +6,6 @@ import Typewriter from 'typewriter-effect';
 import { Button } from "@nextui-org/button";
 import { Card, CardHeader, CardBody, CardFooter } from "@nextui-org/card";
 import { Image } from "@nextui-org/image";
-import { card } from "@nextui-org/theme";
-import card1 from "./assets/trakcni2.png"
 
 
 export default function Home() {
@@ -55,88 +53,91 @@ export default function Home() {
 				<h1 className={title({ class: "mb-10", size: "lg" })}>MelkorVisum</h1>
 				<h2 className={subtitle({ class: "mb-20 text-center w-full md:max-w-5xl" })}>Našim hlavním produktem je plně přizpůsobitelná a integrovaná platforma MelkorVisum, která nám umožňuje efektivně vyvíjet vysoce spolehlivé vizualizační a řídicí systémy pro průmyslové, energetické či dopravní provozy.</h2>
 				{/* card row */}
-				<div className="flex flex-col w-full items-center justify-between max-w-5xl space-y-10 md:flex-row md:space-y-0">
-							<Card isBlurred className=" w-full mx-4 dark:border">
-					
-					<Image
-					 removeWrapper
-						alt="Card background"
-						className="z-0 w-full h-full object-cover"
-						src="/nerd.jpeg"
-						radius="none"
-					/>
-			
-				<CardFooter className="flex flex-col py-12 space-y-10 justify-center">
+				<div className="flex flex-col w-full max-w-7xl space-y-10  md:space-y-0 md:grid grid-rows-3 md:grid-rows-1 grid-cols-3 gap-4">
+					<Card isBlurred className="dark:border height-256 border-slate-700">
+
+						<Image
+							removeWrapper
+							alt="Card background"
+							className="z-0 w-full h-fit object-cover"
+							src="/nerd.jpeg"
+							radius="none"
+						/>
+
+						<CardBody className="flex flex-col py-12 space-y-10 items-center">
 							<h4 className="font-bold text-large text-center">Kompletní softwarová<br />řešení na klíč</h4>
-					<Link href="/melkorvisum">
-						Více o MelkorVisu
-					</Link>
-				</CardFooter>
-			</Card>
+							<p>Zatímco naši konkurenti licencují SCADA platformy třetích stran, naše řešení MelkorVisum jsme vyvinuli celé od základů. Díky tomu můžeme snadno a rychle přizpůsobit veškeré části systému na míru konkrétním požadavkům.</p>
+							<Link href="/melkorvisum">
+								Více o MelkorVisu
+							</Link>
+						</CardBody>
+					</Card>
 
-					<Card isBlurred className=" w-full mx-4 dark:border">
-					
-							<Image
-							 removeWrapper
-								alt="Card background"
-								className="z-0 w-full h-full object-cover"
-								src="/preview.jpeg"
-								radius="none"
-							/>
-					
-						<CardFooter className="flex flex-col py-12 space-y-10 justify-center">
+					<Card isBlurred className="dark:border height-256 border-slate-700">
+
+						<Image
+							removeWrapper
+							alt="Card background"
+							className="z-0 w-full h-fit object-cover"
+							src="/preview.jpeg"
+							radius="none"
+						/>
+
+						<CardBody className="flex flex-col py-12 space-y-10  items-center">
 							<h4 className="font-bold text-large text-center">Integrace se <br />stávajícími technologiemi</h4>
+							<p>Máme zkušenosti s řadou různých protokolů a technologií, není proto problém náš systém zakomponovat do existujících provozů.</p>
 							<Link href="/melkorvisum">
 								Více o MelkorVisu
 							</Link>
-						</CardFooter>
+						</CardBody>
 					</Card>
 
-					<Card isBlurred className=" w-full mx-4 dark:border">
-					
-							<Image
-							 removeWrapper
-								alt="Card background"
-								className="z-0 w-full h-full object-cover"
-								src="/vzhled.jpeg"
-						
-								radius="none"
-							/>
-					
-						<CardFooter className="flex flex-col py-12 space-y-10 justify-center">
+					<Card isBlurred className="dark:border height-256 border-slate-700">
+
+						<Image
+							removeWrapper
+							alt="Card background"
+							className="z-0 w-full h-fit object-cover"
+							src="/vzhled.jpeg"
+
+							radius="none"
+						/>
+
+						<CardBody className="flex flex-col py-12 space-y-10  items-center">
 							<h4 className="font-bold text-large text-center">Moderní vzhled <br />přizpůsobený na míru</h4>
+							<p>Naše vizualizace je postavená na nejnovějších technologiích a vychází z moderních principů tvorby uživatelských rozhraní, díky čemuž je stabilní, bezpečná a uživatelsky přívětivá.</p>
 							<Link href="/melkorvisum">
 								Více o MelkorVisu
 							</Link>
-						</CardFooter>
+						</CardBody>
 					</Card>
 
-			
+
 				</div>
 
 				{/* One Platform row */}
-			
+
 				<div className="flex flex-col md:flex-row w-full justify-between max-w-7xl  py-20 md:py-32">
 					<div className="flex-col space-y-10 max-w-lg">
 
-					<div className={title({size: "lg"})}>
-						<div className="py-2">
-							Jedna platforma,
+						<div className={title({ size: "lg" })}>
+							<div className="py-2">
+								Jedna platforma,
+							</div>
+							<div className="py-2">
+								tisíce možností.
+							</div>
 						</div>
-						<div className="py-2">
-							tisíce možností.
-						</div>
-					</div>
-					<h2 className={subtitle({  })}>
-					Ať už potřebujete renovovat energetický dispečink, automatizovat výrobní linku či modernizovat přehled nad spotřebou energií, Melkor Software Vám poskytne spolehlivé řešení s maximální flexibilitou a kontrolou.
-					</h2>
+						<h2 className={subtitle({})}>
+							Ať už potřebujete renovovat energetický dispečink, automatizovat výrobní linku či modernizovat přehled nad spotřebou energií, Melkor Software Vám poskytne spolehlivé řešení s maximální flexibilitou a kontrolou.
+						</h2>
 					</div>
 					<Image className="w-full max-w-xl mt-10 md:mt-0"
-								alt="Card background"
-								src="/display2.jpg"
-								
-								
-							/>
+						alt="Card background"
+						src="/display2.jpg"
+
+
+					/>
 				</div>
 			</div>
 		</section>

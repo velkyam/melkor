@@ -10,6 +10,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      height: {
+        '128': '32rem',
+        '256': '64rem',
+      },
       backgroundImage: {
         'hero-pattern': "url('../public/wave.svg')",
       },
