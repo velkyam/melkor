@@ -1,0 +1,12 @@
+.icon1Dark {
+    display: none;
+  }
+   
+  @media (prefers-color-scheme: dark) {
+    .icon1Light {
+      display: none;
+    }
+    .iscon1Dark {
+      display: unset;
+    }
+  }

@@ -24,8 +24,9 @@ module.exports = {
         "cl4": "#ffffff",
         "cl5": "#4f52b0",
         "cl6": "#2e3192",
+        "cl7": "#2e2b28",
         "melkorPurple": "#2E3192",
-      }
+      },
     },
   },
   
