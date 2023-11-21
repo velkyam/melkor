@@ -7,23 +7,11 @@ import { Button } from "@nextui-org/button";
 import { Card, CardHeader, CardBody, CardFooter } from "@nextui-org/card";
 import { Image, ImageProps } from "@nextui-org/image";
 import React from "react";
-import styles from '../components/theme-image.module.css'
 import { ScaleW, SecureW, PerformanceW, TestW, LicenceW, SupportW } from "@/components/icons";
 
-type Props = Omit<ImageProps, 'src' | 'priority' | 'loading'> & {
-	srcLight: string
-	srcDark: string
-}
 
-const ThemeImage = (props: Props) => {
-	const { srcLight, srcDark, ...rest } = props
-	return (
-		<>
-			<Image {...rest} src={srcLight} className={styles.imgLight} />
-			<Image {...rest} src={srcDark} className={styles.imgDark} />
-		</>
-	)
-}
+
+
 export default function Home() {
 	return (
 		<section className="flex flex-col items-center justify-center  ">
@@ -70,7 +58,7 @@ export default function Home() {
 				<h2 className={subtitle({ class: "mb-20 w-full md:max-w-5xl" })}>Našim hlavním produktem je plně přizpůsobitelná a integrovaná platforma MelkorVisum, která nám umožňuje efektivně vyvíjet vysoce spolehlivé vizualizační a řídicí systémy pro průmyslové, energetické či dopravní provozy.</h2>
 				{/* card row */}
 				<div className="flex flex-col w-full max-w-7xl space-y-4  md:space-y-0 md:grid grid-rows-3 md:grid-rows-1 grid-cols-3 gap-6">
-					<Card isBlurred className="dark:border height-256 border-slate-700">
+					<Card className=" height-256 ">
 						<Image
 							removeWrapper
 							alt="Software_engineer_working"
@@ -89,7 +77,7 @@ export default function Home() {
 						</CardFooter>
 					</Card>
 
-					<Card isBlurred className="dark:border height-256 border-slate-700">
+					<Card className=" height-256 ">
 						<Image
 							removeWrapper
 							alt="Electrical_engineer_using_MelkorVisum_interface"
@@ -108,7 +96,7 @@ export default function Home() {
 						</CardFooter>
 					</Card>
 
-					<Card isBlurred className="dark:border height-256 border-slate-700">
+					<Card className="height-256 ">
 						<Image
 							removeWrapper
 							alt="Electrical_engineers_installing_plc"
@@ -178,21 +166,21 @@ export default function Home() {
 							<p>Jsme si vědomi významu kybernetické bezpečnosti u průmyslové infrastruktury. Veškerá komunikace mezi našimi komponenty je proto zabezpečena koncovým šifrováním, bránícím neautorizovaným zásahům i odposlechu zpráv.</p>
 						</div>
 						<div className="flex flex-col pt-10 space-y-6 items-start    ">
-							<PerformanceW/>
+							<PerformanceW />
 							<div className="flex space-x-6  items-center">
-								<h4 className="font-bold text-large">Nenáročnou škálovatelnou architekturu</h4>
+								<h4 className="font-bold text-large">Nenáročná škálovatelná architektura</h4>
 							</div>
 							<p>Svá řešení navrhujeme tak, aby byla co nejsnáze rozšířitelná. Není problém ovládat a vizualizovat tisíce i desetitisíce signálů s minimálními hardwarovými požadavky.</p>
 						</div>
 						<div className="flex flex-col pt-10 space-y-6 items-start    ">
-							<TestW/>
+							<TestW />
 							<div className="flex space-x-6  items-center">
-								<h4 className="font-bold text-large">Širokou podporu stávajících technologií</h4>
+								<h4 className="font-bold text-large">Široká podpora stávajících technologií</h4>
 							</div>
 							<p>Vizualizace a řídicí systémy dokážeme dodávat s minimálními zásahy do existující technologie. Máme zkušenosti s řadou standardních protokolů (IEC 60870-5-104, IEC 61850, Modbus, MQTT, ...) a není problém přidat další, případně můžeme pracovat i s fyzickými signály.</p>
 						</div>
 						<div className="flex flex-col pt-10 space-y-6 items-start   ">
-							<LicenceW/>
+							<LicenceW />
 							<div className="flex space-x-6 items-center">
 								<h4 className="font-bold text-large">Nezávislost na třetích stranách</h4>
 							</div>
@@ -201,14 +189,43 @@ export default function Home() {
 						<div className="flex flex-col pt-10 space-y-6 items-start    ">
 							<SupportW />
 							<div className="flex space-x-6  items-center">
-								<h4 className="font-bold text-large">Uživatelskou podporu 24/7</h4>
+								<h4 className="font-bold text-large">Uživatelská podpora 24/7</h4>
 							</div>
 							<p>Naši zákazníci využívají MelkorVisum naprosto bezstarostně, díky plné uživatelské péči a nepřetržité dostupnosti pro rychlé řešení problémů a odborné poradenství ohledně našich systémů a aplikací.</p>
 						</div>
 					</div>
 				</div>
+				{/* Our successes */}
+				<div className="flex flex-col w-full max-w-7xl items-center py-20 md:py-32 mb-20 md:mb-32 border-b border-slate-200 dark:border-slate-700">
+					<div className={title({ class: "mb-10 md:mb-24", size: "lg" })}>Naše úspěchy</div>
+					<div className="flex flex-col md:grid grid-rows-1 grid-cols-3 gap-12">
+						<Card className=" py-6 px-6">
+							<CardHeader className="flex">
+								<h4 className="font-semibold text-large text-left">Energetický dispečink Dopravní společnosti Zlín a Otrokovice</h4>
+							</CardHeader>
+							<CardBody>
+								<p>Na naší technologii běží dispečink, který má na starosti napájení trolejbusů v celém Zlíně a Otrokovicích. Zajišťujeme nepřetržitý provoz deseti měníren a jejich místní i dálkové řízení, které jsme dodali v rámci dvou zakázek ve spolupráci s firmou OHLA ŽS.</p>
+							</CardBody>
+						</Card>
+						<Card className=" py-6 px-6">
+							<CardHeader className="flex">
+								<h4 className="font-semibold text-large text-left">Místní řízení měnírny Heršpice a transformátorové stanice Slatina		</h4>			</CardHeader>
+							<CardBody>
+								<p>Pro Dopravní podnik města Brna jsme dodali modernizovaný řídicí systém, který ovládá stávající technologii, museli jsme jej proto uzpůsobit tak, aby (krom použití moderní techniky) přesně odpovídal systému předešlému.</p>
+							</CardBody>
+						</Card>
+						<Card className=" py-6 px-6">
+							<CardHeader className="flex">
+								<h4 className="font-semibold text-large text-left">Dálkové řízení vytápění Orlovny Brno-Obřany	</h4>				</CardHeader>
+							<CardBody>
+								<p>
+									Pro jednotu Orla Brno-Obřany jsme rozšířili existující řízení kotelny o soustavu bezdrátových snímačů teploty a webové rozhraní, které umožňuje sledování teploty, vzdálené ovládání kotlů i plánování automatického vytápění.</p>
+							</CardBody>
+						</Card>
+					</div>
+				</div>
 				{/* Get started */}
-				<div className="flex flex-col w-full max-w-7xl items-center text-center space-y-12 py-20 md:py-32">
+				<div className="flex flex-col w-full max-w-7xl items-center text-center space-y-12">
 					<h1 className={title({ size: "lg" })}>Zaujala Vás naše nabídka?</h1>
 					<h2 className={subtitle({})}>Poskytněte nám pár rychlých údajů, a náš tým se s Vámi co nejdříve spojí.</h2>
 					<Button color="secondary" className="bg-melkorPurple" as={Link} href={siteConfig.links.kontakt} radius="full" size="lg" >

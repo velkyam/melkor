@@ -16,6 +16,8 @@ module.exports = {
       },
       backgroundImage: {
         'hero-pattern': "url('../public/wave.svg')",
+        'contact-pattern':"url('../public/wave7.svg')",
+        'about-pattern':"url('../public/wave9.svg')",
       },
       colors:{
         "cl1": "#1a1a1a",

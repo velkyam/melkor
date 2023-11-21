@@ -8,21 +8,21 @@ import {
 	NavbarItem,
 	NavbarMenuItem,
 } from "@nextui-org/navbar";
+
 import { Button } from "@nextui-org/button";
 import { Link } from "@nextui-org/link";
-
+import { button as buttonStyles } from "@nextui-org/theme";
 import React from "react";
 import { link as linkStyles } from "@nextui-org/theme";
 
 import { siteConfig } from "@/config/site";
 import NextLink from "next/link";
+import { MelkorLogo} from "@/components/icons";
 import clsx from "clsx";
 
 import { ThemeSwitch } from "@/components/theme-switch";
-import { MelkorLogo} from "@/components/icons";
 
 export const Navbar = () => {
-
 	const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
 	function closeMenu() {
@@ -48,7 +48,7 @@ export const Navbar = () => {
 				<ThemeSwitch className="mr-8" />
 				</NavbarItem>
 
-				<ul className="hidden lg:flex gap-10 justify-start ml-2 mr-8">
+				<ul className="hidden md:flex gap-10 justify-start ml-2 mr-8">
 					{siteConfig.navItems.map((item) => (
 						<NavbarItem key={item.href}>
 							<NextLink
@@ -70,9 +70,6 @@ export const Navbar = () => {
 						Kontaktujte nás
 					</Button>
 				</NavbarItem>
-
-
-				
 			</NavbarContent>
 
 			<NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
@@ -101,11 +98,11 @@ export const Navbar = () => {
 							</Link>
 						</NavbarMenuItem>
 					))}
-					<NavbarMenuItem>
-						<Button color="secondary" className="bg-melkorPurple" as={Link} href={siteConfig.links.kontakt} onPress={closeMenu} radius="full" size="lg" >
+				{/* 	<NavbarMenuItem>
+						<Link color="secondary" className={buttonStyles({ variant: "bordered", radius: "full" })} href={siteConfig.links.kontakt} onPress={closeMenu} radius="full" size="lg" >
 							Kontaktujte nás
-						</Button>
-					</NavbarMenuItem>
+						</Link>
+					</NavbarMenuItem> */}
 
 				</div>
 			</NavbarMenu>

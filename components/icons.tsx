@@ -67,6 +67,19 @@ export const SunFilledIcon = ({
 	</svg>
 );
 
+export const ChatIcon: React.FC<IconSvgProps> = (props) => {
+  const { width, height = 24 } = props;
+
+  return (
+	<svg xmlns="http://www.w3.org/2000/svg" height={height} width={width} {...props} viewBox="0 0 512 512">{/* Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. */}<path className="fill-cl4" d="M160 368c26.5 0 48 21.5 48 48v16l72.5-54.4c8.3-6.2 18.4-9.6 28.8-9.6H448c8.8 0 16-7.2 16-16V64c0-8.8-7.2-16-16-16H64c-8.8 0-16 7.2-16 16V352c0 8.8 7.2 16 16 16h96zm48 124l-.2 .2-5.1 3.8-17.1 12.8c-4.8 3.6-11.3 4.2-16.8 1.5s-8.8-8.2-8.8-14.3V474.7v-6.4V468v-4V416H112 64c-35.3 0-64-28.7-64-64V64C0 28.7 28.7 0 64 0H448c35.3 0 64 28.7 64 64V352c0 35.3-28.7 64-64 64H309.3L208 492z"/></svg>
+  );
+};
+export const CloseIcon: React.FC<IconSvgProps> = (props) => {
+  const { width, height = 12 } = props;
+
+  return (
+<svg xmlns="http://www.w3.org/2000/svg"  height={height} width={width} {...props} viewBox="0 0 384 512"> {/* Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. */} <path className="fill-cl6" d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>  );
+};
 export const MelkorLogo: React.FC<IconSvgProps> = (props) => {
   const { width, height = 40 } = props;
 
