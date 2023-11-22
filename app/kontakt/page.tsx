@@ -16,7 +16,7 @@ export default function BlogPage() {
 					<div className="w-full flex flex-col items-center">
 
 						<Card isBlurred className="w-full lg:max-w-lg flex dark:border dark:border-slate-700 px-6 py-10  ">
-						<h2 className="text-2xl font-bold mb-6"> Firemní informace:</h2>
+						<h2 className="text-2xl font-bold mb-6"> Firemní informace</h2>
 						<div className="grid auto-rows-max grid-col-1 lg:grid-cols-12 gap-y-2">
 
 								<h4 className="font-semibold col-span-4">Obchodní firma:</h4>

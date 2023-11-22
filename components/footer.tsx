@@ -25,9 +25,9 @@ export const Footer = () => {
                                         <li>
                                                 <Link className="md:mr-10 text-default-600" href="/onas">O nás</Link>
                                         </li>
-                                        <li>
+{/*                                         <li>
                                                 <Link className="md:mr-10 text-default-600" href='/reference'>Reference</Link>
-                                        </li>
+                                        </li> */}
                                         <li>
                                                 <Link className="md:mr-10 text-default-600" href='/kontakt'>Kontaktujte nás</Link>
                                         </li>
