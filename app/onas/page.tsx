@@ -26,7 +26,7 @@ export default function AboutPage() {
 
 				<Card isBlurred className=" py-6 px-6 dark:border dark:border-slate-700">
 					<CardHeader className="flex flex-col md:flex-row gap-6">
-						<Avatar isBordered radius="full" className="w-24 h-24 text-large" src="/premek.jpg" />
+						<Avatar isBordered radius="full" className="w-24 h-24 text-large" src="/premek.webp" />
 						<div className="flex flex-col items-center text-center md:items-start md:text-left">
 							<p className="text-xl">Ing. Bc. et Bc. Přemysl Till</p>
 							<p className="text-default-500">jednatel, senior developer</p>
@@ -44,7 +44,7 @@ export default function AboutPage() {
 
 				<Card isBlurred className="py-6 px-6 dark:border dark:border-slate-700">
 					<CardHeader className="flex flex-col md:flex-row gap-6">
-						<Avatar isBordered radius="full" className="w-24 h-24 text-large" src="/robert.jpg" />
+						<Avatar isBordered radius="full" className="w-24 h-24 text-large" src="/robert.webp" />
 						<div className="flex flex-col items-center text-center md:items-start md:text-left">
 							<p className="text-xl">JUDr. Robert Kerndl</p>
 							<p className="text-default-500">jednatel, právník</p>

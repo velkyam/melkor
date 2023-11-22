@@ -12,10 +12,13 @@ import { siteConfig } from "@/config/site";
 export const Footer = () => {
 
 	return (
-                <footer className="w-full flex items-center justify-center py-3 border-t border-slate-200 dark:border-slate-700">
-                <div className="flex flex-col-reverse md:flex-row w-full max-w-7xl px-6 pt-6 justify-center md:justify-between items-center">
-                        <div className="flex-col-reverse md:flex-col space-y-2">
-                                <ul className="flex flex-col items-center md:items-start md:flex-row flex-wrap ">
+                <footer className="w-full flex flex-col  items-center py-3 border-t border-slate-200 dark:border-slate-700">
+                <div className="flex w-full max-w-7xl px-6 pt-6 grid grid-cols-2">
+                        <div className="flex-col-reverse md:flex-col space-y-2 items-start">
+                                <ul className="flex flex-col items-start md:flex-row flex-wrap ">
+                                <li>
+                                                
+                                        </li>
                                         <li>
                                                 <Link className="md:mr-10 text-default-600" href='/'><p>Hlavní stránka</p></Link>
                                         </li>
@@ -31,14 +34,17 @@ export const Footer = () => {
                                         <li>
                                                 <Link className="md:mr-10 text-default-600" href='/kontakt'>Kontaktujte nás</Link>
                                         </li>
+                                       
+                                <ThemeSwitch className="mt-4 md:my-0"/>
                                 </ul>
-                                <p className="text-default-600">
+                        </div>
+                                        <NextLink className="flex items-start tpb-6 ml-auto" href="/">
+                                                <MelkorLogo />
+                                        </NextLink>
+                                        
+                                <p className="flex w-full text-default-600 col-span-2 mt-6 md:mt-0">
                                         Copyright © 2023 Melkor Software. Všechna práva vyhrazena
                                 </p>
-                        </div>
-                        <NextLink className="flex justify-center items-center pb-6 mr-6 md:mr-0" href="/">
-                                <MelkorLogo />
-                        </NextLink>
                 </div>
         </footer>
 	);

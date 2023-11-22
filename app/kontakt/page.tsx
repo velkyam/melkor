@@ -1,7 +1,7 @@
 'use client'
 import { title } from "@/components/primitives";
 import ContactForm from "../../components/contact-form";
-import { Card, CardBody, CardHeader } from "@nextui-org/card";
+import { Card } from "@nextui-org/card";
 import { Link } from "@nextui-org/link"
 
 

@@ -2,7 +2,7 @@ export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
 	name: "Melkor Software",
-	description: "Make beautiful websites regardless of your design experience.",
+	description: "Komplexní softwarová řešení na klíč..",
 	navItems: [
     {
       label: "MelkorVisum",

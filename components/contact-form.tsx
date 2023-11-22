@@ -1,7 +1,6 @@
 import { useForm, ValidationError } from "@formspree/react";
-import { Card, CardHeader, CardBody, CardFooter, Divider, Link, Image, Avatar } from "@nextui-org/react";
-import { Input, Textarea, Button } from "@nextui-org/react";
-import { title } from "@/components/primitives"
+import { Card } from "@nextui-org/react";
+import { Button } from "@nextui-org/react";
 export default function ContactForm() {
   const [state, handleSubmit] = useForm("xoqoryke");
 

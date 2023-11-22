@@ -5,9 +5,10 @@ import { title, subtitle } from "@/components/primitives";
 import Typewriter from 'typewriter-effect';
 import { Button } from "@nextui-org/button";
 import { Card, CardHeader, CardBody, CardFooter } from "@nextui-org/card";
-import { Image, ImageProps } from "@nextui-org/image";
+import { Image } from "@nextui-org/image";
 import React from "react";
 import { ScaleW, SecureW, PerformanceW, TestW, LicenceW, SupportW } from "@/components/icons";
+import { GetStarted } from "@/components/get-started";
 
 
 
@@ -46,14 +47,14 @@ export default function Home() {
 						</Button>
 					</div>
 					<div className="inline-block max-w-2xl pb-10">
-						<video autoPlay loop muted playsInline poster="/poster.jpg" src={"/Untitled.mp4"} />
+						<video autoPlay loop muted playsInline poster="/poster.webp" src={"/Untitled.mp4"} />
 					</div>
 
 				</div>
 			</div>
 
 
-			<div className="container flex flex-col items-center  w-full max-w-7xl px-6 py-20 md:py-32 ">
+			<div className="container flex flex-col items-center  w-full max-w-7xl px-6 pt-20 md:pt-32 ">
 				<h1 className={title({ class: "mb-10", size: "lg" })}>MelkorVisum</h1>
 				<h2 className={subtitle({ class: "mb-20 w-full md:max-w-5xl" })}>Našim hlavním produktem je plně přizpůsobitelná a integrovaná platforma MelkorVisum, která nám umožňuje efektivně vyvíjet vysoce spolehlivé vizualizační a řídicí systémy pro průmyslové, energetické či dopravní provozy.</h2>
 				{/* card row */}
@@ -141,7 +142,7 @@ export default function Home() {
 					</div>
 					<Image className="w-full max-w-xl mt-10 md:mt-0"
 						alt="Card background"
-						src="/display2.jpg"
+						src="/display2.webp"
 					/>
 				</div>
 
@@ -196,7 +197,7 @@ export default function Home() {
 					</div>
 				</div>
 				{/* Our successes */}
-				<div className="flex flex-col w-full max-w-7xl items-center py-20 md:py-32 mb-20 md:mb-32 border-b border-slate-200 dark:border-slate-700">
+				<div className="flex flex-col w-full max-w-7xl items-center py-20 md:py-32 border-b border-slate-200 dark:border-slate-700">
 					<div className={title({ class: "mb-10 md:mb-24", size: "lg" })}>Naše úspěchy</div>
 					<div className="flex flex-col md:grid grid-rows-1 grid-cols-3 gap-12">
 						<Card className=" py-6 px-6">
@@ -225,13 +226,7 @@ export default function Home() {
 					</div>
 				</div>
 				{/* Get started */}
-				<div className="flex flex-col w-full max-w-7xl items-center text-center space-y-12">
-					<h1 className={title({ size: "lg" })}>Zaujala Vás naše nabídka?</h1>
-					<h2 className={subtitle({})}>Poskytněte nám pár rychlých údajů, a náš tým se s Vámi co nejdříve spojí.</h2>
-					<Button color="secondary" className="bg-melkorPurple" as={Link} href={siteConfig.links.kontakt} radius="full" size="lg" >
-						Kontaktujte nás
-					</Button>
-				</div>
+			<GetStarted/>
 			</div>
 		</section>
 

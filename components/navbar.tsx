@@ -11,7 +11,6 @@ import {
 
 import { Button } from "@nextui-org/button";
 import { Link } from "@nextui-org/link";
-import { button as buttonStyles } from "@nextui-org/theme";
 import React from "react";
 import { link as linkStyles } from "@nextui-org/theme";
 
@@ -98,11 +97,6 @@ export const Navbar = () => {
 							</Link>
 						</NavbarMenuItem>
 					))}
-				{/* 	<NavbarMenuItem>
-						<Link color="secondary" className={buttonStyles({ variant: "bordered", radius: "full" })} href={siteConfig.links.kontakt} onPress={closeMenu} radius="full" size="lg" >
-							Kontaktujte nás
-						</Link>
-					</NavbarMenuItem> */}
 
 				</div>
 			</NavbarMenu>
