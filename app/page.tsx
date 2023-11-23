@@ -17,9 +17,13 @@ export default function Home() {
 	return (
 		<section className="flex flex-col items-center justify-center  ">
 			{/* hero row div */}
-			<div className="flex justify-center bg-center bg-cover bg-no-repeat bg-hero-pattern dark:border-b border-slate-700 shadow-sm w-full py-6 md:py-16 pb-24"  >
-				<div className="flex flex-col-reverse justify-between w-full max-w-7xl px-6 md:flex-row"  >
-					<div className="inline-block max-w-md space-y-10 ">
+			<div className="flex justify-center bg-center bg-cover bg-no-repeat bg-hero-pattern dark:border-b border-slate-700 shadow-sm w-full py-6 md:py-16 pb-24 "  >
+	
+
+				<div className="flex flex-col-reverse justify-between w-full max-w-7xl px-6 md:flex-row "  >
+					<div className="inline-block max-w-md space-y-10">
+						
+
 						<div className={title({ size: "lg" })}>
 							<div className="py-2">
 								Moderní řešení pro
@@ -31,7 +35,7 @@ export default function Home() {
 									loop: true,
 									wrapperClassName: title({ color: "purple" }),
 								}}
-							/>
+								/>
 							<div className="py-2">
 
 								systémy.
@@ -42,6 +46,7 @@ export default function Home() {
 							klíč. Prostřednictvím našich špičkových SCADA systémů Vám můžeme usnadnit řízení
 							provozu a zvýšit jeho efektivitu.
 						</h2>
+							
 						<Button color="primary" className="bg-melkorPurple" as={Link} href={siteConfig.links.melkorvisum} radius="full" size="lg">
 							Více o našem řešení
 						</Button>
@@ -50,6 +55,7 @@ export default function Home() {
 						<video autoPlay loop muted playsInline poster="/poster.webp" src={"/Untitled.mp4"} />
 					</div>
 
+						
 				</div>
 			</div>
 
