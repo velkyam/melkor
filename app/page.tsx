@@ -141,6 +141,7 @@ export default function Home() {
 						</Link>
 					</div>
 					<Image className="w-full max-w-xl mt-10 md:mt-0"
+					radius="sm"
 						alt="Card background"
 						src="/display2.webp"
 					/>
