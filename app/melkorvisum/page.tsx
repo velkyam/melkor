@@ -1,14 +1,16 @@
 import { Image } from "@nextui-org/image";
 import { title } from "@/components/primitives";
 import { GetStarted } from "@/components/get-started";
+import { Card } from "@nextui-org/card";
 
 export default function DocsPage() {
 	return (
 		<div className="flex flex-col items-center">
 			<div className="flex flex-col items-center max-w-7xl  pb-20 md:pb-32 border-b border-slate-200 dark:border-slate-700">
 				<h1 className={title()}>MelkorVisum</h1>
-				<p className="text-left lg:px-6 pt-10 pb-20"> Srdcem naší platformy je řídicí server, který zajišťuje komunikaci s technologií, systém varování a alarmů, správu deníků a další. K serveru lze připojit libovolný počet vizualizačních klientů – desktopových, případně mobilních nebo webových klientů, umožňujících zobrazení systémů, práci s deníky událostí a odesílání povelů. Pro menší projekty a místní řízení je samozřejmostí i možnost připojení klienta přímo k technologii, bez nutnosti dodávat celý řídicí server. Platforma podporuje všechny běžně využívané operační systémy (Windows, Linux, MacOS) s minimálními hardwarovými požadavky.</p>
+				<p className="text-left lg:px-6 pt-20 pb-20"> Srdcem naší platformy je řídicí server, který zajišťuje komunikaci s technologií, systém varování a alarmů, správu deníků a další. K serveru lze připojit libovolný počet vizualizačních klientů – desktopových, případně mobilních nebo webových klientů, umožňujících zobrazení systémů, práci s deníky událostí a odesílání povelů. Pro menší projekty a místní řízení je samozřejmostí i možnost připojení klienta přímo k technologii, bez nutnosti dodávat celý řídicí server. Platforma podporuje všechny běžně využívané operační systémy (Windows, Linux, MacOS) s minimálními hardwarovými požadavky.</p>
 				<Image removeWrapper alt="Macbook_view" radius="none" className="w-full xl:w-7/12 " src="/macbook2.webp"></Image>
+
 			</div>
 			<div className="flex grid grid-cols-12 py-20 md:py-32 border-b border-slate-200 dark:border-slate-700 max-w-7xl ">
 				<div className="flex flex-col col-span-12 lg:col-span-4 lg:items-start">

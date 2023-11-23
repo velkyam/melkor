@@ -22,7 +22,7 @@ export default function AboutPage() {
 
 
 			<div className={title()}>Náš tým</div>
-			<div className="flex flex-col md:grid grid-rows-1 grid-cols-2 gap-12 my-20">
+			<div className="flex flex-col md:grid grid-rows-1 grid-cols-2 gap-12 mt-20">
 
 				<Card isBlurred className=" py-6 px-6 dark:border dark:border-slate-700">
 					<CardHeader className="flex flex-col md:flex-row gap-6">

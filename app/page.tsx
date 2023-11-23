@@ -37,7 +37,7 @@ export default function Home() {
 								systémy.
 							</div>
 						</div>
-						<h2 className={subtitle({ class: "mt-4", backdrop: "blur" })}>
+						<h2 className={subtitle({ class: "mt-4 rounded-xl", backdrop:"blur"})}>
 							Nabízíme komplexní softwarová řešení na
 							klíč. Prostřednictvím našich špičkových SCADA systémů Vám můžeme usnadnit řízení
 							provozu a zvýšit jeho efektivitu.
