@@ -16,7 +16,7 @@ import { link as linkStyles } from "@nextui-org/theme";
 
 import { siteConfig } from "@/config/site";
 import NextLink from "next/link";
-import { MelkorLogo} from "@/components/icons";
+import { MelkorLogo } from "@/components/icons";
 import clsx from "clsx";
 
 import { ThemeSwitch } from "@/components/theme-switch";
@@ -44,7 +44,7 @@ export const Navbar = () => {
 				justify="end"
 			>
 				<NavbarItem>
-				<ThemeSwitch className="mr-8" />
+					<ThemeSwitch className="mr-8" />
 				</NavbarItem>
 
 				<ul className="hidden md:flex gap-10 justify-start ml-2 mr-8">
@@ -73,7 +73,7 @@ export const Navbar = () => {
 
 			<NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
 
-				
+
 				<NavbarMenuToggle
 					aria-label={isMenuOpen ? "Close menu" : "Open menu"}
 					className="sm:hidden"
@@ -82,8 +82,8 @@ export const Navbar = () => {
 
 			<NavbarMenu>
 				<div className="mx-auto flex flex-col gap-6 items-center ">
-			<NavbarMenuItem>
-					<ThemeSwitch className="mt-6"/>
+					<NavbarMenuItem>
+						<ThemeSwitch className="mt-6" />
 					</NavbarMenuItem>
 					{siteConfig.navMenuItems.map((item) => (
 						<NavbarMenuItem key={item.href}>

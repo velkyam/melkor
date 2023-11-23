@@ -17,15 +17,16 @@ export default function Home() {
 	return (
 		<section className="flex flex-col items-center justify-center  ">
 			{/* hero row div */}
-			<div className="flex justify-center bg-center bg-cover bg-no-repeat bg-hero-pattern dark:border-b border-slate-700 shadow-sm w-full py-6 md:py-16 pb-24 "  >
-	
+			<div className="flex justify-center bg-center bg-cover bg-no-repeat bg-hero-pattern dark:border-b border-slate-700 shadow-sm w-full py-6 md:py-16  "  >
 
-				<div className="flex flex-col-reverse justify-between w-full max-w-7xl px-6 md:flex-row "  >
+
+				<div className="flex flex-col-reverse justify-between w-full max-w-7xl  md:flex-row pb-24 px-6"  >
 					<div className="inline-block max-w-md space-y-10">
-						
 
-						<div className={title({ size: "lg" })}>
-							<div className="py-2">
+		
+
+						<div className={title({ size: "lg"})}>
+							<div className="py-2 ">
 								Moderní řešení pro
 							</div>
 							<Typewriter
@@ -40,13 +41,18 @@ export default function Home() {
 
 								systémy.
 							</div>
-						</div>
-						<h2 className={subtitle({ class: "mt-4 rounded-xl", backdrop:"blur"})}>
+								
+					
+								</div>
+								<div className="backdrop-blur-sm rounded-lg">
+
+						<h2 className={subtitle({ class: "mt-4  w-full"})}>
 							Nabízíme komplexní softwarová řešení na
 							klíč. Prostřednictvím našich špičkových SCADA systémů Vám můžeme usnadnit řízení
 							provozu a zvýšit jeho efektivitu.
 						</h2>
-							
+								</div>
+
 						<Button color="primary" className="bg-melkorPurple" as={Link} href={siteConfig.links.melkorvisum} radius="full" size="lg">
 							Více o našem řešení
 						</Button>
@@ -55,7 +61,7 @@ export default function Home() {
 						<video autoPlay loop muted playsInline poster="/poster.webp" src={"/Untitled.mp4"} />
 					</div>
 
-						
+
 				</div>
 			</div>
 
@@ -147,7 +153,7 @@ export default function Home() {
 						</Link>
 					</div>
 					<Image className="w-full max-w-xl mt-10 md:mt-0"
-					radius="sm"
+						radius="sm"
 						alt="Card background"
 						src="/display2.webp"
 					/>
@@ -155,7 +161,7 @@ export default function Home() {
 
 				{/* What we offer section */}
 				<div className="flex flex-col w-full max-w-7xl items-center py-20 md:py-32 border-b border-slate-200 dark:border-slate-700">
-					<h1 className={title({ class: "mb-10 md:mb-24", size: "lg" })}>Co nabízíme našim klientům</h1>
+					<h1 className={title({ class: "mb-10 md:mb-24 leading-relaxed", size: "lg" })}>Co nabízíme našim klientům</h1>
 					<div className="flex flex-col w-full max-w-7xl space-y-4  md:space-y-0 md:grid grid-rows-6 md:grid-rows-2 grid-cols-3 gap-x-16">
 
 						<div className="flex flex-col pt-10 space-y-6 items-start ">
@@ -233,7 +239,7 @@ export default function Home() {
 					</div>
 				</div>
 				{/* Get started */}
-			<GetStarted/>
+				<GetStarted />
 			</div>
 		</section>
 

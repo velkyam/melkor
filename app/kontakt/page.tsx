@@ -11,7 +11,7 @@ export default function BlogPage() {
 			<div className="w-full flex flex-col max-w-7xl items-center justify-center px-6">
 
 				<h1 className={title()}>Kontaktujte nás</h1>
-				<div className="flex flex-col lg:grid grid-rows-1 grid-cols-2 gap-12 mt-20">
+				<div className="flex flex-col lg:grid grid-rows-1 grid-cols-2 gap-12 mt-20 lg:my-20">
 				<ContactForm />
 					<div className="w-full flex flex-col items-center">
 
