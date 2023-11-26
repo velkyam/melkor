@@ -43,7 +43,7 @@ export const Navbar = () => {
 				className="hidden sm:flex basis-1/5 sm:basis-full"
 				justify="end"
 			>
-				<NavbarItem>
+				<NavbarItem className="flex items-center">
 					<ThemeSwitch className="mr-8" />
 				</NavbarItem>
 
@@ -57,6 +57,7 @@ export const Navbar = () => {
 								)}
 								color="foreground"
 								href={item.href}
+								
 							>
 								{item.label}
 							</NextLink>
@@ -92,6 +93,7 @@ export const Navbar = () => {
 								href={item.href}
 								size="lg"
 								onClick={closeMenu}
+								
 							>
 								{item.label}
 							</Link>

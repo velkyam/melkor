@@ -12,10 +12,10 @@ export const siteConfig = {
       label: "O nás",
       href: "/onas",
     },
-/*     {
+    {
       label: "Reference",
       href: "/reference",
-    }, */
+    },
 
 	],
 	navMenuItems: [
@@ -31,14 +31,14 @@ export const siteConfig = {
 			label: "O nás",
 			href: "/onas",
 		  },
- 		  {
-			label: "Kontaktujte nás",
-			href: "/kontakt",
-		  }, 
-/* 		  {
-			label: "Reference",
-			href: "/reference",
-		  }, */
+		  {
+			  label: "Reference",
+			  href: "/reference",
+			},
+			{
+			 label: "Kontaktujte nás",
+			 href: "/kontakt",
+		   }, 
 
 	],
 	links: {

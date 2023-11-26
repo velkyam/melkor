@@ -4,7 +4,7 @@ import { Card, CardHeader, CardBody, CardFooter, Divider, Link, Image, Avatar } 
 export default function AboutPage() {
 	return (
 
-		<div className="inline-block max-w-7xl justify-center">
+		<div className="inline-block max-w-7xl justify-center py-20 ">
 			<h1 className={title()}>O nás</h1>
 			<div className="flex w-full my-20">
 				<Card isBlurred className="px-6 py-10 dark:border dark:border-slate-700">
