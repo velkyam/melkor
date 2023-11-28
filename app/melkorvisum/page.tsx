@@ -2,9 +2,8 @@
 import { Image } from "@nextui-org/image";
 import { title } from "@/components/primitives";
 import { GetStarted } from "@/components/get-started";
-import { Card, CardFooter, CardHeader } from "@nextui-org/card";
-import { Button } from "@nextui-org/button";
-import { SupportW, Train, Panel, Factory, Building, Gas, Car } from "@/components/icons";
+import { Card} from "@nextui-org/card";
+import { Train, Panel, Factory, Building, Gas, Car } from "@/components/icons";
 
 
 
@@ -13,7 +12,7 @@ export default function DocsPage() {
 
 	return (
 		<div className="flex flex-col items-center mx-auto w-full">
-			<div className="w-full flex flex-col items-center py-20  border-b border-slate-200 dark:border-slate-700  bg-top bg-cover bg-no-repeat bg-melkor-pattern2 ">
+			<div className="w-full flex flex-col items-center lg:pb-20 pt-20  border-b border-slate-200 dark:border-slate-700  bg-top bg-cover bg-no-repeat bg-melkor-pattern2 ">
 				<h1 className={title()}>MelkorVisum</h1>
 				<div className="flex flex-col items-center max-w-7xl px-6">
 					<Card isBlurred className="my-20 px-6 py-10 dark:border dark:border-slate-700">
