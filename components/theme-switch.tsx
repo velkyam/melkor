@@ -38,6 +38,7 @@ export const ThemeSwitch: FC<ThemeSwitchProps> = ({
 		onChange,
 	});
 
+
 	return (
 		<Component
 			{...getBaseProps({
@@ -70,7 +71,7 @@ export const ThemeSwitch: FC<ThemeSwitchProps> = ({
 					),
 				})}
 			>
-			 {!isSelected || isSSR ? <SunFilledIcon size={22} /> : <MoonFilledIcon size={22} />}
+			 {!isSelected || isSSR ? <SunFilledIcon size={24} /> : <MoonFilledIcon size={24} />}
 			</div>
 		</Component>
 	);

@@ -35,18 +35,21 @@ export default function RootLayout({
 			<head />
 			<body
 				className={clsx(
-					"min-h-screen bg-background font-sans antialiased",
+					"min-h-screen bg-background font-sans antialiased overflow-y-scroll", 
 					fontSans.variable
 				)}
-			>
-				<Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
-					<div className="relative flex flex-col h-screen">
+			 >
+				<Providers themeProps={{ attribute: "class",/*  defaultTheme: "light"  */}}>
+					
+				<div className="relative flex flex-col h-screen">
+
 						<Navbar />
-						<main>
+						<main className="pt-16">
 							{children}
 						</main>
 						<Footer/>
-					</div>
+				</div>
+					
 				</Providers>
 				{/* Fontawesome Icons */}
 				<Script src="https://kit.fontawesome.com/7f5487acc3.js"></Script>

@@ -21,7 +21,7 @@ export default function ReferencePage() {
 						<CardHeader className="flex">
 							<h4 className="font-semibold text-large text-left">Místní řízení měnírny Heršpice a transformátorové stanice Slatina		</h4>			</CardHeader>
 						<CardBody>
-							<p>Pro Dopravní podnik města Brna jsme dodali modernizovaný řídicí systém, který ovládá stávající technologii, museli jsme jej proto uzpůsobit tak, aby (krom použití moderní techniky) přesně odpovídal systému předešlému.</p>
+						<p>Pro Dopravní podnik města Brna jsme dodali modernizovaný řídicí systém, který ovládá stávající technologii. Abychom zajistili plynulé pokračování obsluhy, celý systém byl navržen tak, aby (krom použití moderní techniky) přesně odpovídal řízení předešlému.</p>
 						</CardBody>
 					</Card>
 					<Card isBlurred className=" px-6 py-10 dark:border dark:border-slate-700">

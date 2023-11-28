@@ -21,18 +21,25 @@ import clsx from "clsx";
 
 import { ThemeSwitch } from "@/components/theme-switch";
 
+
 export const Navbar = () => {
 	const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
 	function closeMenu() {
 		setIsMenuOpen(!isMenuOpen)
 	}
+	function closeMenuLogo() {
+		if(isMenuOpen)
+			setIsMenuOpen(!isMenuOpen)
+	}
+
+
 
 	return (
-		<NextUINavbar isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen} maxWidth="xl" position="sticky" className="shadow-sm dark:border-b border-slate-700">
+		<NextUINavbar isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen} maxWidth="xl" position="sticky" className="fixed top-0 shadow-sm dark:border-b border-slate-700">
 			<NavbarContent className="basis-1/5 sm:basis-full" justify="start">
 				<NavbarBrand as="li" className="gap-3 max-w-fit">
-					<NextLink className="flex justify-start items-center gap-1" href="/">
+					<NextLink className="flex justify-start items-center gap-1" href="/" onClick={closeMenuLogo}>
 						<MelkorLogo />
 					</NextLink>
 				</NavbarBrand>
@@ -57,7 +64,9 @@ export const Navbar = () => {
 								)}
 								color="foreground"
 								href={item.href}
-								
+								scroll={false}
+
+
 							>
 								{item.label}
 							</NextLink>
@@ -73,18 +82,16 @@ export const Navbar = () => {
 			</NavbarContent>
 
 			<NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
-
-
 				<NavbarMenuToggle
 					aria-label={isMenuOpen ? "Close menu" : "Open menu"}
 					className="sm:hidden"
 				/>
 			</NavbarContent>
 
-			<NavbarMenu>
+			<NavbarMenu >
 				<div className="mx-auto flex flex-col gap-6 items-center ">
 					<NavbarMenuItem>
-						<ThemeSwitch className="mt-6" />
+						<ThemeSwitch className="mt-6"/>
 					</NavbarMenuItem>
 					{siteConfig.navMenuItems.map((item) => (
 						<NavbarMenuItem key={item.href}>
@@ -93,7 +100,7 @@ export const Navbar = () => {
 								href={item.href}
 								size="lg"
 								onClick={closeMenu}
-								
+
 							>
 								{item.label}
 							</Link>

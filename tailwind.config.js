@@ -11,13 +11,14 @@ module.exports = {
   theme: {
     extend: {
       boxShadow: {
-        'light': '0px 0px 20px 0px rgb(0, 114, 245)',
+        'light': '0px 0px 20px 0px rgb(51, 65, 85)',
         'light2': '0px 0px 20px 0px rgb(0, 114, 245)',
         'light3': '0px 0px 20px 0px rgb(178, 73, 248)',
         'light4': '0px 0px 20px 0px rgb(178, 73, 248)',
       },
       dropShadow: {
-        'lightShadow': '5px 5px 35px rgb(178, 73, 248)',
+      /*   'lightShadow': '5px 5px 35px rgb(178, 73, 248)', */
+        'lightShadow': '5px 5px 35px rgb(209, 213, 219)',
       },
       height: {
         '128': '32rem',

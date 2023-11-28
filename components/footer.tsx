@@ -41,7 +41,7 @@ export const Footer = () => {
                                 </NextLink>
 
                                 <p className="flex w-full text-default-600 col-span-8 mt-6 md:mt-0">
-                                        Copyright © 2023 Melkor Software. Všechna práva vyhrazena
+                                        Copyright © 2023 Melkor Software. Všechna práva vyhrazena.
                                 </p>
                         </div>
                 </footer>

@@ -23,9 +23,9 @@ export default function Home() {
 				<div className="flex flex-col-reverse justify-between w-full max-w-7xl  md:flex-row pb-24 px-6"  >
 					<div className="inline-block max-w-md space-y-10">
 
-		
 
-						<div className={title({ size: "lg"})}>
+
+						<div className={title({ size: "lg" })}>
 							<div className="py-2 ">
 								Moderní řešení pro
 							</div>
@@ -36,22 +36,22 @@ export default function Home() {
 									loop: true,
 									wrapperClassName: title({ color: "purple" }),
 								}}
-								/>
+							/>
 							<div className="py-2">
 
 								systémy.
 							</div>
-								
-					
-								</div>
-								<div className="backdrop-blur-sm rounded-lg">
 
-						<h2 className={subtitle({ class: "mt-4  w-full"})}>
-							Nabízíme komplexní softwarová řešení na
-							klíč. Prostřednictvím našich špičkových SCADA systémů Vám můžeme usnadnit řízení
-							provozu a zvýšit jeho efektivitu.
-						</h2>
-								</div>
+
+						</div>
+						<div className="backdrop-blur-sm rounded-lg">
+
+							<h2 className={subtitle({ class: "mt-4  w-full" })}>
+								Nabízíme komplexní softwarová řešení na
+								klíč. Prostřednictvím našich špičkových SCADA systémů Vám můžeme usnadnit řízení
+								provozu a zvýšit jeho efektivitu.
+							</h2>
+						</div>
 
 						<Button color="primary" className="bg-melkorPurple" as={Link} href={siteConfig.links.melkorvisum} radius="full" size="lg">
 							Více o našem řešení
@@ -70,8 +70,8 @@ export default function Home() {
 				<h1 className={title({ class: "mb-10", size: "lg" })}>MelkorVisum</h1>
 				<h2 className={subtitle({ class: "mb-20 w-full md:max-w-5xl" })}>Našim hlavním produktem je plně přizpůsobitelná a integrovaná SCADA platforma MelkorVisum, která nám umožňuje efektivně vyvíjet vysoce spolehlivé vizualizační a řídicí systémy pro průmyslové, energetické či dopravní provozy.</h2>
 				{/* card row */}
-				<div className="flex flex-col w-full max-w-7xl space-y-4  md:space-y-0 md:grid grid-rows-3 md:grid-rows-1 grid-cols-3 gap-6">
-					<Card className=" height-256 ">
+				<div className="flex flex-col w-full max-w-7xl space-y-4  md:space-y-0 md:grid grid-rows-3 md:grid-rows-1 grid-cols-3 gap-6 lg:pb-10">
+					<Card className=" height-256">
 						<Image
 							removeWrapper
 							alt="Software_engineer_working"
@@ -81,7 +81,7 @@ export default function Home() {
 						/>
 						<CardBody className="flex flex-col pt-10 space-y-6 items-start items-center">
 							<h4 className="font-bold text-large text-center">Kompletní softwarová<br />řešení na klíč</h4>
-							<p className="mx-4">Zatímco naši konkurenti licencují SCADA platformy třetích stran, naše řešení MelkorVisum jsme vyvinuli celé od základů. Díky tomu můžeme snadno a rychle přizpůsobit veškeré části systému na míru konkrétním požadavkům.</p>
+							<p className="mx-4">Zatímco naši konkurenti licencují SCADA platformy třetích stran, náš program MelkorVisum jsme vyvinuli celý od základů. Díky tomu můžeme snadno a rychle přizpůsobit veškeré části systému na míru konkrétním požadavkům.</p>
 						</CardBody>
 						<CardFooter className="flex justify-center pb-10">
 							<Link href="/melkorvisum">
@@ -90,7 +90,7 @@ export default function Home() {
 						</CardFooter>
 					</Card>
 
-					<Card className=" height-256 ">
+					<Card className=" height-256">
 						<Image
 							removeWrapper
 							alt="Electrical_engineer_using_MelkorVisum_interface"
@@ -109,7 +109,7 @@ export default function Home() {
 						</CardFooter>
 					</Card>
 
-					<Card className="height-256 ">
+					<Card className="height-256">
 						<Image
 							removeWrapper
 							alt="Electrical_engineers_installing_plc"
@@ -146,13 +146,13 @@ export default function Home() {
 							</div>
 						</div>
 						<h2 className={subtitle({})}>
-							Ať už potřebujete moderní energetický dispečink, automatizaci výrobní linky či přehled nad spotřebou energií, Melkor Software Vám poskytne spolehlivé řešení s maximální flexibilitou.
+							Ať už potřebujete moderní energetický dispečink, automatizaci výrobní linky či přehled nad spotřebou energií ve Vaší firmě nebo areálu, Melkor Software Vám poskytne spolehlivé řešení s maximální flexibilitou.
 						</h2>
 						<Link href="/reference">
 							Podívejte se na naše řešení v praxi
 						</Link>
 					</div>
-					<Image className="w-full max-w-xl mt-10 md:mt-0"
+					<Image className="w-full max-w-xl mt-10 md:mt-0 dark:shadow-light"
 						radius="sm"
 						alt="Card background"
 						src="/display2.webp"
@@ -170,12 +170,12 @@ export default function Home() {
 							<div className="flex space-x-6  items-center">
 								<h4 className="font-bold text-large">Vysoce spolehlivé systémy</h4>
 							</div>
-							<p>Dodáváme i systémy pro nepřetržité provozy s vysokými požadavky na spolehlivost. Všechny komponenty je proto možné nasadit redundantně, takže ani v případě hardwarového selhání nedojde k výpadku ovládání.</p>
+							<p>Dodáváme systémy pro nepřetržité provozy s vysokými požadavky na spolehlivost. Všechny komponenty je proto možné nasadit redundantně, takže ani v případě hardwarového selhání nedojde k výpadku ovládání.</p>
 						</div>
 						<div className="flex flex-col pt-10 space-y-6 items-start    ">
 							<SecureW />
 							<div className="flex space-x-6  items-center">
-								<h4 className="font-bold text-large">Bezpečnost na předním místě</h4>
+								<h4 className="font-bold text-large">Bezpečnost na prvním místě</h4>
 							</div>
 							<p>Jsme si vědomi významu kybernetické bezpečnosti u průmyslové infrastruktury. Veškerá komunikace mezi našimi komponenty je proto zabezpečena koncovým šifrováním, bránícím neautorizovaným zásahům i odposlechu zpráv.</p>
 						</div>
@@ -184,7 +184,7 @@ export default function Home() {
 							<div className="flex space-x-6  items-center">
 								<h4 className="font-bold text-large">Nenáročná škálovatelná architektura</h4>
 							</div>
-							<p>Svá řešení navrhujeme tak, aby byla co nejsnáze rozšířitelná. Není problém ovládat a vizualizovat tisíce i desetitisíce signálů s minimálními hardwarovými požadavky.</p>
+							<p>Svá řešení navrhujeme tak, aby byla co nejsnáze rozšiřitelná. Není problém ovládat a vizualizovat tisíce i desetitisíce signálů s minimálními hardwarovými požadavky.</p>
 						</div>
 						<div className="flex flex-col pt-10 space-y-6 items-start    ">
 							<TestW />
@@ -205,7 +205,8 @@ export default function Home() {
 							<div className="flex space-x-6  items-center">
 								<h4 className="font-bold text-large">Uživatelská podpora 24/7</h4>
 							</div>
-							<p>Naši zákazníci využívají MelkorVisum naprosto bezstarostně, díky plné uživatelské péči a nepřetržité dostupnosti pro rychlé řešení problémů a odborné poradenství ohledně našich systémů a aplikací.</p>
+							{/* <p>Naši zákazníci využívají MelkorVisum naprosto bezstarostně, díky plné uživatelské péči a nepřetržité dostupnosti pro rychlé řešení problémů a odborné poradenství ohledně našich systémů a aplikací.</p> */}
+							<p>Svým zákazníkům nabízíme nepřetržitou telefonickou a online podporu a většinu problémů řešíme do několika hodin.</p>
 						</div>
 					</div>
 				</div>
@@ -213,7 +214,7 @@ export default function Home() {
 				<div className="flex flex-col w-full max-w-7xl items-center py-20 md:py-32 border-b border-slate-200 dark:border-slate-700">
 					<div className={title({ class: "mb-10 md:mb-24", size: "lg" })}>Naše úspěchy</div>
 					<div className="flex flex-col md:grid grid-rows-1 grid-cols-3 gap-12">
-						<Card className=" py-6 px-6">
+						<Card className=" py-10 px-6">
 							<CardHeader className="flex">
 								<h4 className="font-semibold text-large text-left">Energetický dispečink Dopravní společnosti Zlín a Otrokovice</h4>
 							</CardHeader>
@@ -221,14 +222,14 @@ export default function Home() {
 								<p>Na naší technologii běží dispečink, který má na starosti napájení trolejbusů v celém Zlíně a Otrokovicích. Zajišťujeme nepřetržitý provoz deseti měníren a jejich místní i dálkové řízení, které jsme dodali v rámci dvou zakázek ve spolupráci s firmou OHLA ŽS.</p>
 							</CardBody>
 						</Card>
-						<Card className=" py-6 px-6">
+						<Card className=" py-10 px-6">
 							<CardHeader className="flex">
 								<h4 className="font-semibold text-large text-left">Místní řízení měnírny Heršpice a transformátorové stanice Slatina		</h4>			</CardHeader>
 							<CardBody>
-								<p>Pro Dopravní podnik města Brna jsme dodali modernizovaný řídicí systém, který ovládá stávající technologii, museli jsme jej proto uzpůsobit tak, aby (krom použití moderní techniky) přesně odpovídal systému předešlému.</p>
+								<p>Pro Dopravní podnik města Brna jsme dodali modernizovaný řídicí systém, který ovládá stávající technologii. Abychom zajistili plynulé pokračování obsluhy, celý systém byl navržen tak, aby (krom použití moderní techniky) přesně odpovídal řízení předešlému.</p>
 							</CardBody>
 						</Card>
-						<Card className=" py-6 px-6">
+						<Card className=" py-10 px-6">
 							<CardHeader className="flex">
 								<h4 className="font-semibold text-large text-left">Dálkové řízení vytápění Orlovny Brno-Obřany	</h4>				</CardHeader>
 							<CardBody>
