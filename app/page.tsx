@@ -70,7 +70,7 @@ export default function Home() {
 				<h1 className={title({ class: "mb-10", size: "lg" })}>MelkorVisum</h1>
 				<h2 className={subtitle({ class: "mb-20 w-full md:max-w-5xl" })}>Našim hlavním produktem je plně přizpůsobitelná a integrovaná SCADA platforma MelkorVisum, která nám umožňuje efektivně vyvíjet vysoce spolehlivé vizualizační a řídicí systémy pro průmyslové, energetické či dopravní provozy.</h2>
 				{/* card row */}
-				<div className="flex flex-col w-full max-w-7xl space-y-4  md:space-y-0 md:grid grid-rows-3 md:grid-rows-1 grid-cols-3 gap-6 lg:pb-10">
+				<div className="flex flex-col w-full max-w-7xl space-y-4  md:space-y-0 md:grid grid-rows-3 md:grid-rows-1 grid-cols-3 gap-6">
 					<Card className=" height-256">
 						<Image
 							removeWrapper
@@ -137,7 +137,7 @@ export default function Home() {
 				<div className="flex flex-col md:flex-row w-full justify-between max-w-7xl  py-20 md:py-32  border-b border-slate-200 dark:border-slate-700">
 					<div className="flex-col space-y-10 max-w-lg">
 
-						<div className={title({ size: "lg" })}>
+						<div className={title({ size: "sm" })}>
 							<div className="py-2">
 								Jedna platforma,
 							</div>

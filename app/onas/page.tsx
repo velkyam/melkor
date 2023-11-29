@@ -14,10 +14,10 @@ export default function AboutPage() {
 					</CardHeader> */}
 					<CardBody>
 						<p className="text-left">Melkor Software je moderní IT firma, která Vám nabízí komplexní softwarová řešení na klíč. Naše softwarové řešení je postavené na nejnovějších technologiích a vychází z moderních principů tvorby uživatelských rozhraní, díky čemuž je stabilní, bezpečné a uživatelsky přívětivé. Máme zkušenosti s řadou různých protokolů a technologií, není proto problém náš systém zakomponovat do existujících provozů. Jsme vášnivý tým profesionálů s rozsáhlým spektrem dovedností od obchodních znalostí po technickou vynalézavost. Společně jsme vytvořili silnou, oddanou a kreativní pracovní atmosféru, která nám umožňuje neustále inovovat a přinášet našim klientům efektivní řešení.</p>
-						
+
 					</CardBody>
 				</Card>
-				
+
 			</div>
 
 
@@ -61,19 +61,19 @@ export default function AboutPage() {
 				</Card>
 				<Card isBlurred className="py-6 px-6 dark:border dark:border-slate-700">
 					<CardHeader className="flex flex-col md:flex-row gap-6">
-						<Avatar isBordered radius="full" className="w-24 h-24 text-large" src="/robert.webp" />
+						<Avatar isBordered radius="full" className="w-24 h-24 text-large" src="/dan3.webp" />
 						<div className="flex flex-col items-center text-center md:items-start md:text-left">
 							<p className="text-xl">Mgr. Dan Makalouš</p>
 							<p className="text-default-500">programátor, vizualizace a desktopové systémy</p>
 							<Link
 								isExternal
 								href="mailto:dmakalous@melkor.cz">
-								dmakalous@melkor.cz 
+								dmakalous@melkor.cz
 							</Link>
 						</div>
 					</CardHeader>
 					<CardBody>
-						<p>Absolvent Právnické fakulty Univerzity Karlovy, právník se specializací na obchodní akviziční právo a právo veřejných zakázek.</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 					</CardBody>
 				</Card>
 				<Card isBlurred className="py-6 px-6 dark:border dark:border-slate-700">
@@ -90,11 +90,11 @@ export default function AboutPage() {
 						</div>
 					</CardHeader>
 					<CardBody>
-						<p>Absolvent Právnické fakulty Univerzity Karlovy, právník se specializací na obchodní akviziční právo a právo veřejných zakázek.</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 					</CardBody>
 				</Card>
+		
 			</div>
-
 
 
 

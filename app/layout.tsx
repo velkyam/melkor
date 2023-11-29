@@ -1,4 +1,6 @@
 import "@/styles/globals.css";
+import 'lightbox.js-react/dist/index.css'
+import '@splidejs/react-splide/css';
 import { Metadata } from "next";
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
@@ -7,6 +9,7 @@ import { Navbar } from "@/components/navbar";
 import clsx from "clsx";
 import Script from "next/script";
 import { Footer } from "@/components/footer";
+
 
 export const metadata: Metadata = {
 	title: {
