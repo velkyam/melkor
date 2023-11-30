@@ -85,21 +85,21 @@ export default function RizeniPage() {
     });
 
     return (
-        <div className="flex flex-col items-center mx-auto w-full">
+        <div className="flex flex-col items-center mx-auto w-full ">
             <div className="w-full flex flex-col items-center pt-20">
                 <h1 className={title()}>Řízení měníren</h1>
-                <div className="flex flex-col items-center max-w-7xl px-6">
-                    <Card isBlurred className="mt-20 px-6 py-10 dark:border dark:border-slate-700">
+                <div className="flex flex-col items-center max-w-7xl lg:px-6">
+                    <Card shadow="sm" isBlurred className="mt-20 px-6 py-10 dark:border dark:border-slate-700">
                         <p className="text-left"> Dodáváme moduly pro dálkové i místní řízení měníren MHD, na kterých v současnosti běží řada měníren v několika městech. Své systémy stavíme na platformě MelkorVisum, o jejíchž výhodách si můžete přečíst <Link href={siteConfig.links.melkorvisum} > více zde</Link>. Níže se můžete podívat na podporované funkce a výhody oproti konkurenci.</p>
                     </Card>
 
                 </div>
     
-            <div className="flex flex-col w-full max-w-7xl space-y-4 py-20 md:pb-32 md:space-y-0 md:grid grid-rows-3 md:grid-rows-3 grid-cols-3 px-6 gap-12 border-b border-slate-200 dark:border-slate-700 ">
+            <div className="flex flex-col w-full max-w-7xl lg:px-6 space-y-4 py-20 md:pb-32 md:space-y-0 md:grid grid-cols-3 gap-12 lg:gap-16 border-b border-slate-200 dark:border-slate-700 ">
 
 
                        
-                <Card className=" height-256">
+                <Card shadow="sm" radius="sm">
                     <SlideshowLightbox
                         theme="lightbox"
                         modalClose="clickOutside"
@@ -115,7 +115,7 @@ export default function RizeniPage() {
                     >
                     </SlideshowLightbox>
 
-                    <Splide options={{
+                    <Splide className="h-60" options={{
                         type: 'loop',
                         perPage: 1,
                         autoplay: true,
@@ -123,37 +123,36 @@ export default function RizeniPage() {
                         gap: "1rem",
                         speed: 600,
                         interval: 7000,
-                        height: '15rem',
                         pagination: false,
                     }}
                         aria-label="Schématické zobrazení technologie">
                         <SplideSlide>
                             <Link className="object-cover w-full flex" onClick={() => { setIsOpen1(true); setStartingIndex(0) }}>
-                                <Image alt="melkorvisum_zobrazeni" removeWrapper className="w-full object-cover h-60" radius="none" src="/1_1.webp" />
+                                <Image alt="melkorvisum_zobrazeni" removeWrapper className="w-full object-cover h-60 " radius="none" src="/1_1.webp" />
                             </Link>
                         </SplideSlide>
                         <SplideSlide>
                             <Link className="object-cover w-full flex" onClick={() => { setIsOpen1(true); setStartingIndex(1) }}>
-                                <Image alt="melkorvisum_zobrazeni" removeWrapper className="w-full object-cover h-60" radius="none" src="/1_2.webp" />
+                                <Image alt="melkorvisum_zobrazeni" removeWrapper className="w-full object-cover h-60 " radius="none" src="/1_2.webp" />
                             </Link>
                         </SplideSlide>
                     </Splide>
-                    <CardBody className="flex flex-col py-10 px-6 space-y-6 items-center text-center">
-                        <h4 className="font-bold text-large">Schématické zobrazení technologie</h4>
-                        <p className="">Zachycuje stav prvků v reálném čase, přítomnost napětí na vodičích apod.</p>
+                    <CardBody className="flex flex-col py-10 px-6 space-y-2 items-start text-left border-t dark:border-slate-700 border-slate-200">
+                        <h4 className="font-semibold text-lg">Schématické zobrazení technologie</h4>
+                        <p className="text-base">Zachycuje stav prvků v reálném čase, přítomnost napětí na vodičích apod.</p>
                     </CardBody>
                 </Card>
        
-                <Card className=" height-256">
-                    <LightImage modalClose="clickOutside" image={{ src: "/2_1.webp" }} removeWrapper className="w-full object-cover h-60" radius="none" />
-                    <CardBody className="flex flex-col py-10 px-6 space-y-6 items-center text-center">
-                        <h4 className="font-bold text-large">Schéma trakční sítě</h4>
-                        <p className="">Zobrazení všech měníren a napájených úseků</p>
+                <Card shadow="sm" radius="sm">
+                    <LightImage modalClose="clickOutside" image={{ src: "/2_1.webp" }} removeWrapper className="w-full object-cover h-60 " radius="none" />
+                    <CardBody className="flex flex-col py-10 px-6 space-y-2 items-start text-left border-t dark:border-slate-700 border-slate-200">
+                        <h4 className="font-semibold text-lg">Schéma trakční sítě</h4>
+                        <p className="text-base">Zobrazení všech měníren a napájených úseků</p>
                     </CardBody>
                 </Card>
      
 
-                <Card className=" height-256">
+                <Card shadow="sm" radius="sm">
                     <SlideshowLightbox
                         theme="lightbox"
                         modalClose="clickOutside"
@@ -169,7 +168,7 @@ export default function RizeniPage() {
                     >
                     </SlideshowLightbox>
 
-                    <Splide options={{
+                    <Splide className="h-60" options={{
                         type: 'loop',
                         perPage: 1,
                         autoplay: true,
@@ -177,7 +176,7 @@ export default function RizeniPage() {
                         gap: "1rem",
                         speed: 600,
                         interval: 7000,
-                        height: '15rem',
+                        height: '24rem',
                         pagination: false,
 
 
@@ -185,30 +184,30 @@ export default function RizeniPage() {
                         >
                         <SplideSlide>
                             <Link className="object-cover w-full flex" onClick={() => { setIsOpen2(true); setStartingIndex(0) }}>
-                                <Image alt="melkorvisum_zobrazeni" removeWrapper className="w-full object-cover h-60" radius="none" src="/3_1.webp" />
+                                <Image alt="melkorvisum_zobrazeni" removeWrapper className="w-full object-cover h-60 " radius="none" src="/3_1.webp" />
                             </Link>
                         </SplideSlide>
                         <SplideSlide >
                             <Link className="object-cover" onClick={() => { setIsOpen2(true); setStartingIndex(1) }}>
-                                <Image alt="melkorvisum_zobrazeni" removeWrapper className="w-full object-cover h-60" radius="none" src="/3_2.webp" />
+                                <Image alt="melkorvisum_zobrazeni" removeWrapper className="w-full object-cover h-60 " radius="none" src="/3_2.webp" />
                             </Link>
                         </SplideSlide>
                     </Splide>
-                    <CardBody className="flex flex-col py-10 px-6 space-y-6 items-center text-center">
-                        <h4 className="font-bold text-large">Zobrazení deníku událostí</h4>
-                        <p className="">Podporuje generování alarmů i dalších událostí, kvitace, podrobné filtrování i vyhledávání v historických datech</p>
+                    <CardBody className="flex flex-col py-10 px-6 space-y-2 items-start text-left border-t dark:border-slate-700 border-slate-200">
+                        <h4 className="font-semibold text-lg">Zobrazení deníku událostí</h4>
+                        <p className="text-base">Podporuje generování alarmů i dalších událostí, kvitace, podrobné filtrování i vyhledávání v historických datech</p>
                     </CardBody>
                 </Card>
 
-                <Card className=" height-256">
-                    <LightImage modalClose="clickOutside" image={{ src: "/4_1.webp" }} removeWrapper className="w-full object-cover h-60" radius="none" />
-                    <CardBody className="flex flex-col py-10 px-6 space-y-6 items-center text-center">
-                        <h4 className="font-bold text-large">Detaily jednotlivých prvků</h4>
-                        <p className="">Obsahují detailní informace o stavu, meřené hodnoty, povely k odeslání atd.</p>
+                <Card shadow="sm" radius="sm">
+                    <LightImage modalClose="clickOutside" image={{ src: "/4_1.webp" }} removeWrapper className="w-full object-cover h-60 " radius="none" />
+                    <CardBody className="flex flex-col py-10 px-6 space-y-2 items-start text-left border-t dark:border-slate-700 border-slate-200">
+                        <h4 className="font-semibold text-lg">Detaily jednotlivých prvků</h4>
+                        <p className="text-base">Obsahují detailní informace o stavu, meřené hodnoty, povely k odeslání atd.</p>
                     </CardBody>
                 </Card>
 
-                <Card className="height-256">
+                <Card shadow="sm" radius="sm">
                     <SlideshowLightbox
                         theme="lightbox"
                         modalClose="clickOutside"
@@ -225,7 +224,7 @@ export default function RizeniPage() {
                     >
                     </SlideshowLightbox>
 
-                    <Splide options={{
+                    <Splide className="h-60" options={{
                         type: 'loop',
                         perPage: 1,
                         autoplay: true,
@@ -233,7 +232,6 @@ export default function RizeniPage() {
                         gap: "1rem",
                         speed: 600,
                         interval: 7000,
-                        height: '15rem',
                         width: '100%',
                         pagination: false,
 
@@ -242,48 +240,48 @@ export default function RizeniPage() {
                         >
                         <SplideSlide>
                             <Link className="object-cover w-full flex" onClick={() => { setIsOpen3(true); setStartingIndex(0) }}>
-                                <Image alt="melkorvisum_zobrazeni" removeWrapper className="object-cover h-60 w-full" radius="none" src="/5_1.webp" />
+                                <Image alt="melkorvisum_zobrazeni" removeWrapper className="object-cover h-60  w-full" radius="none" src="/5_1.webp" />
                             </Link>
                         </SplideSlide>
                         <SplideSlide >
                             <Link className="object-cover w-full flex" onClick={() => { setIsOpen3(true); setStartingIndex(1) }}>
-                                <Image alt="melkorvisum_zobrazeni" removeWrapper className="w-full object-cover h-60" radius="none" src="/5_2.webp" />
+                                <Image alt="melkorvisum_zobrazeni" removeWrapper className="w-full object-cover h-60 " radius="none" src="/5_2.webp" />
                             </Link>
                         </SplideSlide>
                         <SplideSlide >
                             <Link className="object-cover w-full flex" onClick={() => { setIsOpen3(true); setStartingIndex(2) }}>
-                                <Image alt="melkorvisum_zobrazeni" removeWrapper className="w-full object-cover h-60" radius="none" src="/5_3.webp" />
+                                <Image alt="melkorvisum_zobrazeni" removeWrapper className="w-full object-cover h-60 " radius="none" src="/5_3.webp" />
                             </Link>
                         </SplideSlide>
                         <SplideSlide >
                             <Link className="object-cover w-full" onClick={() => { setIsOpen3(true); setStartingIndex(3) }}>
-                                <Image alt="melkorvisum_zobrazeni" removeWrapper className="w-full object-cover h-60" radius="none" src="/5_4.webp" />
+                                <Image alt="melkorvisum_zobrazeni" removeWrapper className="w-full object-cover h-60 " radius="none" src="/5_4.webp" />
                             </Link>
                         </SplideSlide>
                     </Splide>
-                    <CardBody className="flex flex-col py-10 px-6 space-y-6 items-center text-center">
-                        <h4 className="font-bold text-large">Stejné zobrazení pro místní řízení i dálkové ovládání</h4>
-                        <p className="">Usnadňuje komunikaci mezi servisem a dispečinkem</p>
+                    <CardBody className="flex flex-col py-10 px-6 space-y-2 items-start text-left border-t dark:border-slate-700 border-slate-200">
+                        <h4 className="font-semibold text-lg">Stejné zobrazení pro místní řízení i dálkové ovládání</h4>
+                        <p className="text-base">Usnadňuje komunikaci mezi servisem a dispečinkem</p>
                     </CardBody>
                 </Card>
 
-                <Card className=" height-256">
-                    <LightImage modalClose="clickOutside" image={{ src: "/6_1.webp" }} removeWrapper className="w-full object-cover h-60" radius="none" />
-                    <CardBody className="flex flex-col py-10 px-6 space-y-6 items-center text-center">
-                        <h4 className="font-bold text-large">Dynamické rozložení obsahu</h4>
-                        <p className="">Aplikaci lze rozložit do libovolného počtu oken různé velikosti</p>
+                <Card shadow="sm" radius="sm">
+                    <LightImage modalClose="clickOutside" image={{ src: "/6_1.webp" }} removeWrapper className="w-full object-cover h-60 " radius="none" />
+                    <CardBody className="flex flex-col py-10 px-6 space-y-2 items-start text-left border-t dark:border-slate-700 border-slate-200">
+                        <h4 className="font-semibold text-lg">Dynamické rozložení obsahu</h4>
+                        <p className="text-base">Aplikaci lze rozložit do libovolného počtu oken různé velikosti</p>
                     </CardBody>
                 </Card>
 
-                <Card className=" height-256">
-                    <LightImage modalClose="clickOutside" image={{ src: "/7_2.webp" }} removeWrapper className="w-full object-cover h-60" radius="none" />
-                    <CardBody className="flex flex-col py-10 px-6 space-y-6 items-center text-center">
-                        <h4 className="font-bold text-large">Jednoduchá integrace se stávajícími technologiemi</h4>
-                        <p className="">Do technologie přidáno jediné PLC</p>
+                <Card shadow="sm" radius="sm">
+                    <LightImage modalClose="clickOutside" image={{ src: "/7_2.webp" }} removeWrapper className="w-full object-cover h-60 " radius="none" />
+                    <CardBody className="flex flex-col py-10 px-6 space-y-2 items-start text-left border-t dark:border-slate-700 border-slate-200">
+                        <h4 className="font-semibold text-lg">Jednoduchá integrace se stávajícími technologiemi</h4>
+                        <p className="text-base">Do technologie přidáno jediné PLC</p>
                     </CardBody>
                 </Card>
 
-                <Card className="height-256">
+                <Card shadow="sm" radius="sm">
                     <SlideshowLightbox
                         theme="lightbox"
                         modalClose="clickOutside"
@@ -300,7 +298,7 @@ export default function RizeniPage() {
                     >
                     </SlideshowLightbox>
 
-                    <Splide options={{
+                    <Splide className="h-60" options={{
                         type: 'loop',
                         perPage: 1,
                         autoplay: true,
@@ -308,7 +306,7 @@ export default function RizeniPage() {
                         gap: "1rem",
                         speed: 600,
                         interval: 7000,
-                        height: '15rem',
+                        height: '24rem',
                         width: '100%',
                         pagination: false,
 
@@ -317,26 +315,26 @@ export default function RizeniPage() {
                         >
                         <SplideSlide>
                             <Link className="object-cover w-full flex" onClick={() => { setIsOpen4(true); setStartingIndex(0) }}>
-                                <Image alt="melkorvisum_zobrazeni" removeWrapper className="object-cover object-left h-60 w-full" radius="none" src="/8_2.webp" />
+                                <Image alt="melkorvisum_zobrazeni" removeWrapper className="object-cover object-left h-60  w-full" radius="none" src="/8_2.webp" />
                             </Link>
                         </SplideSlide>
                         <SplideSlide >
                             <Link className="object-cover w-full flex" onClick={() => { setIsOpen4(true); setStartingIndex(1) }}>
-                                <Image alt="melkorvisum_zobrazeni" removeWrapper className="w-full object-cover h-60" radius="none" src="/8_3.webp" />
+                                <Image alt="melkorvisum_zobrazeni" removeWrapper className="w-full object-cover h-60 " radius="none" src="/8_3.webp" />
                             </Link>
                         </SplideSlide>
                     </Splide>
 
-                    <CardBody className="flex flex-col py-10 px-6 space-y-6 items-center text-center">
-                        <h4 className="font-bold text-large">Přehled komponent a jejich stavu</h4>
-                        <p className=""></p>
+                    <CardBody className="flex flex-col py-10 px-6 space-y-2 items-start text-left border-t dark:border-slate-700 border-slate-200">
+                        <h4 className="font-semibold text-lg">Přehled komponent a jejich stavu</h4>
+                        <p className="text-base"></p>
                     </CardBody>
                 </Card>
-                <Card className=" height-256">
-                    <LightImage modalClose="clickOutside" image={{ src: "/9_1.webp" }} removeWrapper className="w-full object-cover h-60" radius="none" />
-                    <CardBody className="flex flex-col py-10 px-6 space-y-6 items-center text-center">
-                        <h4 className="font-bold text-large">Energetické limity</h4>
-                        <p className="">Zobrazuje rozložení spotřeby a hlídá překročení nastavených limitů</p>
+                <Card shadow="sm" radius="sm">
+                    <LightImage modalClose="clickOutside" image={{ src: "/9_1.webp" }} removeWrapper className="w-full object-cover h-60 " radius="none" />
+                    <CardBody className="flex flex-col py-10 px-6 space-y-2 items-start text-left border-t dark:border-slate-700 border-slate-200">
+                        <h4 className="font-semibold text-lg">Energetické limity</h4>
+                        <p className="text-base">Zobrazuje rozložení spotřeby a hlídá překročení nastavených limitů</p>
                     </CardBody>
                 </Card>
                 </div>

@@ -27,8 +27,8 @@ module.exports = {
       backgroundImage: {
         'hero-pattern': "url('../public/wave.svg')",
         'contact-pattern':"url('../public/wave7.svg')",
-        'about-pattern':"url('../public/wave9.svg')",
-        'melkor-pattern':"url('../public/melkor7.svg')",
+        'about-pattern':"url('../public/wave14.svg')",
+        'melkor-pattern':"url('../public/wave18.svg')",
         'melkor-pattern2':"url('../public/melkor12.svg')",
       },
       colors:{

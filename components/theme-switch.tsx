@@ -6,6 +6,7 @@ import { SwitchProps, useSwitch } from "@nextui-org/switch";
 import { useTheme } from "next-themes";
 import {useIsSSR} from "@react-aria/ssr";
 import clsx from "clsx";
+import React from "react";
 
 import { SunFilledIcon, MoonFilledIcon } from "@/components/icons";
 
@@ -18,11 +19,19 @@ export const ThemeSwitch: FC<ThemeSwitchProps> = ({
 	className,
 	classNames,
 }) => {
+
+	const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+	function closeMenuLogo() {
+		if(isMenuOpen)
+			setIsMenuOpen(!isMenuOpen)
+	}
+
 	const { theme, setTheme } = useTheme();
   const isSSR = useIsSSR();
 
 	const onChange = () => {
 		theme === "light" ? setTheme("dark") : setTheme("light");
+		closeMenuLogo();
 	};
 
 	const {
@@ -37,7 +46,6 @@ export const ThemeSwitch: FC<ThemeSwitchProps> = ({
     "aria-label": `Switch to ${theme === "light" || isSSR ? "dark" : "light"} mode`,
 		onChange,
 	});
-
 
 	return (
 		<Component

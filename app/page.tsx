@@ -137,7 +137,7 @@ export default function Home() {
 				<div className="flex flex-col md:flex-row w-full justify-between max-w-7xl  py-20 md:py-32  border-b border-slate-200 dark:border-slate-700">
 					<div className="flex-col space-y-10 max-w-lg">
 
-						<div className={title({ size: "sm" })}>
+						<div className={title({ size: "lg" })}>
 							<div className="py-2">
 								Jedna platforma,
 							</div>
@@ -212,7 +212,7 @@ export default function Home() {
 				</div>
 				{/* Our successes */}
 				<div className="flex flex-col w-full max-w-7xl items-center py-20 md:py-32 border-b border-slate-200 dark:border-slate-700">
-					<div className={title({ class: "mb-10 md:mb-24", size: "lg" })}>Naše úspěchy</div>
+					<div className={title({ class: "mb-20 lg:mb-24", size: "lg" })}>Naše úspěchy</div>
 					<div className="flex flex-col md:grid grid-rows-1 grid-cols-3 gap-12">
 						<Card className=" py-10 px-6">
 							<CardHeader className="flex">

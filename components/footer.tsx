@@ -24,6 +24,9 @@ export const Footer = () => {
                                                         <Link className="md:mr-10 text-default-600" href='/melkorvisum'>MelkorVisum</Link>
                                                 </li>
                                                 <li>
+                                                        <Link className="md:mr-10 text-default-600" href="/rizenimeniren">Řízení měníren</Link>
+                                                </li>
+                                                <li>
                                                         <Link className="md:mr-10 text-default-600" href="/onas">O nás</Link>
                                                 </li>
                                                 <li>
