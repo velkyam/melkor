@@ -52,6 +52,7 @@ export const Navbar = () => {
 			>
 				<NavbarItem className="flex items-center">
 					<ThemeSwitch className="mr-8" />
+					
 				</NavbarItem>
 
 				<ul className="hidden md:flex gap-10 justify-start ml-2 mr-8">
@@ -88,10 +89,12 @@ export const Navbar = () => {
 				/>
 			</NavbarContent>
 
-			<NavbarMenu >
+			<NavbarMenu>
 				<div className="mx-auto flex flex-col gap-6 items-center ">
 					<NavbarMenuItem>
-						<ThemeSwitch className="mt-6"/>
+						
+						<ThemeSwitch className="mt-6" onClick={closeMenuLogo}/>
+					
 					</NavbarMenuItem>
 					{siteConfig.navMenuItems.map((item) => (
 						<NavbarMenuItem key={item.href}>

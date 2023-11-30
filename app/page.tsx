@@ -68,7 +68,7 @@ export default function Home() {
 
 			<div className="container flex flex-col items-center  w-full max-w-7xl px-6 pt-20 md:pt-32 ">
 				<h1 className={title({ class: "mb-10", size: "lg" })}>MelkorVisum</h1>
-				<h2 className={subtitle({ class: "mb-20 w-full md:max-w-5xl" })}>Našim hlavním produktem je plně přizpůsobitelná a integrovaná SCADA platforma MelkorVisum, která nám umožňuje efektivně vyvíjet vysoce spolehlivé vizualizační a řídicí systémy pro průmyslové, energetické či dopravní provozy.</h2>
+				<h2 className={subtitle({ class: "mb-20 w-full md:max-w-5xl" })}>Naším hlavním produktem je plně přizpůsobitelná a integrovaná SCADA platforma MelkorVisum, která nám umožňuje efektivně vyvíjet vysoce spolehlivé vizualizační a řídicí systémy pro průmyslové, energetické či dopravní provozy.</h2>
 				{/* card row */}
 				<div className="flex flex-col w-full max-w-7xl space-y-4  md:space-y-0 md:grid grid-rows-3 md:grid-rows-1 grid-cols-3 gap-6">
 					<Card className=" height-256">
@@ -81,7 +81,7 @@ export default function Home() {
 						/>
 						<CardBody className="flex flex-col pt-10 space-y-6 items-start items-center">
 							<h4 className="font-bold text-large text-center">Kompletní softwarová<br />řešení na klíč</h4>
-							<p className="mx-4">Zatímco naši konkurenti licencují SCADA platformy třetích stran, náš program MelkorVisum jsme vyvinuli celý od základů. Díky tomu můžeme snadno a rychle přizpůsobit veškeré části systému na míru konkrétním požadavkům.</p>
+							<p className="mx-4">Zatímco naši konkurenti licencují SCADA platformy třetích stran, náš program MelkorVisum jsme vyvinuli celý od základů. Díky tomu můžeme snadno a rychle přizpůsobit všechny části systému na míru konkrétním požadavkům.</p>
 						</CardBody>
 						<CardFooter className="flex justify-center pb-10">
 							<Link href="/melkorvisum">

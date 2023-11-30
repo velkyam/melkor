@@ -13,25 +13,25 @@ import { SunFilledIcon, MoonFilledIcon } from "@/components/icons";
 export interface ThemeSwitchProps {
 	className?: string;
 	classNames?: SwitchProps["classNames"];
+	onClick?: () => void; 
+	
+
 }
 
 export const ThemeSwitch: FC<ThemeSwitchProps> = ({
 	className,
 	classNames,
+	onClick, // Receive onClick prop
+
+	
 }) => {
 
-	const [isMenuOpen, setIsMenuOpen] = React.useState(false);
-	function closeMenuLogo() {
-		if(isMenuOpen)
-			setIsMenuOpen(!isMenuOpen)
-	}
 
 	const { theme, setTheme } = useTheme();
   const isSSR = useIsSSR();
 
 	const onChange = () => {
 		theme === "light" ? setTheme("dark") : setTheme("light");
-		closeMenuLogo();
 	};
 
 	const {
@@ -78,6 +78,9 @@ export const ThemeSwitch: FC<ThemeSwitchProps> = ({
 						classNames?.wrapper
 					),
 				})}
+				onClick={() => {
+					if (onClick) onClick(); // Invoke the onClick function if it exists
+				  }}
 			>
 			 {!isSelected || isSSR ? <SunFilledIcon size={24} /> : <MoonFilledIcon size={24} />}
 			</div>

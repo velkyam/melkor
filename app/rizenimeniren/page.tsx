@@ -34,6 +34,28 @@ const card3 = [
 
     },
 ]
+const card4 = [
+    {
+        src: '/4_1.webp',
+        alt: 'melkorvisum_zobrazeni',
+
+    },
+    {
+        src: '/4_2.webp',
+        alt: 'melkorvisum_zobrazeni',
+
+    },
+    {
+        src: '/4_3.webp',
+        alt: 'melkorvisum_zobrazeni',
+
+    },
+    {
+        src: '/4_4.webp',
+        alt: 'melkorvisum_zobrazeni',
+
+    },
+]
 const card5 = [
     {
         src: '/5_1.webp',
@@ -77,6 +99,7 @@ export default function RizeniPage() {
     let [isOpen2, setIsOpen2] = useState(false);
     let [isOpen3, setIsOpen3] = useState(false);
     let [isOpen4, setIsOpen4] = useState(false);
+    let [isOpen5, setIsOpen5] = useState(false);
 
     let [startingIndex, setStartingIndex] = useState(0);
 
@@ -90,7 +113,7 @@ export default function RizeniPage() {
                 <h1 className={title()}>Řízení měníren</h1>
                 <div className="flex flex-col items-center max-w-7xl lg:px-6">
                     <Card shadow="sm" isBlurred className="mt-20 px-6 py-10 dark:border dark:border-slate-700">
-                        <p className="text-left"> Dodáváme moduly pro dálkové i místní řízení měníren MHD, na kterých v současnosti běží řada měníren v několika městech. Své systémy stavíme na platformě MelkorVisum, o jejíchž výhodách si můžete přečíst <Link href={siteConfig.links.melkorvisum} > více zde</Link>. Níže se můžete podívat na podporované funkce a výhody oproti konkurenci.</p>
+                        <p className="text-left"> Dodáváme moduly pro dálkové i místní řízení měníren MHD, na kterých v současnosti běží řada měníren v několika městech. Své systémy stavíme na platformě MelkorVisum, o jejíchž výhodách si můžete přečíst <Link href={siteConfig.links.melkorvisum} > více zde</Link>. Níže se můžete podívat na podporované funkce a silné stránky našeho řešení.</p>
                     </Card>
 
                 </div>
@@ -128,12 +151,12 @@ export default function RizeniPage() {
                         aria-label="Schématické zobrazení technologie">
                         <SplideSlide>
                             <Link className="object-cover w-full flex" onClick={() => { setIsOpen1(true); setStartingIndex(0) }}>
-                                <Image alt="melkorvisum_zobrazeni" removeWrapper className="w-full object-cover h-60 " radius="none" src="/1_1.webp" />
+                                <Image alt="melkorvisum_zobrazeni" removeWrapper className="w-full object-cover object-left-top  h-60 " radius="none" src="/1_1.webp" />
                             </Link>
                         </SplideSlide>
                         <SplideSlide>
                             <Link className="object-cover w-full flex" onClick={() => { setIsOpen1(true); setStartingIndex(1) }}>
-                                <Image alt="melkorvisum_zobrazeni" removeWrapper className="w-full object-cover h-60 " radius="none" src="/1_2.webp" />
+                                <Image alt="melkorvisum_zobrazeni" removeWrapper className="w-full object-cover object-left-top h-60 " radius="none" src="/1_2.webp" />
                             </Link>
                         </SplideSlide>
                     </Splide>
@@ -144,7 +167,7 @@ export default function RizeniPage() {
                 </Card>
        
                 <Card shadow="sm" radius="sm">
-                    <LightImage modalClose="clickOutside" image={{ src: "/2_1.webp" }} removeWrapper className="w-full object-cover h-60 " radius="none" />
+                    <LightImage modalClose="clickOutside" image={{ src: "/2_1.webp" }} removeWrapper className="w-full object-cover object-left-top h-60 " radius="none" />
                     <CardBody className="flex flex-col py-10 px-6 space-y-2 items-start text-left border-t dark:border-slate-700 border-slate-200">
                         <h4 className="font-semibold text-lg">Schéma trakční sítě</h4>
                         <p className="text-base">Zobrazení všech měníren a napájených úseků</p>
@@ -184,12 +207,12 @@ export default function RizeniPage() {
                         >
                         <SplideSlide>
                             <Link className="object-cover w-full flex" onClick={() => { setIsOpen2(true); setStartingIndex(0) }}>
-                                <Image alt="melkorvisum_zobrazeni" removeWrapper className="w-full object-cover h-60 " radius="none" src="/3_1.webp" />
+                                <Image alt="melkorvisum_zobrazeni" removeWrapper className="w-full object-cover object-left-top h-60 " radius="none" src="/3_1.webp" />
                             </Link>
                         </SplideSlide>
                         <SplideSlide >
                             <Link className="object-cover" onClick={() => { setIsOpen2(true); setStartingIndex(1) }}>
-                                <Image alt="melkorvisum_zobrazeni" removeWrapper className="w-full object-cover h-60 " radius="none" src="/3_2.webp" />
+                                <Image alt="melkorvisum_zobrazeni" removeWrapper className="w-full object-cover object-left-top h-60 " radius="none" src="/3_2.webp" />
                             </Link>
                         </SplideSlide>
                     </Splide>
@@ -200,13 +223,62 @@ export default function RizeniPage() {
                 </Card>
 
                 <Card shadow="sm" radius="sm">
-                    <LightImage modalClose="clickOutside" image={{ src: "/4_1.webp" }} removeWrapper className="w-full object-cover h-60 " radius="none" />
+                    <SlideshowLightbox
+                        theme="lightbox"
+                        modalClose="clickOutside"
+                        open={isOpen5}
+                        startingSlideIndex={startingIndex}
+                        images={card4}
+                        showThumbnails={true}
+                        onClose={() => setIsOpen5(false)}
+                        lightboxIdentifier="lbox1"
+                        showThumbnailIcon={false}
+                        showFullScreenIcon={false}
+                        showSlideshowIcon={false}
+                        
+                    >
+                    </SlideshowLightbox>
+
+                    <Splide className="h-60" options={{
+                        type: 'loop',
+                        perPage: 1,
+                        autoplay: true,
+                        pauseOnHover: true,
+                        gap: "1rem",
+                        speed: 600,
+                        interval: 7000,
+                        width: '100%',
+                        pagination: false,
+
+
+                    }}
+                        >
+                        <SplideSlide>
+                            <Link className="object-cover w-full flex" onClick={() => { setIsOpen5(true); setStartingIndex(0) }}>
+                                <Image alt="melkorvisum_zobrazeni" removeWrapper className="object-cover h-60 object-left-top  w-full" radius="none" src="/4_1.webp" />
+                            </Link>
+                        </SplideSlide>
+                        <SplideSlide >
+                            <Link className="object-cover w-full flex" onClick={() => { setIsOpen5(true); setStartingIndex(1) }}>
+                                <Image alt="melkorvisum_zobrazeni" removeWrapper className="w-full object-cover object-left-top h-60 " radius="none" src="/4_2.webp" />
+                            </Link>
+                        </SplideSlide>
+                        <SplideSlide >
+                            <Link className="object-cover w-full flex" onClick={() => { setIsOpen5(true); setStartingIndex(2) }}>
+                                <Image alt="melkorvisum_zobrazeni" removeWrapper className="w-full object-cover object-left-top h-60 " radius="none" src="/4_3.webp" />
+                            </Link>
+                        </SplideSlide>
+                        <SplideSlide >
+                            <Link className="object-cover w-full" onClick={() => { setIsOpen5(true); setStartingIndex(3) }}>
+                                <Image alt="melkorvisum_zobrazeni" removeWrapper className="w-full object-cover object-left-top h-60 " radius="none" src="/4_4.webp" />
+                            </Link>
+                        </SplideSlide>
+                    </Splide>
                     <CardBody className="flex flex-col py-10 px-6 space-y-2 items-start text-left border-t dark:border-slate-700 border-slate-200">
                         <h4 className="font-semibold text-lg">Detaily jednotlivých prvků</h4>
                         <p className="text-base">Obsahují detailní informace o stavu, meřené hodnoty, povely k odeslání atd.</p>
                     </CardBody>
                 </Card>
-
                 <Card shadow="sm" radius="sm">
                     <SlideshowLightbox
                         theme="lightbox"
@@ -240,22 +312,22 @@ export default function RizeniPage() {
                         >
                         <SplideSlide>
                             <Link className="object-cover w-full flex" onClick={() => { setIsOpen3(true); setStartingIndex(0) }}>
-                                <Image alt="melkorvisum_zobrazeni" removeWrapper className="object-cover h-60  w-full" radius="none" src="/5_1.webp" />
+                                <Image alt="melkorvisum_zobrazeni" removeWrapper className="object-cover h-60  object-left-top w-full" radius="none" src="/5_1.webp" />
                             </Link>
                         </SplideSlide>
                         <SplideSlide >
                             <Link className="object-cover w-full flex" onClick={() => { setIsOpen3(true); setStartingIndex(1) }}>
-                                <Image alt="melkorvisum_zobrazeni" removeWrapper className="w-full object-cover h-60 " radius="none" src="/5_2.webp" />
+                                <Image alt="melkorvisum_zobrazeni" removeWrapper className="w-full object-cover object-left-top h-60 " radius="none" src="/5_2.webp" />
                             </Link>
                         </SplideSlide>
                         <SplideSlide >
                             <Link className="object-cover w-full flex" onClick={() => { setIsOpen3(true); setStartingIndex(2) }}>
-                                <Image alt="melkorvisum_zobrazeni" removeWrapper className="w-full object-cover h-60 " radius="none" src="/5_3.webp" />
+                                <Image alt="melkorvisum_zobrazeni" removeWrapper className="w-full object-cover object-left-top h-60 " radius="none" src="/5_3.webp" />
                             </Link>
                         </SplideSlide>
                         <SplideSlide >
                             <Link className="object-cover w-full" onClick={() => { setIsOpen3(true); setStartingIndex(3) }}>
-                                <Image alt="melkorvisum_zobrazeni" removeWrapper className="w-full object-cover h-60 " radius="none" src="/5_4.webp" />
+                                <Image alt="melkorvisum_zobrazeni" removeWrapper className="w-full object-cover object-left-top h-60 " radius="none" src="/5_4.webp" />
                             </Link>
                         </SplideSlide>
                     </Splide>
@@ -266,7 +338,7 @@ export default function RizeniPage() {
                 </Card>
 
                 <Card shadow="sm" radius="sm">
-                    <LightImage modalClose="clickOutside" image={{ src: "/6_1.webp" }} removeWrapper className="w-full object-cover h-60 " radius="none" />
+                    <LightImage modalClose="clickOutside" image={{ src: "/6_1.webp" }} removeWrapper className="w-full object-cover object-left-top h-60 " radius="none" />
                     <CardBody className="flex flex-col py-10 px-6 space-y-2 items-start text-left border-t dark:border-slate-700 border-slate-200">
                         <h4 className="font-semibold text-lg">Dynamické rozložení obsahu</h4>
                         <p className="text-base">Aplikaci lze rozložit do libovolného počtu oken různé velikosti</p>
@@ -274,7 +346,7 @@ export default function RizeniPage() {
                 </Card>
 
                 <Card shadow="sm" radius="sm">
-                    <LightImage modalClose="clickOutside" image={{ src: "/7_2.webp" }} removeWrapper className="w-full object-cover h-60 " radius="none" />
+                    <LightImage modalClose="clickOutside" image={{ src: "/7_2.webp" }} removeWrapper className="w-full object-cover object-left-top h-60 " radius="none" />
                     <CardBody className="flex flex-col py-10 px-6 space-y-2 items-start text-left border-t dark:border-slate-700 border-slate-200">
                         <h4 className="font-semibold text-lg">Jednoduchá integrace se stávajícími technologiemi</h4>
                         <p className="text-base">Do technologie přidáno jediné PLC</p>
@@ -315,12 +387,12 @@ export default function RizeniPage() {
                         >
                         <SplideSlide>
                             <Link className="object-cover w-full flex" onClick={() => { setIsOpen4(true); setStartingIndex(0) }}>
-                                <Image alt="melkorvisum_zobrazeni" removeWrapper className="object-cover object-left h-60  w-full" radius="none" src="/8_2.webp" />
+                                <Image alt="melkorvisum_zobrazeni" removeWrapper className="object-cover object-left-top h-60  w-full" radius="none" src="/8_2.webp" />
                             </Link>
                         </SplideSlide>
                         <SplideSlide >
                             <Link className="object-cover w-full flex" onClick={() => { setIsOpen4(true); setStartingIndex(1) }}>
-                                <Image alt="melkorvisum_zobrazeni" removeWrapper className="w-full object-cover h-60 " radius="none" src="/8_3.webp" />
+                                <Image alt="melkorvisum_zobrazeni" removeWrapper className="w-full object-cover object-left-top h-60 " radius="none" src="/8_3.webp" />
                             </Link>
                         </SplideSlide>
                     </Splide>
@@ -331,7 +403,7 @@ export default function RizeniPage() {
                     </CardBody>
                 </Card>
                 <Card shadow="sm" radius="sm">
-                    <LightImage modalClose="clickOutside" image={{ src: "/9_1.webp" }} removeWrapper className="w-full object-cover h-60 " radius="none" />
+                    <LightImage modalClose="clickOutside" image={{ src: "/9_1.webp" }} removeWrapper className="w-full object-cover object-left-top h-60 " radius="none" />
                     <CardBody className="flex flex-col py-10 px-6 space-y-2 items-start text-left border-t dark:border-slate-700 border-slate-200">
                         <h4 className="font-semibold text-lg">Energetické limity</h4>
                         <p className="text-base">Zobrazuje rozložení spotřeby a hlídá překročení nastavených limitů</p>
