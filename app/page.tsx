@@ -58,7 +58,12 @@ export default function Home() {
 						</Button>
 					</div>
 					<div className="inline-block max-w-2xl pb-10">
-						<video autoPlay loop muted playsInline poster="/poster.webp" src={"/Untitled.mp4"} />
+						{/* <video autoPlay loop muted playsInline poster="/poster.webp" src={"/Untitled.mp4"} /> */}
+						<video autoPlay loop muted playsInline poster="/poster.webp">
+							<source src="/Untitled.webm" type="video/webm" />
+							<source src="/Untitled.mp4" type="video/mp4" />
+							Your browser does not support the video tag.
+						</video>
 					</div>
 
 
@@ -80,7 +85,7 @@ export default function Home() {
 							radius="none"
 						/>
 						<CardBody className="flex flex-col pt-10 space-y-6 items-start items-center">
-							<h4 className="font-bold text-large text-center">Kompletní softwarová<br />řešení na klíč</h4>
+							<h2 className="font-bold text-large text-center">Kompletní softwarová<br />řešení na klíč</h2>
 							<p className="mx-4">Zatímco naši konkurenti licencují SCADA platformy třetích stran, náš program MelkorVisum jsme vyvinuli celý od základů. Díky tomu můžeme snadno a rychle přizpůsobit všechny části systému na míru konkrétním požadavkům.</p>
 						</CardBody>
 						<CardFooter className="flex justify-center pb-10">
@@ -99,7 +104,7 @@ export default function Home() {
 							radius="none"
 						/>
 						<CardBody className="flex flex-col pt-10 space-y-6 items-start  items-center">
-							<h4 className="font-bold text-large text-center">Moderní vzhled <br />přizpůsobený na míru</h4>
+							<h2 className="font-bold text-large text-center">Moderní vzhled <br />přizpůsobený na míru</h2>
 							<p className="mx-4">Naše vizualizace je postavená na nejnovějších technologiích a vychází z moderních principů tvorby uživatelských rozhraní, díky čemuž je stabilní, bezpečná a uživatelsky přívětivá.</p>
 						</CardBody>
 						<CardFooter className="flex justify-center pb-10">
@@ -118,7 +123,7 @@ export default function Home() {
 							radius="none"
 						/>
 						<CardBody className="flex flex-col pt-10 space-y-6 items-start  items-center">
-							<h4 className="font-bold text-large text-center">Integrace se <br />stávajícími technologiemi</h4>
+							<h2 className="font-bold text-large text-center">Integrace se <br />stávajícími technologiemi</h2>
 							<p className="mx-4">Máme zkušenosti s řadou různých protokolů a technologií, není proto problém náš systém zakomponovat do existujících provozů.</p>
 						</CardBody>
 						<CardFooter className="flex justify-center pb-10">
@@ -168,42 +173,42 @@ export default function Home() {
 							<ScaleW />
 
 							<div className="flex space-x-6  items-center">
-								<h4 className="font-bold text-large">Vysoce spolehlivé systémy</h4>
+								<h2 className="font-bold text-large">Vysoce spolehlivé systémy</h2>
 							</div>
 							<p>Dodáváme systémy pro nepřetržité provozy s vysokými požadavky na spolehlivost. Všechny komponenty je proto možné nasadit redundantně, takže ani v případě hardwarového selhání nedojde k výpadku ovládání.</p>
 						</div>
 						<div className="flex flex-col pt-10 space-y-6 items-start    ">
 							<SecureW />
 							<div className="flex space-x-6  items-center">
-								<h4 className="font-bold text-large">Bezpečnost na prvním místě</h4>
+								<h2 className="font-bold text-large">Bezpečnost na prvním místě</h2>
 							</div>
 							<p>Jsme si vědomi významu kybernetické bezpečnosti u průmyslové infrastruktury. Veškerá komunikace mezi našimi komponenty je proto zabezpečena koncovým šifrováním, bránícím neautorizovaným zásahům i odposlechu zpráv.</p>
 						</div>
 						<div className="flex flex-col pt-10 space-y-6 items-start    ">
 							<PerformanceW />
 							<div className="flex space-x-6  items-center">
-								<h4 className="font-bold text-large">Nenáročná škálovatelná architektura</h4>
+								<h2 className="font-bold text-large">Nenáročná škálovatelná architektura</h2>
 							</div>
 							<p>Svá řešení navrhujeme tak, aby byla co nejsnáze rozšiřitelná. Není problém ovládat a vizualizovat tisíce i desetitisíce signálů s minimálními hardwarovými požadavky.</p>
 						</div>
 						<div className="flex flex-col pt-10 space-y-6 items-start    ">
 							<TestW />
 							<div className="flex space-x-6  items-center">
-								<h4 className="font-bold text-large">Široká podpora stávajících technologií</h4>
+								<h2 className="font-bold text-large">Široká podpora stávajících technologií</h2>
 							</div>
 							<p>Vizualizace a řídicí systémy dokážeme dodávat s minimálními zásahy do existující technologie. Máme zkušenosti s řadou standardních protokolů (IEC 60870-5-104, IEC 61850, Modbus, MQTT, ...) a není problém přidat další, případně můžeme pracovat i s fyzickými signály.</p>
 						</div>
 						<div className="flex flex-col pt-10 space-y-6 items-start   ">
 							<LicenceW />
 							<div className="flex space-x-6 items-center">
-								<h4 className="font-bold text-large">Nezávislost na třetích stranách</h4>
+								<h2 className="font-bold text-large">Nezávislost na třetích stranách</h2>
 							</div>
 							<p>Zatímco konkurenční řešení mohou být omezena licenčními podmínkami použitých SCADA platforem, my své aplikace vytváříme celé in-house a podobné limitace tak není třeba řešit.</p>
 						</div>
 						<div className="flex flex-col pt-10 space-y-6 items-start    ">
 							<SupportW />
 							<div className="flex space-x-6  items-center">
-								<h4 className="font-bold text-large">Uživatelská podpora 24/7</h4>
+								<h2 className="font-bold text-large">Uživatelská podpora 24/7</h2>
 							</div>
 							{/* <p>Naši zákazníci využívají MelkorVisum naprosto bezstarostně, díky plné uživatelské péči a nepřetržité dostupnosti pro rychlé řešení problémů a odborné poradenství ohledně našich systémů a aplikací.</p> */}
 							<p>Svým zákazníkům nabízíme nepřetržitou telefonickou a online podporu a většinu problémů řešíme do několika hodin.</p>
@@ -216,7 +221,7 @@ export default function Home() {
 					<div className="flex flex-col md:grid grid-rows-1 grid-cols-3 gap-12">
 						<Card className=" py-10 px-6">
 							<CardHeader className="flex">
-								<h4 className="font-semibold text-large text-left">Energetický dispečink Dopravní společnosti Zlín a Otrokovice</h4>
+								<h2 className="font-semibold text-large text-left">Energetický dispečink Dopravní společnosti Zlín a Otrokovice</h2>
 							</CardHeader>
 							<CardBody>
 								<p>Na naší technologii běží dispečink, který má na starosti napájení trolejbusů v celém Zlíně a Otrokovicích. Zajišťujeme nepřetržitý provoz deseti měníren a jejich místní i dálkové řízení, které jsme dodali v rámci dvou zakázek ve spolupráci s firmou OHLA ŽS.</p>
@@ -224,14 +229,14 @@ export default function Home() {
 						</Card>
 						<Card className=" py-10 px-6">
 							<CardHeader className="flex">
-								<h4 className="font-semibold text-large text-left">Místní řízení měnírny Heršpice a transformátorové stanice Slatina		</h4>			</CardHeader>
+								<h2 className="font-semibold text-large text-left">Místní řízení měnírny Heršpice a transformátorové stanice Slatina		</h2>			</CardHeader>
 							<CardBody>
 								<p>Pro Dopravní podnik města Brna jsme dodali modernizovaný řídicí systém, který ovládá stávající technologii. Abychom zajistili plynulé pokračování obsluhy, celý systém byl navržen tak, aby (krom použití moderní techniky) přesně odpovídal řízení předešlému.</p>
 							</CardBody>
 						</Card>
 						<Card className=" py-10 px-6">
 							<CardHeader className="flex">
-								<h4 className="font-semibold text-large text-left">Dálkové řízení vytápění Orlovny Brno-Obřany	</h4>				</CardHeader>
+								<h2 className="font-semibold text-large text-left">Dálkové řízení vytápění Orlovny Brno-Obřany	</h2>				</CardHeader>
 							<CardBody>
 								<p>
 									Pro jednotu Orla Brno-Obřany jsme rozšířili existující řízení kotelny o soustavu bezdrátových snímačů teploty a webové rozhraní, které umožňuje sledování teploty, vzdálené ovládání kotlů i plánování automatického vytápění.</p>

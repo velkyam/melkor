@@ -28,7 +28,7 @@ export const Navbar = () => {
 	function closeMenu() {
 		setIsMenuOpen(!isMenuOpen)
 	}
-	function closeMenuLogo() {
+	function closeMenmenuogo() {
 		if(isMenuOpen)
 			setIsMenuOpen(!isMenuOpen)
 	}
@@ -39,8 +39,8 @@ export const Navbar = () => {
 		<NextUINavbar isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen} maxWidth="xl" position="sticky" className="fixed top-0 shadow-sm dark:border-b border-slate-700">
 			<NavbarContent className="basis-1/5 sm:basis-full" justify="start">
 				<NavbarBrand as="li" className="gap-3 max-w-fit">
-					<NextLink className="flex justify-start items-center gap-1" href="/" onClick={closeMenuLogo}>
-						<MelkorLogo />
+					<NextLink className="flex justify-start items-center gap-1" href="/" onClick={closeMenmenuogo}>
+						<MelkorLogo aria-label="Melkor_Software_logo" />
 					</NextLink>
 				</NavbarBrand>
 
@@ -55,7 +55,7 @@ export const Navbar = () => {
 					
 				</NavbarItem>
 
-				<ul className="hidden md:flex gap-10 justify-start ml-2 mr-8">
+				<menu className="hidden md:flex gap-10 justify-start ml-2 mr-8">
 					{siteConfig.navItems.map((item) => (
 						<NavbarItem key={item.href}>
 							<NextLink
@@ -73,7 +73,7 @@ export const Navbar = () => {
 							</NextLink>
 						</NavbarItem>
 					))}
-				</ul>
+				</menu>
 
 				<NavbarItem>
 					<Button color="secondary" className="bg-melkorPurple" as={Link} href={siteConfig.links.kontakt} radius="full" size="md">
@@ -90,10 +90,10 @@ export const Navbar = () => {
 			</NavbarContent>
 
 			<NavbarMenu>
-				<div className="mx-auto flex flex-col gap-6 items-center ">
+				<menu className="mx-auto flex flex-col gap-6 items-center ">
 					<NavbarMenuItem>
 						
-						<ThemeSwitch className="mt-6" onClick={closeMenuLogo}/>
+						<ThemeSwitch className="mt-6" onClick={closeMenmenuogo}/>
 					
 					</NavbarMenuItem>
 					{siteConfig.navMenuItems.map((item) => (
@@ -110,7 +110,7 @@ export const Navbar = () => {
 						</NavbarMenuItem>
 					))}
 
-				</div>
+				</menu>
 			</NavbarMenu>
 		</NextUINavbar>
 	);

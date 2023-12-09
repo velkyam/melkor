@@ -40,7 +40,7 @@ export const Footer = () => {
                                         </ul>
                                 </div>
                                 <NextLink className="flex items-start ml-auto lg:col-span-4" href="/">
-                                        <MelkorLogo />
+                                        <MelkorLogo aria-label="Melkor_Software" />
                                 </NextLink>
 
         
