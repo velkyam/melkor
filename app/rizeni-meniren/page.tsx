@@ -81,10 +81,23 @@ const card5 = [
 
     }, */
 ]
+const card7 = [
+    {
+        src: '/7_1.webp',
+        alt: 'melkorvisum_zobrazeni',
+
+    },
+    {
+        src: '/7_2.webp',
+        alt: 'melkorvisum_zobrazeni',
+
+    },
+    
+]
 const card8 = [
     {
         src: '/8_2.webp',
-        alt: 'denik_1',
+        alt: 'melkorvisum_zobrazeni',
 
     },
     {
@@ -143,7 +156,7 @@ export default function RizeniPage() {
                     <Splide className="" options={{
                         type: 'loop',
                         perPage: 1,
-                        aucenterlay: true,
+                        autoplay: true,
                         pauseOnHover: true,
                         gap: "1rem",
                         speed: 520,
@@ -196,7 +209,7 @@ export default function RizeniPage() {
                     <Splide  options={{
                         type: 'loop',
                         perPage: 1,
-                        aucenterlay: true,
+                        autoplay: true,
                         pauseOnHover: true,
                         gap: "1rem",
                         speed: 520,
@@ -226,59 +239,7 @@ export default function RizeniPage() {
 
                 <Card shadow="sm" radius="sm">
                 <LightImage modalClose="clickOutside" image={{ src: "/4_1.webp" }} removeWrapper radius="none" />
-             {/*        <SlideshowLightbox
-                        theme="lightbox"
-                        modalClose="clickOutside"
-                        open={isOpen5}
-                        startingSlideIndex={startingIndex}
-                        images={card4}
-                        showThumbnails={true}
-                        onClose={() => setIsOpen5(false)}
-                        lightboxIdentifier="lbox1"
-                        showThumbnailIcon={false}
-                        showFullScreenIcon={false}
-                        showSlideshowIcon={false}
-                        
-                    >
-                    </SlideshowLightbox> */}
-{/* 
-                    <Splide extensions={{Grid}} options={{
-                        
-                        type: 'loop',
-                        perPage: 2,
-                        aucenterlay: true,
-                        pauseOnHover: true,
-                        gap: "1rem",
-                        speed: 520,
-                        interval: 7000,
-                        width: '100%',
-                        pagination: false,
-                 
-                    
 
-                    }}
-                        >
-                        <SplideSlide>
-                            <Link onClick={() => { setIsOpen5(true); setStartingIndex(0) }}>
-                                <Image alt="melkorvisum_zobrazeni" removeWrapper radius="none" src="/4_1.webp" />
-                            </Link>
-                        </SplideSlide >
-                        <SplideSlide className=" object-contain ">
-                            <Link onClick={() => { setIsOpen5(true); setStartingIndex(1) }}>
-                                <Image alt="melkorvisum_zobrazeni" removeWrapper  radius="none" src="/4_2.webp" />
-                            </Link>
-                        </SplideSlide>
-                        <SplideSlide className=" object-contain ">
-                            <Link onClick={() => { setIsOpen5(true); setStartingIndex(2) }}>
-                                <Image alt="melkorvisum_zobrazeni" removeWrapper  radius="none" src="/4_3.webp" />
-                            </Link>
-                        </SplideSlide>
-                        <SplideSlide className=" object-contain ">
-                            <Link onClick={() => { setIsOpen5(true); setStartingIndex(3) }}>
-                                <Image alt="melkorvisum_zobrazeni" removeWrapper  radius="none" src="/4_4.webp" />
-                            </Link>
-                        </SplideSlide>
-                    </Splide> */}
                     <CardBody className="flex flex-col py-10 px-6 space-y-2 items-start text-left ">
                         <h4 className="font-semibold text-lg">Detaily jednotlivých prvků</h4>
                         <p className="text-base">Obsahují detailní informace o stavu, meřené hodnoty, povely k odeslání atd.</p>
@@ -304,7 +265,7 @@ export default function RizeniPage() {
                     <Splide  options={{
                         type: 'loop',
                         perPage: 1,
-                        aucenterlay: true,
+                        autoplay: true,
                         pauseOnHover: true,
                         gap: "1rem",
                         speed: 520,
@@ -342,7 +303,48 @@ export default function RizeniPage() {
                 </Card>
 
                 <Card shadow="sm" radius="sm">
-                    <LightImage modalClose="clickOutside" image={{ src: "/7_2.webp" }} removeWrapper radius="none" />
+                <SlideshowLightbox
+                        theme="lightbox"
+                        modalClose="clickOutside"
+                        open={isOpen5}
+                        startingSlideIndex={startingIndex}
+                        images={card7}
+                        showThumbnails={true}
+                        onClose={() => setIsOpen5(false)}
+                        lightboxIdentifier="lbox1"
+                        showThumbnailIcon={false}
+                        showFullScreenIcon={false}
+                        showSlideshowIcon={false}
+                        
+                    >
+                    </SlideshowLightbox>
+
+                    <Splide  options={{
+                        type: 'loop',
+                        perPage: 1,
+                        autoplay: true,
+                        pauseOnHover: true,
+                        gap: "1rem",
+                        speed: 520,
+                        interval: 7000,
+                        width: '100%',
+                        pagination: false,
+
+
+                    }}
+                        >
+                        <SplideSlide>
+                            <Link onClick={() => { setIsOpen5(true); setStartingIndex(0) }}>
+                                <Image alt="melkorvisum_zobrazeni" removeWrapper radius="none" src="/7_1.webp" />
+                            </Link>
+                        </SplideSlide>
+                        <SplideSlide >
+                            <Link onClick={() => { setIsOpen5(true); setStartingIndex(1) }}>
+                                <Image alt="melkorvisum_zobrazeni" removeWrapper radius="none" src="/7_2.webp" />
+                            </Link>
+                        </SplideSlide>
+                    </Splide>
+
                     <CardBody className="flex flex-col py-10 px-6 space-y-2 items-start text-left">
                         <h4 className="font-semibold text-lg">Jednoduchá integrace se stávajícími technologiemi</h4>
                         <p className="text-base">Do technologie přidáno jediné PLC</p>
@@ -369,7 +371,7 @@ export default function RizeniPage() {
                     <Splide  options={{
                         type: 'loop',
                         perPage: 1,
-                        aucenterlay: true,
+                        autoplay: true,
                         pauseOnHover: true,
                         gap: "1rem",
                         speed: 520,
