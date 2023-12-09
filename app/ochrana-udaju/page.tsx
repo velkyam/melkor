@@ -10,7 +10,7 @@ export default function PrivacyPage() {
 		<div className=" justify-center py-20 w-full">
 			<h1 className={title()}>Ochrana osobních údajů</h1>
 			<div className="w-full my-20 flex flex-col items-center justify-center">
-			<p className="mb-20">
+			<p className="mb-20 text-left">
 				Tyto zásady ochrany osobních údajů popisují způsob, jakým naše webové stránky shromažďují, používají a uchovávají osobní údaje. Tyto zásady ochrany osobních údajů mohou být občas revizovány a aktualizovány. Vaše užití našich webových stránek je považováno za vaše souhlasné přijetí těchto zásad.
 				</p>
 

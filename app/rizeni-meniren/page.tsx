@@ -140,7 +140,7 @@ export default function RizeniPage() {
                     >
                     </SlideshowLightbox>
 
-                    <Splide className=" " options={{
+                    <Splide className="" options={{
                         type: 'loop',
                         perPage: 1,
                         aucenterlay: true,
