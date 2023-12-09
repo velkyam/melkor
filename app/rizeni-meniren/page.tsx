@@ -143,7 +143,7 @@ export default function RizeniPage() {
                     >
                     </SlideshowLightbox>
 
-                    <Splide className="" options={{
+                    <Splide  options={{
                         type: 'loop',
                         perPage: 1,
                         autoplay: true,
@@ -152,6 +152,7 @@ export default function RizeniPage() {
                         speed: 520,
                         interval: 7000,
                         pagination: false,
+                        heightRatio: 0.5625,
                     }}
                         aria-label="Schématické zobrazení technologie">
                         <SplideSlide>
@@ -205,7 +206,7 @@ export default function RizeniPage() {
                         speed: 520,
                         interval: 7000,
                         pagination: false,
-                  
+                        heightRatio: 0.5625,
 
 
                     }}
@@ -262,8 +263,7 @@ export default function RizeniPage() {
                         interval: 7000,
                         width: '100%',
                         pagination: false,
-
-
+                        heightRatio: 0.5625,
 
                     }}
                         >
@@ -319,7 +319,7 @@ export default function RizeniPage() {
                         interval: 7000,
                         width: '100%',
                         pagination: false,
-
+                        heightRatio: 0.5625,
 
                     }}
                         >
@@ -368,7 +368,7 @@ export default function RizeniPage() {
                         interval: 7000,
                         width: '100%',
                         pagination: false,
-
+                        heightRatio: 0.5625,
 
                     }}
                         >
