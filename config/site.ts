@@ -10,7 +10,7 @@ export const siteConfig = {
     },
 	{
 		label: "Řízení měníren",
-		href: "/rizenimeniren",
+		href: "/rizeni-meniren",
 	  },
     {
       label: "O nás",
@@ -33,7 +33,7 @@ export const siteConfig = {
 		  },
 		{
 			label: "Řízení měníren",
-			href: "/rizenimeniren",
+			href: "/rizeni-meniren",
 		  },
 		  {
 			label: "O nás",
@@ -53,6 +53,7 @@ export const siteConfig = {
 	main: "/",
 	kontakt: "/kontakt",
 	melkorvisum: "/melkorvisum",
-	rizeni: "/rizenimeniren"
+	rizeni: "/rizeni-meniren",
+	ochrana: "/ochrana-udaju"
 	},
 };

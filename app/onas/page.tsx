@@ -13,7 +13,7 @@ export default function AboutPage() {
 
 					</CardHeader> */}
 					<CardBody>
-						<p className="text-left">Melkor Software je moderní IT firma, která Vám nabízí komplexní softwarová řešení na klíč. Naše softwarové řešení je postavené na nejnovějších technologiích a vychází z moderních principů tvorby uživatelských rozhraní, díky čemuž je stabilní, bezpečné a uživatelsky přívětivé. Máme zkušenosti s řadou různých protokolů a technologií, není proto problém náš systém zakomponovat do existujících provozů. Jsme vášnivý tým profesionálů s rozsáhlým spektrem dovedností od obchodních znalostí po technickou vynalézavost. Společně jsme vytvořili silnou, oddanou a kreativní pracovní atmosféru, která nám umožňuje neustále inovovat a přinášet našim klientům efektivní řešení.</p>
+						<p className="text-left">Melkor Software je moderní IT firma, která Vám nabízí komplexní softwarová řešení na klíč. Naše softwarové řešení jsou postavená na nejnovějších technologiích a vychází z moderních principů tvorby uživatelských rozhraní, díky čemuž jsou stabilní, bezpečná a uživatelsky přívětivá. Máme zkušenosti s řadou různých protokolů a technologií, není proto problém náš systém zakomponovat do jakéhokoli existujícího provozu. Společně tvoříme tým s širokou paletou dovedností v oblastech elektrotechniky, programování a řízení komplexních projektů, díky čemuž jsme schopni našim klientům dodávat řešení flexibilně a efektivně.</p>
 
 					</CardBody>
 				</Card>
@@ -22,7 +22,7 @@ export default function AboutPage() {
 
 
 			<div className={title()}>Náš tým</div>
-			<div className="flex flex-col md:grid grid-rows-2 grid-cols-2 gap-12 lg:my-20 mt-20">
+			<div className="flex flex-col md:grid grid-cols-2 gap-12 mt-20">
 
 				<Card isBlurred className=" py-6 px-6 dark:border dark:border-slate-700">
 					<CardHeader className="flex flex-col md:flex-row gap-6">
@@ -56,9 +56,13 @@ export default function AboutPage() {
 						</div>
 					</CardHeader>
 					<CardBody>
-						<p>Absolvent Právnické fakulty Univerzity Karlovy, právník se specializací na obchodní akviziční právo a právo veřejných zakázek.</p>
+						<p>Absolvent Právnické fakulty Univerzity Karlovy, odpovídá za právní, finanční a daňové záležitosti společnosti, právník se zkušenostmi z advokacie a mezinárodní investiční skupiny se specializací na obchodní, finanční a akviziční právo.</p>
 					</CardBody>
 				</Card>
+
+				</div>
+
+				<div className="flex flex-col md:grid grid-cols-2 gap-12 my-12">
 				<Card isBlurred className="py-6 px-6 dark:border dark:border-slate-700">
 					<CardHeader className="flex flex-col md:flex-row gap-6">
 						<Avatar isBordered radius="full" className="w-24 h-24 text-large" src="/dan3.webp" />
@@ -72,13 +76,11 @@ export default function AboutPage() {
 							</Link>
 						</div>
 					</CardHeader>
-					<CardBody>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-					</CardBody>
+
 				</Card>
 				<Card isBlurred className="py-6 px-6 dark:border dark:border-slate-700">
 					<CardHeader className="flex flex-col md:flex-row gap-6">
-						<Avatar isBordered radius="full" className="w-24 h-24 text-large" src="/robert.webp" />
+						<Avatar isBordered radius="full" className="w-24 h-24 text-large" src="/dalik.webp" />
 						<div className="flex flex-col items-center text-center md:items-start md:text-left">
 							<p className="text-xl">Dalibor Till</p>
 							<p className="text-default-500">programátor, komunikace a vestavné systémy</p>
@@ -89,15 +91,14 @@ export default function AboutPage() {
 							</Link>
 						</div>
 					</CardHeader>
-					<CardBody>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-					</CardBody>
+
 				</Card>
 		
-			</div>
+		
 
 
 
+		</div>
 		</div>
 
 	);

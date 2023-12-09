@@ -5,7 +5,7 @@ export default function ContactForm() {
   const [state, handleSubmit] = useForm("xoqoryke");
 
   if (state.succeeded) {
-    return <p>Thanks for your submission!</p>;
+    return <p>Děkujeme za dotaz. Brzy se vám ozveme!</p>;
   }
 
   return (

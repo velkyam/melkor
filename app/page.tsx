@@ -17,7 +17,7 @@ export default function Home() {
 	return (
 		<section className="flex flex-col items-center justify-center  ">
 			{/* hero row div */}
-			<div className="flex justify-center bg-center bg-cover bg-no-repeat bg-hero-pattern dark:border-b border-slate-700 shadow-sm w-full py-6 md:py-16  "  >
+			<div className="flex justify-center bg-center bg-cover bg-no-repeat bg-hero-pattern dark:border-b border-slate-700 shadow-sm w-full pt-6 md:pt-16  "  >
 
 
 				<div className="flex flex-col-reverse justify-between w-full max-w-7xl  md:flex-row pb-24 px-6"  >
@@ -68,9 +68,9 @@ export default function Home() {
 
 			<div className="container flex flex-col items-center  w-full max-w-7xl px-6 pt-20 md:pt-32 ">
 				<h1 className={title({ class: "mb-10", size: "lg" })}>MelkorVisum</h1>
-				<h2 className={subtitle({ class: "mb-20 w-full md:max-w-5xl" })}>Naším hlavním produktem je plně přizpůsobitelná a integrovaná SCADA platforma MelkorVisum, která nám umožňuje efektivně vyvíjet vysoce spolehlivé vizualizační a řídicí systémy pro průmyslové, energetické či dopravní provozy.</h2>
+				<h2 className={subtitle({ class: "mb-20 w-full md:text-center max-w-5xl" })}>Naším hlavním produktem je plně přizpůsobitelná a integrovaná SCADA platforma MelkorVisum, která nám umožňuje efektivně vyvíjet vysoce spolehlivé vizualizační a řídicí systémy pro průmyslové, energetické či dopravní provozy.</h2>
 				{/* card row */}
-				<div className="flex flex-col w-full max-w-7xl space-y-4  md:space-y-0 md:grid grid-rows-3 md:grid-rows-1 grid-cols-3 gap-6">
+				<div className="flex flex-col w-full max-w-7xl space-y-4  md:space-y-0 md:grid grid-rows-3 md:grid-rows-1 grid-cols-3 gap-10">
 					<Card className=" height-256">
 						<Image
 							removeWrapper
@@ -152,7 +152,7 @@ export default function Home() {
 							Podívejte se na naše řešení v praxi
 						</Link>
 					</div>
-					<Image className="w-full max-w-xl mt-10 md:mt-0 dark:shadow-light"
+					<Image className="w-full max-w-xl mt-20 md:mt-0 dark:shadow-light"
 						radius="sm"
 						alt="Card background"
 						src="/display2.webp"
