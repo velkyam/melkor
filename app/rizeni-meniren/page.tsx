@@ -119,15 +119,16 @@ export default function RizeniPage() {
         <div className="flex flex-col items-center mx-auto w-full ">
             <div className="w-full flex flex-col items-center pt-20">
                 <h1 className={title()}>Řízení měníren</h1>
-                <div className="flex flex-col items-center max-w-7xl lg:px-6">
-                    <Card shadow="sm" isBlurred className="mt-20 px-6 py-10 dark:border dark:border-slate-700">
+                <div className="flex flex-col items-center max-w-7xl lg:px-6 pt-20">
+  {/*                   <Card  isBlurred className="mt-20 px-6 py-10 dark:border dark:border-slate-700">
                         <p className="text-left"> Dodáváme moduly pro dálkové i místní řízení měníren MHD, na kterých v současnosti běží řada měníren v několika městech. Své systémy stavíme na platformě MelkorVisum, o jejíchž výhodách si můžete přečíst <Link href={siteConfig.links.melkorvisum} > více zde</Link>. Níže se můžete podívat na podporované funkce a silné stránky našeho řešení.</p>
-                    </Card>
+                    </Card> */}
+                        <p className="text-left"> Dodáváme moduly pro dálkové i místní řízení měníren MHD, na kterých v současnosti běží řada měníren v několika městech. Své systémy stavíme na platformě MelkorVisum, o jejíchž výhodách si můžete přečíst <Link href={siteConfig.links.melkorvisum} > více zde</Link>. Níže se můžete podívat na podporované funkce a silné stránky našeho řešení.</p>
 
                 </div>
     
-            <div className="flex flex-col w-full max-w-7xl lg:px-6 space-y-4 py-20 md:pb-32 md:space-y-0 md:grid grid-cols-3 gap-12 lg:gap-12 border-b border-slate-200 dark:border-slate-700 ">             
-                <Card shadow="sm" radius="sm">
+            <div className="flex flex-col w-full max-w-7xl lg:px-6 space-y-4 py-20 md:py-32 md:space-y-0 md:grid grid-cols-3 gap-12 lg:gap-16 border-b border-slate-200 dark:border-slate-700 ">             
+                <Card  radius="sm">
                     <SlideshowLightbox
                         theme="lightbox"
                         modalClose="clickOutside"
@@ -143,7 +144,7 @@ export default function RizeniPage() {
                     >
                     </SlideshowLightbox>
 
-                    <Splide  options={{
+                    <Splide className=""  options={{
                         type: 'loop',
                         perPage: 1,
                         autoplay: true,
@@ -172,7 +173,7 @@ export default function RizeniPage() {
                     </CardBody>
                 </Card>
        
-                <Card shadow="sm" radius="sm">
+                <Card  radius="sm">
                     <LightImage modalClose="clickOutside" image={{ src: "/2_1.webp", title: "melkorvisum_zobrazeni" }} removeWrapperradius="none"  aria-label="Zobrazení technologie"/>
                     <CardBody className="flex flex-col py-10 px-6 space-y-2 items-start text-left ">
                         <h2 className="font-semibold text-lg">Schéma trakční sítě</h2>
@@ -181,7 +182,7 @@ export default function RizeniPage() {
                 </Card>
      
 
-                <Card shadow="sm" radius="sm">
+                <Card  radius="sm">
                     <SlideshowLightbox
                         theme="lightbox"
                         modalClose="clickOutside"
@@ -197,7 +198,7 @@ export default function RizeniPage() {
                     >
                     </SlideshowLightbox>
 
-                    <Splide  options={{
+                    <Splide  className="" options={{
                         type: 'loop',
                         perPage: 1,
                         autoplay: true,
@@ -228,7 +229,7 @@ export default function RizeniPage() {
                     </CardBody>
                 </Card>
 
-                <Card shadow="sm" radius="sm">
+                <Card  radius="sm">
                 <LightImage modalClose="clickOutside" image={{ src: "/4_1.webp", title: "melkorvisum_zobrazeni" }} removeWrapper radius="none" aria-label="Zobrazení technologie"/>
 
                     <CardBody className="flex flex-col py-10 px-6 space-y-2 items-start text-left ">
@@ -236,7 +237,7 @@ export default function RizeniPage() {
                         <p className="text-base">Obsahují detailní informace o stavu, meřené hodnoty, povely k odeslání atd.</p>
                     </CardBody>
                 </Card>
-                <Card shadow="sm" radius="sm">
+                <Card  radius="sm">
                     <SlideshowLightbox
                         theme="lightbox"
                         modalClose="clickOutside"
@@ -253,7 +254,7 @@ export default function RizeniPage() {
                     >
                     </SlideshowLightbox>
 
-                    <Splide  options={{
+                    <Splide className="" options={{
                         type: 'loop',
                         perPage: 1,
                         autoplay: true,
@@ -284,7 +285,7 @@ export default function RizeniPage() {
                     </CardBody>
                 </Card>
 
-                <Card shadow="sm" radius="sm">
+                <Card  radius="sm">
                     <LightImage modalClose="clickOutside" image={{ src: "/6_1.webp", title: "melkorvisum_zobrazeni" }} removeWrapper radius="none" aria-label="Zobrazení technologie"/>
                     <CardBody className="flex flex-col py-10 px-6 space-y-2 items-start text-left ">
                         <h2 className="font-semibold text-lg">Dynamické rozložení obsahu</h2>
@@ -292,7 +293,7 @@ export default function RizeniPage() {
                     </CardBody>
                 </Card>
 
-                <Card shadow="sm" radius="sm">
+                <Card  radius="sm">
                 <SlideshowLightbox
                         theme="lightbox"
                         modalClose="clickOutside"
@@ -309,7 +310,7 @@ export default function RizeniPage() {
                     >
                     </SlideshowLightbox>
 
-                    <Splide  options={{
+                    <Splide className="" options={{
                         type: 'loop',
                         perPage: 1,
                         autoplay: true,
@@ -341,7 +342,7 @@ export default function RizeniPage() {
                     </CardBody>
                 </Card>
 
-                <Card shadow="sm" radius="sm">
+                <Card  radius="sm">
                     <SlideshowLightbox
                         theme="lightbox"
                         modalClose="clickOutside"
@@ -389,7 +390,7 @@ export default function RizeniPage() {
                         <p className="text-base"></p>
                     </CardBody>
                 </Card>
-                <Card shadow="sm" radius="sm">
+                <Card className="" radius="sm">
                     <LightImage modalClose="clickOutside" image={{ src: "/9_1.webp", title: "melkorvisum_zobrazeni" }} removeWrapper radius="none" aria-label="Zobrazení technologie"/>
                     <CardBody className="flex flex-col py-10 px-6 space-y-2 items-start text-left ">
                         <h2 className="font-semibold text-lg">Energetické limity</h2>

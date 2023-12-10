@@ -7,7 +7,7 @@ import { Link } from "@nextui-org/link"
 
 export default function BlogPage() {
 	return (
-		<div className="flex justify-center w-full bg-center bg-cover bg-no-repeat bg-contact-pattern">
+		<div className="flex justify-center w-full lg:bg-none bg-center bg-cover bg-no-repeat bg-contact-pattern">
 			<div className="w-full flex flex-col max-w-7xl items-center justify-center px-6 py-20">
 
 				<h1 className={title()}>Kontaktujte nás</h1>

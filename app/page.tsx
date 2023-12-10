@@ -57,8 +57,7 @@ export default function Home() {
 							Více o našem řešení
 						</Button>
 					</div>
-					<div className="inline-block max-w-2xl pb-10">
-						{/* <video autoPlay loop muted playsInline poster="/poster.webp" src={"/Untitled.mp4"} /> */}
+					<div className="max-w-2xl h-fit shadow-xl mb-10">
 						<video autoPlay loop muted playsInline poster="/poster.webp">
 							<source src="/Untitled.webm" type="video/webm" />
 							<source src="/Untitled.mp4" type="video/mp4" />
@@ -219,7 +218,7 @@ export default function Home() {
 				<div className="flex flex-col w-full max-w-7xl items-center py-20 md:py-32 border-b border-slate-200 dark:border-slate-700">
 					<div className={title({ class: "mb-20 lg:mb-24", size: "lg" })}>Naše úspěchy</div>
 					<div className="flex flex-col md:grid grid-rows-1 grid-cols-3 gap-12">
-						<Card className=" py-10 px-6">
+						<Card className="py-10 px-4 lg:px-6">
 							<CardHeader className="flex">
 								<h2 className="font-semibold text-large text-left">Energetický dispečink Dopravní společnosti Zlín a Otrokovice</h2>
 							</CardHeader>
@@ -227,14 +226,14 @@ export default function Home() {
 								<p>Na naší technologii běží dispečink, který má na starosti napájení trolejbusů v celém Zlíně a Otrokovicích. Zajišťujeme nepřetržitý provoz deseti měníren a jejich místní i dálkové řízení, které jsme dodali v rámci dvou zakázek ve spolupráci s firmou OHLA ŽS.</p>
 							</CardBody>
 						</Card>
-						<Card className=" py-10 px-6">
+						<Card className="py-10 px-4 lg:px-6">
 							<CardHeader className="flex">
 								<h2 className="font-semibold text-large text-left">Místní řízení měnírny Heršpice a transformátorové stanice Slatina		</h2>			</CardHeader>
 							<CardBody>
 								<p>Pro Dopravní podnik města Brna jsme dodali modernizovaný řídicí systém, který ovládá stávající technologii. Abychom zajistili plynulé pokračování obsluhy, celý systém byl navržen tak, aby (krom použití moderní techniky) přesně odpovídal řízení předešlému.</p>
 							</CardBody>
 						</Card>
-						<Card className=" py-10 px-6">
+						<Card className="py-10 px-4 lg:px-6">
 							<CardHeader className="flex">
 								<h2 className="font-semibold text-large text-left">Dálkové řízení vytápění Orlovny Brno-Obřany	</h2>				</CardHeader>
 							<CardBody>
