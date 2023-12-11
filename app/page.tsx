@@ -193,9 +193,9 @@ export default function Home() {
 						</div>
 						</motion.div>
 						<motion.div
-							initial={{ opacity: 0, scale:0.85 }}
+							initial={{ opacity: 0, scale:0.75 }}
 							whileInView={{ opacity: 1, scale: 1 }}
-							transition={{ duration: 1, delay: 0.25 }}
+							transition={{ duration: 1.5, delay: 0.25 }}
 							viewport={{ once: true }}
 							className="w-full max-w-xl mt-20 md:mt-0 dark:shadow-light">
 

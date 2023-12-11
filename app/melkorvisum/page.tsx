@@ -47,9 +47,9 @@ export default function DocsPage() {
 						<p className="text-left pt-10 pb-20">S našimi systémy pro vizualizaci a řízení máte možnost monitorovat a ovládat energetické a průmyslové procesy v reálném čase nejen přímo na místě, ale i ze vzdáleného dispečinku. Kromě toho nabízíme specializovaná řešení pro třídění a sběr dat, díky kterým můžete efektivně zaznamenávat komplexní data z různých zařízení. Tato data pak mohou být analyzována pro identifikaci problémů a optimalizaci provozu.</p>
 		</motion.div>
 					</div>
-					<motion.div initial={{ opacity: 0, scale: 0.85 }}
+					<motion.div initial={{ opacity: 0, scale: 0.75 }}
 					whileInView={{ opacity: 1, scale: 1 }}
-					transition={{ duration: 1 }}
+					transition={{ duration: 1.5, delay: 0.25 }}
 					viewport={{ once: true }}
 					className=" w-full col-span-12 lg:col-end-13 lg:col-span-7">
 						<Image removeWrapper alt="MelkorVisum_screenshot" src="/macbook2.webp"></Image>
@@ -58,9 +58,9 @@ export default function DocsPage() {
 
 				<div className="flex flex-col-reverse lg:grid grid-cols-12 lg:grid-rows-1 py-20 md:py-32 justify-center items-center border-b border-slate-200 dark:border-slate-700 items-center">
 					<motion.div
-						initial={{ opacity: 0, scale: 0.85 }}
+						initial={{ opacity: 0, scale: 0.75 }}
 						whileInView={{ opacity: 1, scale: 1 }}
-						transition={{ duration: 1, }}
+						transition={{ duration: 1.5, delay: 0.25 }}
 						viewport={{ once: true }}
 						className="dark:shadow-light max-w-2xl w-full col-span-12 lg:col-span-6" >
 						<Image removeWrapper alt="MelkorVisum_screenshot" shadow="lg" radius="sm" src="/display_spotreba.webp"></Image>
