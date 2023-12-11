@@ -1,13 +1,11 @@
 'use client'
 import { Link } from "@nextui-org/link";
-import { Button } from "@nextui-org/button";
 import { ThemeSwitch } from "@/components/theme-switch";
 import { MelkorLogo } from "@/components/icons";
 
 import NextLink from "next/link";
 
 import React from "react";
-import { siteConfig } from "@/config/site";
 
 export const Footer = () => {
 
@@ -18,22 +16,22 @@ export const Footer = () => {
                                         <ul className="flex flex-col items-start md:flex-row flex-wrap ">
 
                                                 <li>
-                                                        <Link className="md:mr-10 text-default-600 text-sm" href='/'><p>Hlavní stránka</p></Link>
+                                                        <Link className="md:mr-10 text-default-600 lg:text-sm py-2" href='/'><p>Hlavní stránka</p></Link>
                                                 </li>
                                                 <li>
-                                                        <Link className="md:mr-10 text-default-600 text-sm" href='/melkorvisum'>MelkorVisum</Link>
+                                                        <Link className="md:mr-10 text-default-600 lg:text-sm py-2" href='/melkorvisum'>MelkorVisum</Link>
                                                 </li>
                                                 <li>
-                                                        <Link className="md:mr-10 text-default-600 text-sm" href="/rizeni-meniren">Řízení měníren</Link>
+                                                        <Link className="md:mr-10 text-default-600 lg:text-sm py-2" href="/rizeni-meniren">Řízení měníren</Link>
                                                 </li>
                                                 <li>
-                                                        <Link className="md:mr-10 text-default-600 text-sm" href="/onas">O nás</Link>
+                                                        <Link className="md:mr-10 text-default-600 lg:text-sm py-2" href="/onas">O nás</Link>
                                                 </li>
                                                 <li>
-                                                        <Link className="md:mr-10 text-default-600 text-sm" href='/reference'>Reference</Link>
+                                                        <Link className="md:mr-10 text-default-600 lg:text-sm py-2" href='/reference'>Reference</Link>
                                                 </li>
                                                 <li>
-                                                        <Link className="md:mr-10 text-default-600 text-sm" href='/kontakt'>Kontaktujte nás</Link>
+                                                        <Link className="md:mr-10 text-default-600 lg:text-sm py-2" href='/kontakt'>Kontaktujte nás</Link>
                                                 </li>
 
                                                 <ThemeSwitch className="my-4 md:my-0" />

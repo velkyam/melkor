@@ -33,11 +33,9 @@ export const Navbar = () => {
 			setIsMenuOpen(!isMenuOpen)
 	}
 
-
-
 	return (
-		<NextUINavbar isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen} maxWidth="xl" position="sticky" className="fixed top-0 shadow-sm dark:border-b border-slate-700">
-			<NavbarContent className="basis-1/5 sm:basis-full" justify="start">
+		<NextUINavbar isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen} position="sticky" maxWidth="xl" className="top-0 left-0 shadow-sm dark:border-b border-slate-700 " >
+			<NavbarContent className="basis-1/5 md:basis-full" justify="start">
 				<NavbarBrand as="li" className="gap-3 max-w-fit">
 					<NextLink className="flex justify-start items-center gap-1" href="/" onClick={closeMenmenuogo}>
 						<MelkorLogo aria-label="Melkor_Software_logo" />
@@ -47,7 +45,7 @@ export const Navbar = () => {
 			</NavbarContent>
 
 			<NavbarContent
-				className="hidden sm:flex basis-1/5 sm:basis-full"
+				className="hidden md:flex basis-1/5 sm:basis-full"
 				justify="end"
 			>
 				<NavbarItem className="flex items-center">
@@ -82,10 +80,10 @@ export const Navbar = () => {
 				</NavbarItem>
 			</NavbarContent>
 
-			<NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
+			<NavbarContent className="md:hidden basis-1 pl-4" justify="end">
 				<NavbarMenuToggle
 					aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-					className="sm:hidden"
+					className="md:hidden"
 				/>
 			</NavbarContent>
 

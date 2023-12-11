@@ -1,15 +1,28 @@
+'use client'
 import { title } from "@/components/primitives";
 import { Card, CardHeader, CardBody } from "@nextui-org/card";
 import { GetStarted } from "@/components/get-started";
+import { useEffect } from "react";
+import { motion } from "framer-motion";
 
 export default function ReferencePage() {
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	  }, []);
 	return (
-		<div>
+		<motion.div initial={{ opacity: 0}}
+		whileInView={{ opacity: 1 }}
+		transition={{ duration: 0.5 }}>
 			{/* Our successes */}
 			<div className="flex flex-col w-full max-w-7xl items-center py-20 md:pb-32 border-b border-slate-200 dark:border-slate-700">
 				<div className={title({ class: "mb-20", size: "lg" })}>Reference</div>
 				<div className="flex flex-col md:grid grid-rows-1 grid-cols-3 gap-12">
-					<Card isBlurred className="py-10 px-4 lg:px-6 dark:border dark:border-slate-700">
+				<motion.div
+							initial={{ opacity: 0 }}
+							whileInView={{ opacity: 1, scale: 1 }}
+							transition={{ duration: 1, delay: 0.25 }}
+							viewport={{ once: true }}>
+					<Card isBlurred className="py-10 px-4 lg:px-6 dark:border dark:border-slate-700 h-full">
 						<CardHeader className="flex">
 							<h4 className="font-semibold text-large text-left">Energetický dispečink Dopravní společnosti Zlín a Otrokovice</h4>
 						</CardHeader>
@@ -17,14 +30,26 @@ export default function ReferencePage() {
 							<p>Na naší technologii běží dispečink, který má na starosti napájení trolejbusů v celém Zlíně a Otrokovicích. Zajišťujeme nepřetržitý provoz deseti měníren a jejich místní i dálkové řízení, které jsme dodali v rámci dvou zakázek ve spolupráci s firmou OHLA ŽS.</p>
 						</CardBody>
 					</Card>
-					<Card isBlurred className=" py-10 px-4 lg:px-6 dark:border dark:border-slate-700">
+					</motion.div>
+					<motion.div
+							initial={{ opacity: 0 }}
+							whileInView={{ opacity: 1, scale: 1 }}
+							transition={{ duration: 1, delay: 0.25 }}
+							viewport={{ once: true }}>
+					<Card isBlurred className=" py-10 px-4 lg:px-6 dark:border dark:border-slate-700 h-full">
 						<CardHeader className="flex">
 							<h4 className="font-semibold text-large text-left">Místní řízení měnírny Heršpice a transformátorové stanice Slatina		</h4>			</CardHeader>
 						<CardBody>
 						<p>Pro Dopravní podnik města Brna jsme dodali modernizovaný řídicí systém, který ovládá stávající technologii. Abychom zajistili plynulé pokračování obsluhy, celý systém byl navržen tak, aby (krom použití moderní techniky) přesně odpovídal řízení předešlému.</p>
 						</CardBody>
 					</Card>
-					<Card isBlurred className=" py-10 px-4 lg:px-6 dark:border dark:border-slate-700">
+					</motion.div>
+					<motion.div
+							initial={{ opacity: 0 }}
+							whileInView={{ opacity: 1, scale: 1 }}
+							transition={{ duration: 1, delay: 0.25 }}
+							viewport={{ once: true }}>
+					<Card isBlurred className=" py-10 px-4 lg:px-6 dark:border dark:border-slate-700 h-full">
 						<CardHeader className="flex">
 							<h4 className="font-semibold text-large text-left">Dálkové řízení vytápění Orlovny Brno-Obřany	</h4>				</CardHeader>
 						<CardBody>
@@ -32,10 +57,11 @@ export default function ReferencePage() {
 								Pro jednotu Orla Brno-Obřany jsme rozšířili existující řízení kotelny o soustavu bezdrátových snímačů teploty a webové rozhraní, které umožňuje sledování teploty, vzdálené ovládání kotlů i plánování automatického vytápění.</p>
 						</CardBody>
 					</Card>
+					</motion.div>
 				</div>
 			</div>
 			{/* Get started */}
 			<GetStarted />
-		</div>
+		</motion.div>
 	);
 }

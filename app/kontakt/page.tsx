@@ -3,11 +3,20 @@ import { title } from "@/components/primitives";
 import ContactForm from "../../components/contact-form";
 import { Card } from "@nextui-org/card";
 import { Link } from "@nextui-org/link"
+import { motion } from "framer-motion";
+import { useEffect } from "react";
 
 
 export default function BlogPage() {
+	useEffect(() => {
+		window.scrollTo(0, 1);
+	  }, []);
+
 	return (
-		<div className="flex justify-center w-full lg:bg-none bg-center bg-cover bg-no-repeat bg-contact-pattern">
+		<motion.div initial={{ opacity: 0}}
+		whileInView={{ opacity: 1 }}
+		transition={{ duration: 0.5 }}>
+		<div className="flex justify-center w-full">
 			<div className="w-full flex flex-col max-w-7xl items-center justify-center px-6 py-20">
 
 				<h1 className={title()}>Kontaktujte nás</h1>
@@ -49,5 +58,6 @@ export default function BlogPage() {
 				</div>
 			</div>
 		</div>
+		</motion.div>
 	);
 }

@@ -2,7 +2,7 @@ import { useForm, ValidationError } from "@formspree/react";
 import { Card } from "@nextui-org/react";
 import { Button } from "@nextui-org/react";
 export default function ContactForm() {
-  const [state, handleSubmit] = useForm("xoqoryke");
+  const [state, handleSubmit] = useForm("mknldpoy");
 
   if (state.succeeded) {
     return <p>Děkujeme za dotaz. Brzy se vám ozveme!</p>;

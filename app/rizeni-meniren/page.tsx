@@ -12,6 +12,8 @@ import { useEffect, useState } from "react";
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import { Grid } from '@splidejs/splide-extension-grid';
 import { GetStarted } from "@/components/get-started";
+import { motion } from "framer-motion";
+
 
 
 
@@ -113,9 +115,15 @@ export default function RizeniPage() {
         initLightboxJS("9C64-9D7D-1161-2794", "Individual");
     });
 
+    useEffect(() => {
+		window.scrollTo(0, 1);
+	  }, []);
 
 
     return (
+        <motion.div initial={{ opacity: 0}}
+		whileInView={{ opacity: 1 }}
+		transition={{ duration: 0.5 }}>
         <div className="flex flex-col items-center mx-auto w-full ">
             <div className="w-full flex flex-col items-center pt-20">
                 <h1 className={title()}>Řízení měníren</h1>
@@ -127,8 +135,14 @@ export default function RizeniPage() {
 
                 </div>
     
-            <div className="flex flex-col w-full max-w-7xl lg:px-6 space-y-4 py-20 md:py-32 md:space-y-0 md:grid grid-cols-3 gap-12 lg:gap-16 border-b border-slate-200 dark:border-slate-700 ">             
-                <Card  radius="sm">
+            <div className="flex flex-col w-full max-w-7xl lg:px-6 space-y-4 py-20 md:py-32 md:space-y-0 md:grid grid-cols-3 gap-12 lg:gap-16 border-b border-slate-200 dark:border-slate-700 ">   
+            <motion.div
+							initial={{ opacity: 0 }}
+							whileInView={{ opacity: 1, scale: 1 }}
+							transition={{ duration: 1, delay: 0.25 }}
+							viewport={{ once: true }}>
+                                        
+                <Card  className="h-full" radius="sm">
                     <SlideshowLightbox
                         theme="lightbox"
                         modalClose="clickOutside"
@@ -172,17 +186,27 @@ export default function RizeniPage() {
                         <p className="text-base">Zachycuje stav prvků v reálném čase, přítomnost napětí na vodičích apod.</p>
                     </CardBody>
                 </Card>
-       
-                <Card  radius="sm">
+                </motion.div>
+                <motion.div
+							initial={{ opacity: 0 }}
+							whileInView={{ opacity: 1, scale: 1 }}
+							transition={{ duration: 1, delay: 0.25 }}
+							viewport={{ once: true }}>
+                <Card className="h-full" radius="sm">
                     <LightImage modalClose="clickOutside" image={{ src: "/2_1.webp", title: "melkorvisum_zobrazeni" }} removeWrapperradius="none"  aria-label="Zobrazení technologie"/>
                     <CardBody className="flex flex-col py-10 px-6 space-y-2 items-start text-left ">
                         <h2 className="font-semibold text-lg">Schéma trakční sítě</h2>
                         <p className="text-base">Zobrazení všech měníren a napájených úseků</p>
                     </CardBody>
                 </Card>
-     
-
-                <Card  radius="sm">
+                </motion.div>  
+                <motion.div
+							initial={{ opacity: 0 }}
+							whileInView={{ opacity: 1, scale: 1 }}
+							transition={{ duration: 1, delay: 0.25 }}
+							viewport={{ once: true }}>
+                                        
+                <Card className="h-full" radius="sm">
                     <SlideshowLightbox
                         theme="lightbox"
                         modalClose="clickOutside"
@@ -228,8 +252,13 @@ export default function RizeniPage() {
                         <p className="text-base">Podporuje generování alarmů i dalších událostí, kvitace, podrobné filtrování i vyhledávání v historických datech</p>
                     </CardBody>
                 </Card>
-
-                <Card  radius="sm">
+                </motion.div> 
+                <motion.div
+							initial={{ opacity: 0 }}
+							whileInView={{ opacity: 1, scale: 1 }}
+							transition={{ duration: 1, delay: 0.25 }}
+							viewport={{ once: true }}>
+                <Card className="h-full" radius="sm">
                 <LightImage modalClose="clickOutside" image={{ src: "/4_1.webp", title: "melkorvisum_zobrazeni" }} removeWrapper radius="none" aria-label="Zobrazení technologie"/>
 
                     <CardBody className="flex flex-col py-10 px-6 space-y-2 items-start text-left ">
@@ -237,7 +266,13 @@ export default function RizeniPage() {
                         <p className="text-base">Obsahují detailní informace o stavu, meřené hodnoty, povely k odeslání atd.</p>
                     </CardBody>
                 </Card>
-                <Card  radius="sm">
+                </motion.div>
+                <motion.div
+							initial={{ opacity: 0 }}
+							whileInView={{ opacity: 1, scale: 1 }}
+							transition={{ duration: 1, delay: 0.25 }}
+							viewport={{ once: true }}>
+                <Card className="h-full" radius="sm">
                     <SlideshowLightbox
                         theme="lightbox"
                         modalClose="clickOutside"
@@ -284,16 +319,27 @@ export default function RizeniPage() {
                         <p className="text-base">Usnadňuje komunikaci mezi servisem a dispečinkem</p>
                     </CardBody>
                 </Card>
-
-                <Card  radius="sm">
+                </motion.div>
+                <motion.div
+							initial={{ opacity: 0 }}
+							whileInView={{ opacity: 1, scale: 1 }}
+							transition={{ duration: 1, delay: 0.25 }}
+							viewport={{ once: true }}>
+                <Card className="h-full" radius="sm">
                     <LightImage modalClose="clickOutside" image={{ src: "/6_1.webp", title: "melkorvisum_zobrazeni" }} removeWrapper radius="none" aria-label="Zobrazení technologie"/>
                     <CardBody className="flex flex-col py-10 px-6 space-y-2 items-start text-left ">
                         <h2 className="font-semibold text-lg">Dynamické rozložení obsahu</h2>
                         <p className="text-base">Aplikaci lze rozložit do libovolného počtu oken různé velikosti</p>
                     </CardBody>
                 </Card>
+                </motion.div>
+                <motion.div
+							initial={{ opacity: 0 }}
+							whileInView={{ opacity: 1, scale: 1 }}
+							transition={{ duration: 1, delay: 0.25 }}
+							viewport={{ once: true }}>
 
-                <Card  radius="sm">
+                <Card className="h-full" radius="sm">
                 <SlideshowLightbox
                         theme="lightbox"
                         modalClose="clickOutside"
@@ -341,8 +387,13 @@ export default function RizeniPage() {
                         <p className="text-base">Do technologie přidáno jediné PLC</p>
                     </CardBody>
                 </Card>
-
-                <Card  radius="sm">
+                </motion.div>
+                <motion.div
+							initial={{ opacity: 0 }}
+							whileInView={{ opacity: 1, scale: 1 }}
+							transition={{ duration: 1, delay: 0.25 }}
+							viewport={{ once: true }}>
+                <Card className="h-full" radius="sm">
                     <SlideshowLightbox
                         theme="lightbox"
                         modalClose="clickOutside"
@@ -390,16 +441,25 @@ export default function RizeniPage() {
                         <p className="text-base"></p>
                     </CardBody>
                 </Card>
-                <Card className="" radius="sm">
+                </motion.div>
+                <motion.div
+							initial={{ opacity: 0 }}
+							whileInView={{ opacity: 1, scale: 1 }}
+							transition={{ duration: 1, delay: 0.25 }}
+							viewport={{ once: true }}>
+                <Card className="h-full" radius="sm">
                     <LightImage modalClose="clickOutside" image={{ src: "/9_1.webp", title: "melkorvisum_zobrazeni" }} removeWrapper radius="none" aria-label="Zobrazení technologie"/>
                     <CardBody className="flex flex-col py-10 px-6 space-y-2 items-start text-left ">
                         <h2 className="font-semibold text-lg">Energetické limity</h2>
                         <p className="text-base">Zobrazuje rozložení spotřeby a hlídá překročení nastavených limitů</p>
                     </CardBody>
                 </Card>
+                </motion.div>
+              
                 </div>
             <GetStarted />
             </div>
         </div>
+        </motion.div>
     );
 }
