@@ -23,7 +23,7 @@ export default function Home() {
 		<motion.div initial={{ opacity: 0 }}
 			whileInView={{ opacity: 1 }}
 			transition={{ duration: 0.5 }}>
-			<section className="flex flex-col items-center justify-center">
+			<section className="flex flex-col items-center justify-center ">
 				{/* hero row div */}
 				<div className="flex justify-center bg-center bg-cover bg-no-repeat bg-hero-pattern dark:border-b border-slate-700 shadow-sm w-full pt-6 md:pt-16  "  >
 
@@ -54,7 +54,7 @@ export default function Home() {
 
 
 							</div>
-							<div className="backdrop-blur-sm rounded-lg">
+							<div className=" rounded-lg">
 
 								<h2 className={subtitle({ class: "mt-4  w-full" })}>
 									Nabízíme komplexní softwarová řešení na
