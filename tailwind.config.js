@@ -28,7 +28,8 @@ module.exports = {
         'hero-pattern': "url('../public/wave.svg')",
         'contact-pattern':"url('../public/wave7.svg')",
         'about-pattern':"url('../public/wave14.svg')",
-        'melkor-pattern':"url('../public/wave18.svg')",
+        'melkor-pattern':"url('../public/hex2.svg')",
+        'hero-pattern2':"url('../public/wave1.svg')",
         'melkor-pattern2':"url('../public/melkor12.svg')",
       },
       colors:{

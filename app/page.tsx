@@ -25,7 +25,7 @@ export default function Home() {
 			transition={{ duration: 0.5 }}>
 			<section className="flex flex-col items-center justify-center ">
 				{/* hero row div */}
-				<div className="flex justify-center bg-center bg-cover bg-no-repeat bg-hero-pattern dark:border-b border-slate-700 shadow-sm w-full pt-6 md:pt-16  "  >
+				<div className="flex justify-center bg-center bg-cover bg-no-repeat bg-hero-pattern2 lg:bg-hero-pattern dark:border-b border-slate-700 shadow-sm w-full pt-6 md:pt-16  "  >
 
 
 					<div
