@@ -33,6 +33,7 @@ export default function RootLayout({
 }: {
 	children: React.ReactNode;
 }) {
+	
 	return (
 		<html lang="en" suppressHydrationWarning>
 			<head />
@@ -42,7 +43,7 @@ export default function RootLayout({
 					fontSans.variable
 				)}
 			 >
-				<Providers themeProps={{ attribute: "class",/*  defaultTheme: "light"  */}}>
+				<Providers themeProps={{ attribute: "class", defaultTheme:"light"  }}>
 					
 				<div className="relative flex flex-col h-fit">
 
