@@ -14,7 +14,7 @@ export default function ReferencePage() {
 		whileInView={{ opacity: 1 }}
 		transition={{ duration: 0.5 }}>
 			{/* Our successes */}
-			<div className=" md:bg-none bg-left bg-cover bg-melkor-pattern">
+			<div className=" md:bg-none bg-right bg-cover bg-melkor-pattern">
 			<div className="flex flex-col w-full max-w-7xl items-center py-20 md:pb-32 border-b border-slate-200 dark:border-slate-700 px-6">
 				<div className={title({ class: "mb-20", size: "lg" })}>Reference</div>
 				<div className="flex flex-col md:grid grid-rows-1 grid-cols-3 gap-12">
