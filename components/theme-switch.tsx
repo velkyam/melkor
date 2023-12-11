@@ -1,89 +1,93 @@
-"use client";
-
-import { FC } from "react";
+import React, { useState, useEffect } from 'react';
 import { VisuallyHidden } from "@react-aria/visually-hidden";
 import { SwitchProps, useSwitch } from "@nextui-org/switch";
 import { useTheme } from "next-themes";
-import {useIsSSR} from "@react-aria/ssr";
 import clsx from "clsx";
-import React from "react";
 
 import { SunFilledIcon, MoonFilledIcon } from "@/components/icons";
 
 export interface ThemeSwitchProps {
-	className?: string;
-	classNames?: SwitchProps["classNames"];
-	onClick?: () => void; 
-	
-
+    className?: string;
+    classNames?: SwitchProps["classNames"];
+    onClick?: () => void;
 }
 
-export const ThemeSwitch: FC<ThemeSwitchProps> = ({
-	className,
-	classNames,
-	onClick, // Receive onClick prop
-
-	
+export const ThemeSwitch: React.FC<ThemeSwitchProps> = ({
+    className,
+    classNames,
+    onClick,
 }) => {
+    const { theme, setTheme, systemTheme } = useTheme();
+    const [mounted, setMounted] = useState(false);
 
+    useEffect(() => {
+        setMounted(true);
+    }, []);
 
-	const { theme, setTheme } = useTheme();
-  const isSSR = useIsSSR();
+    const currentTheme = theme === 'system' ? systemTheme : theme;
 
-	const onChange = () => {
-		theme === "light" ? setTheme("dark") : setTheme("light");
-	};
+    const onChange = () => {
+        setTheme(currentTheme === 'light' ? 'dark' : 'light');
+    };
 
-	const {
-		Component,
-		slots,
-		isSelected,
-		getBaseProps,
-		getInputProps,
-		getWrapperProps,
-	} = useSwitch({
-		isSelected: theme === "light" || isSSR,
-    "aria-label": `Switch to ${theme === "light" || isSSR ? "dark" : "light"} mode`,
-		onChange,
-	});
+    const {
+        Component,
+        slots,
+        isSelected,
+        getBaseProps,
+        getInputProps,
+        getWrapperProps,
+    } = useSwitch({
+        isSelected: currentTheme === 'light',
+        "aria-label": `Switch to ${currentTheme === 'light' ? 'dark' : 'light'} mode`,
+        onChange,
+    });
 
-	return (
-		<Component
-			{...getBaseProps({
-				className: clsx(
-					"px-px transition-opacity hover:opacity-80 cursor-pointer",
-					className,
-					classNames?.base
-				),
-			})}
-		>
-			<VisuallyHidden>
-				<input {...getInputProps()} />
-			</VisuallyHidden>
-			<div
-				{...getWrapperProps()}
-				className={slots.wrapper({
-					class: clsx(
-						[
-							"w-auto h-auto",
-							"bg-transparent",
-							"rounded-lg",
-							"flex items-center justify-center",
-							"group-data-[selected=true]:bg-transparent",
-							"!text-default-500",
-							"pt-px",
-							"px-0",
-							"mx-0",
-						],
-						classNames?.wrapper
-					),
-				})}
-				onClick={() => {
-					if (onClick) onClick(); // Invoke the onClick function if it exists
-				  }}
-			>
-			 {!isSelected || isSSR ? <SunFilledIcon size={24} /> : <MoonFilledIcon size={24} />}
-			</div>
-		</Component>
-	);
+    const renderIcon = () => {
+        if (!mounted) {
+            return null;  // Or a placeholder/loading state
+        }
+        return currentTheme === 'dark' ? <SunFilledIcon size={24} /> : <MoonFilledIcon size={24} />;
+    };
+
+    return (
+        <Component
+            {...getBaseProps({
+                className: clsx(
+                    "px-px transition-opacity hover:opacity-80 cursor-pointer",
+                    className,
+                    classNames?.base
+                ),
+            })}
+        >
+            <VisuallyHidden>
+                <input {...getInputProps()} />
+            </VisuallyHidden>
+            <div
+                {...getWrapperProps()}
+                className={slots.wrapper({
+                    class: clsx(
+                        [
+                            "w-auto h-auto",
+                            "bg-transparent",
+                            "rounded-lg",
+                            "flex items-center justify-center",
+                            "group-data-[selected=true]:bg-transparent",
+                            "!text-default-500",
+                            "pt-px",
+                            "px-0",
+                            "mx-0",
+                        ],
+                        classNames?.wrapper
+                    ),
+                })}
+                onClick={() => {
+                    if (onClick) onClick();
+                }}
+            >
+                {renderIcon()}
+            </div>
+        </Component>
+    );
 };
+
