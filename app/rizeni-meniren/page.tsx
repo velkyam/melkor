@@ -1,16 +1,13 @@
 'use client'
 import { title } from "@/components/primitives"
-import { Card, CardBody, CardFooter, CardHeader } from "@nextui-org/card";
-import { Button } from "@nextui-org/button";
+import { Card, CardBody } from "@nextui-org/card";
 import { Image } from "@nextui-org/image";
 import { Link } from "@nextui-org/link";
 import { siteConfig } from "@/config/site";
 import { Image as LightImage } from "lightbox.js-react"
 import { SlideshowLightbox, initLightboxJS } from 'lightbox.js-react'
-
 import { useEffect, useState } from "react";
 import { Splide, SplideSlide } from '@splidejs/react-splide';
-import { Grid } from '@splidejs/splide-extension-grid';
 import { GetStarted } from "@/components/get-started";
 import { motion } from "framer-motion";
 
@@ -139,7 +136,7 @@ export default function RizeniPage() {
             <motion.div
 							initial={{ opacity: 0 }}
 							whileInView={{ opacity: 1, scale: 1 }}
-							transition={{ duration: 1, delay: 0.25 }}
+							transition={{ duration: 0.5 }}
 							viewport={{ once: true }}>
                                         
                 <Card  className="h-full" radius="sm">
@@ -190,7 +187,7 @@ export default function RizeniPage() {
                 <motion.div
 							initial={{ opacity: 0 }}
 							whileInView={{ opacity: 1, scale: 1 }}
-							transition={{ duration: 1, delay: 0.25 }}
+							transition={{ duration: 0.5 }}
 							viewport={{ once: true }}>
                 <Card className="h-full" radius="sm">
                     <LightImage modalClose="clickOutside" image={{ src: "/2_1.webp", title: "melkorvisum_zobrazeni" }} removeWrapperradius="none"  aria-label="Zobrazení technologie"/>
@@ -203,7 +200,7 @@ export default function RizeniPage() {
                 <motion.div
 							initial={{ opacity: 0 }}
 							whileInView={{ opacity: 1, scale: 1 }}
-							transition={{ duration: 1, delay: 0.25 }}
+							transition={{ duration: 0.5 }}
 							viewport={{ once: true }}>
                                         
                 <Card className="h-full" radius="sm">
@@ -256,7 +253,7 @@ export default function RizeniPage() {
                 <motion.div
 							initial={{ opacity: 0 }}
 							whileInView={{ opacity: 1, scale: 1 }}
-							transition={{ duration: 1, delay: 0.25 }}
+							transition={{ duration: 0.5 }}
 							viewport={{ once: true }}>
                 <Card className="h-full" radius="sm">
                 <LightImage modalClose="clickOutside" image={{ src: "/4_1.webp", title: "melkorvisum_zobrazeni" }} removeWrapper radius="none" aria-label="Zobrazení technologie"/>
@@ -270,7 +267,7 @@ export default function RizeniPage() {
                 <motion.div
 							initial={{ opacity: 0 }}
 							whileInView={{ opacity: 1, scale: 1 }}
-							transition={{ duration: 1, delay: 0.25 }}
+							transition={{ duration: 0.5 }}
 							viewport={{ once: true }}>
                 <Card className="h-full" radius="sm">
                     <SlideshowLightbox
@@ -323,7 +320,7 @@ export default function RizeniPage() {
                 <motion.div
 							initial={{ opacity: 0 }}
 							whileInView={{ opacity: 1, scale: 1 }}
-							transition={{ duration: 1, delay: 0.25 }}
+							transition={{ duration: 0.5 }}
 							viewport={{ once: true }}>
                 <Card className="h-full" radius="sm">
                     <LightImage modalClose="clickOutside" image={{ src: "/6_1.webp", title: "melkorvisum_zobrazeni" }} removeWrapper radius="none" aria-label="Zobrazení technologie"/>
@@ -336,7 +333,7 @@ export default function RizeniPage() {
                 <motion.div
 							initial={{ opacity: 0 }}
 							whileInView={{ opacity: 1, scale: 1 }}
-							transition={{ duration: 1, delay: 0.25 }}
+							transition={{ duration: 0.5 }}
 							viewport={{ once: true }}>
 
                 <Card className="h-full" radius="sm">
@@ -391,7 +388,7 @@ export default function RizeniPage() {
                 <motion.div
 							initial={{ opacity: 0 }}
 							whileInView={{ opacity: 1, scale: 1 }}
-							transition={{ duration: 1, delay: 0.25 }}
+							transition={{ duration: 0.5 }}
 							viewport={{ once: true }}>
                 <Card className="h-full" radius="sm">
                     <SlideshowLightbox
@@ -445,7 +442,7 @@ export default function RizeniPage() {
                 <motion.div
 							initial={{ opacity: 0 }}
 							whileInView={{ opacity: 1, scale: 1 }}
-							transition={{ duration: 1, delay: 0.25 }}
+							transition={{ duration: 0.5 }}
 							viewport={{ once: true }}>
                 <Card className="h-full" radius="sm">
                     <LightImage modalClose="clickOutside" image={{ src: "/9_1.webp", title: "melkorvisum_zobrazeni" }} removeWrapper radius="none" aria-label="Zobrazení technologie"/>

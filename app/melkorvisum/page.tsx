@@ -40,7 +40,7 @@ export default function DocsPage() {
 							<motion.div
 							initial={{ opacity: 0 }}
 							whileInView={{ opacity: 1, scale: 1 }}
-							transition={{ duration: 1, delay: 0.25 }}
+							transition={{ duration: 0.5 }}
 							viewport={{ once: true }}>
 
 						<h1 className={title({ size: "sm" })}>SCADA systémy</h1>
@@ -49,7 +49,7 @@ export default function DocsPage() {
 					</div>
 					<motion.div initial={{ opacity: 0, scale: 0.75 }}
 					whileInView={{ opacity: 1, scale: 1 }}
-					transition={{ duration: 1.5, delay: 0.25 }}
+					transition={{ duration: 1 }}
 					viewport={{ once: true }}
 					className=" w-full col-span-12 lg:col-end-13 lg:col-span-7">
 						<Image removeWrapper alt="MelkorVisum_screenshot" src="/macbook2.webp"></Image>
@@ -60,7 +60,7 @@ export default function DocsPage() {
 					<motion.div
 						initial={{ opacity: 0, scale: 0.75 }}
 						whileInView={{ opacity: 1, scale: 1 }}
-						transition={{ duration: 1.5, delay: 0.25 }}
+						transition={{ duration: 1 }}
 						viewport={{ once: true }}
 						className="dark:shadow-light max-w-2xl w-full col-span-12 lg:col-span-6" >
 						<Image removeWrapper alt="MelkorVisum_screenshot" shadow="lg" radius="sm" src="/display_spotreba.webp"></Image>
@@ -69,7 +69,7 @@ export default function DocsPage() {
 					<motion.div
 							initial={{ opacity: 0 }}
 							whileInView={{ opacity: 1, scale: 1 }}
-							transition={{ duration: 1, delay: 0.25 }}
+							transition={{ duration: 0.5 }}
 							viewport={{ once: true }}>
 						<h1 className={title({ size: "sm" })}>Proč MelkorVisum?</h1>
 						<p className="text-left pt-10 pb-20">Zatímco většina konkurenčních firem licencuje SCADA platformy třetích stran a staví své systémy na nich, naše řešení MelkorVisum jnonee vyvinuli na vlastním know-how, což nám umožňuje flexibilně přizpůsobit každou část systému specifickým potřebám a požadavkům konkrétního zákazníka. Naše vizualizace je postavená na nejnovějších technologiích a vychází z moderních principů tvorby uživatelských rozhraní, díky čemuž je stabilní, bezpečná a uživatelsky přívětivá. Máme zkušenosti s řadou různých protokolů a technologií, není proto problém náš systém zakomponovat do existujících provozů.</p>
@@ -81,7 +81,7 @@ export default function DocsPage() {
 					<motion.h1
 							initial={{ opacity: 0 }}
 							whileInView={{ opacity: 1, scale: 1 }}
-							transition={{ duration: 1, delay: 0.25 }}
+							transition={{ duration: 0.5 }}
 							viewport={{ once: true }} className={title({ class: "mb-10 md:mb-24" })}>Možnosti využití</motion.h1>
 					{/* 					<p className="text-left pt-10 pb-20 lg">Naše inovativní řešení nalezne uplatnění v široké škále odvětví a oblastí, přinášejíc zásadní přínosy v mnoha ohledech. Jeho využití je možné v měnírnách a dispečinkách dopravních podniků, kde umožňuje efektivní správu a koordinaci dopravního provozu. Dále je vhodné pro energetické zdroje a rozvodnou síť, včetně fotovoltaických elektráren a transformátorových stanic. V průmyslových provozech zase naše řešení optimalizuje výrobní linky, zvyšuje efektivitu a umožňuje lepší řízení průmyslových procesů. V oblasti vytápění, klimatizace a inteligentního řízení budov přinášíme inovace, které umožňují optimalizaci spotřeby energie a zajišťují pohodlné prostředí v budovách. Dále podporujeme kontrolu spotřeby a komunikaci s elektroměry, plynoměry a dalšími měřicími zařízeními. Naše technologická řešení jsou rovněž využitelná v energetických dispečinkách a nabíjecích stanicích pro elektromobily, přičemž nabízíme komplexní a spolehlivé možnosti správy a monitoringu. To všechno je pouze začátek, naše řešení mohou být aplikována v mnoha dalších oblastech, poskytujíce tak flexibilitu a širokou škálu výhod pro různé odvětví a sektory.</p>
  */}					{/* <Image removeWrapper alt="Melkorvisum_screen" shadow="md" radius="sm" className="w-full xl:w-6/12 lg:dark:shadow-white" src="/display_spotreba.webp"></Image> */}
@@ -89,7 +89,7 @@ export default function DocsPage() {
 					<motion.div
 							initial={{ opacity: 0 }}
 							whileInView={{ opacity: 1, scale: 1 }}
-							transition={{ duration: 1, delay: 0.25 }}
+							transition={{ duration: 0.5 }}
 							viewport={{ once: true }}
 							 className="flex flex-col pt-10 space-y-6 items-center ">
 							<Train />
@@ -101,7 +101,7 @@ export default function DocsPage() {
 						<motion.div
 							initial={{ opacity: 0 }}
 							whileInView={{ opacity: 1, scale: 1 }}
-							transition={{ duration: 1, delay: 0.25 }}
+							transition={{ duration: 0.5 }}
 							viewport={{ once: true }}
 							 className="flex flex-col pt-10 space-y-6 items-center ">
 							<Panel />
@@ -113,7 +113,7 @@ export default function DocsPage() {
 						<motion.div
 							initial={{ opacity: 0 }}
 							whileInView={{ opacity: 1, scale: 1 }}
-							transition={{ duration: 1, delay: 0.25 }}
+							transition={{ duration: 0.5 }}
 							viewport={{ once: true }}
 							 className="flex flex-col pt-10 space-y-6 items-center ">
 							<Factory />
@@ -125,7 +125,7 @@ export default function DocsPage() {
 						<motion.div
 							initial={{ opacity: 0 }}
 							whileInView={{ opacity: 1, scale: 1 }}
-							transition={{ duration: 1, delay: 0.25 }}
+							transition={{ duration: 0.5 }}
 							viewport={{ once: true }}
 							 className="flex flex-col pt-10 space-y-6 items-center ">
 							<Building />
@@ -137,7 +137,7 @@ export default function DocsPage() {
 						<motion.div
 							initial={{ opacity: 0 }}
 							whileInView={{ opacity: 1, scale: 1 }}
-							transition={{ duration: 1, delay: 0.25 }}
+							transition={{ duration: 0.5 }}
 							viewport={{ once: true }}
 							 className="flex flex-col pt-10 space-y-6 items-center ">
 							<Gas />
@@ -149,7 +149,7 @@ export default function DocsPage() {
 						<motion.div
 							initial={{ opacity: 0 }}
 							whileInView={{ opacity: 1, scale: 1 }}
-							transition={{ duration: 1, delay: 0.25 }}
+							transition={{ duration: 0.5 }}
 							viewport={{ once: true }}
 							 className="flex flex-col pt-10 space-y-6 items-center ">
 							<Car />

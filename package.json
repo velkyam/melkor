@@ -42,6 +42,7 @@
     "framer-motion": "^10.16.4",
     "intl-messageformat": "^10.5.0",
     "lightbox.js-react": "^0.9.6",
+    "locomotive-scroll": "^5.0.0-beta.11",
     "next": "14.0.2",
     "next-themes": "^0.2.1",
     "postcss": "8.4.31",

@@ -1,7 +1,6 @@
 "use client"
 import { title } from "@/components/primitives";
-import React from "react";
-import { Card, CardHeader, CardBody, CardFooter, Divider, Link, Image, Avatar } from "@nextui-org/react";
+import React from "react"; 
 import {Accordion, AccordionItem} from "@nextui-org/react";
 export default function PrivacyPage() {
 	

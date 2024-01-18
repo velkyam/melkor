@@ -21,7 +21,7 @@ export default function ReferencePage() {
 				<motion.div
 							initial={{ opacity: 0 }}
 							whileInView={{ opacity: 1, scale: 1 }}
-							transition={{ duration: 1, delay: 0.25 }}
+							transition={{ duration: 0.5}}
 							viewport={{ once: true }}>
 					<Card isBlurred className="py-10 px-4 lg:px-6 dark:border dark:border-slate-700 h-full">
 						<CardHeader className="flex">
@@ -35,7 +35,7 @@ export default function ReferencePage() {
 					<motion.div
 							initial={{ opacity: 0 }}
 							whileInView={{ opacity: 1, scale: 1 }}
-							transition={{ duration: 1, delay: 0.25 }}
+							transition={{ duration: 0.5}}
 							viewport={{ once: true }}>
 					<Card isBlurred className=" py-10 px-4 lg:px-6 dark:border dark:border-slate-700 h-full">
 						<CardHeader className="flex">
@@ -48,7 +48,7 @@ export default function ReferencePage() {
 					<motion.div
 							initial={{ opacity: 0 }}
 							whileInView={{ opacity: 1, scale: 1 }}
-							transition={{ duration: 1, delay: 0.25 }}
+							transition={{ duration: 0.5}}
 							viewport={{ once: true }}>
 					<Card isBlurred className=" py-10 px-4 lg:px-6 dark:border dark:border-slate-700 h-full">
 						<CardHeader className="flex">

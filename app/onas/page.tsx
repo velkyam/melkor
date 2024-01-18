@@ -33,7 +33,7 @@ export default function AboutPage() {
 				<motion.div
 							initial={{ opacity: 0 }}
 							whileInView={{ opacity: 1, scale: 1 }}
-							transition={{ duration: 1, delay: 0.25 }}
+							transition={{ duration: 0.5 }}
 							viewport={{ once: true }}>
 				<Card className=" py-4 lg:py-6 px-4 lg:px-6">
 					<CardHeader className="flex flex-col md:flex-row gap-6">
@@ -56,7 +56,7 @@ export default function AboutPage() {
 				<motion.div
 							initial={{ opacity: 0 }}
 							whileInView={{ opacity: 1, scale: 1 }}
-							transition={{ duration: 1, delay: 0.25 }}
+							transition={{ duration: 0.5 }}
 							viewport={{ once: true }}>
 				<Card className="py-4 lg:py-6 px-4 lg:px-6">
 					<CardHeader className="flex flex-col md:flex-row gap-6">
@@ -82,7 +82,7 @@ export default function AboutPage() {
 			<motion.div
 							initial={{ opacity: 0 }}
 							whileInView={{ opacity: 1, scale: 1 }}
-							transition={{ duration: 1, delay: 0.25 }}
+							transition={{ duration: 0.5 }}
 							viewport={{ once: true }}>
 				<Card className="py-4 lg:py-6 px-4 lg:px-6">
 					<CardHeader className="flex flex-col md:flex-row gap-6">
@@ -103,7 +103,7 @@ export default function AboutPage() {
 				<motion.div
 							initial={{ opacity: 0 }}
 							whileInView={{ opacity: 1, scale: 1 }}
-							transition={{ duration: 1, delay: 0.25 }}
+							transition={{ duration: 0.5 }}
 							viewport={{ once: true }}>
 				<Card className="py-4 lg:py-6 px-4 lg:px-6">
 					<CardHeader className="flex flex-col md:flex-row gap-6">

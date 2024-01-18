@@ -13,7 +13,7 @@ export const GetStarted = () => {
         <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1, delay: 0.25 }}
+        transition={{ duration: 0.5 }}
         viewport={{ once: true }} 
         className="flex flex-col w-full max-w-7xl items-center text-center space-y-12 py-20 md:py-32">
             <h1 className={title({class:"leading-relaxed", size:"sm"})}>Zaujala Vás naše nabídka?</h1>

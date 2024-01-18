@@ -84,7 +84,7 @@ export default function Home() {
 					<div className="container flex flex-col items-center  w-full pt-20 md:pt-32">
 					<motion.div initial={{ opacity: 0 }}
 							whileInView={{ opacity: 1 }}
-							transition={{ duration: 1 }}
+							transition={{ duration: 0.5 }}
 							viewport={{ once: true }}
 							className="flex flex-col items-center">
 							<h1 className={title({ class: "mb-10", size: "lg" })}>MelkorVisum</h1>
@@ -95,7 +95,7 @@ export default function Home() {
 							className="flex flex-col w-full max-w-7xl space-y-4  md:space-y-0 md:grid grid-rows-3 md:grid-rows-1 grid-cols-3 gap-10">
 								<motion.div initial={{ opacity: 0 }}
 							whileInView={{ opacity: 1, scale: 1 }}
-							transition={{ duration: 1, delay: 0.25 }}
+							transition={{ duration: 0.5}}
 							viewport={{ once: true }}>
 							<Card className="h-full">
 								<Image
@@ -118,7 +118,7 @@ export default function Home() {
 							</motion.div>
 							<motion.div initial={{ opacity: 0 }}
 							whileInView={{ opacity: 1, scale: 1 }}
-							transition={{ duration: 1, delay: 0.25 }}
+							transition={{ duration: 0.5}}
 							viewport={{ once: true }}>
 							<Card className=" h-full">
 								<Image
@@ -141,7 +141,7 @@ export default function Home() {
 							</motion.div>
 							<motion.div initial={{ opacity: 0 }}
 							whileInView={{ opacity: 1, scale: 1 }}
-							transition={{ duration: 1, delay: 0.25 }}
+							transition={{ duration: 0.5}}
 							viewport={{ once: true }}>
 							<Card className="h-full">
 								<Image
@@ -172,7 +172,7 @@ export default function Home() {
 					<div className="flex flex-col md:flex-row w-full justify-between max-w-7xl  py-20 md:py-32  border-b border-slate-200 dark:border-slate-700">
 					<motion.div initial={{ opacity: 0 }}
 							whileInView={{ opacity: 1 }}
-							transition={{ duration: 1 }}
+							transition={{ duration: 0.5 }}
 							viewport={{ once: true }}>
 						<div className="flex-col space-y-10 max-w-lg">
 
@@ -195,7 +195,7 @@ export default function Home() {
 						<motion.div
 							initial={{ opacity: 0, scale:0.75 }}
 							whileInView={{ opacity: 1, scale: 1 }}
-							transition={{ duration: 1.5, delay: 0.25 }}
+							transition={{ duration: 1}}
 							viewport={{ once: true }}
 							className="w-full max-w-xl mt-20 md:mt-0 dark:shadow-light">
 
@@ -215,14 +215,14 @@ export default function Home() {
 						
 						<motion.h1 initial={{ opacity: 0 }}
 							whileInView={{ opacity: 1 }}
-							transition={{ duration: 1 }}
+							transition={{ duration: 0.5 }}
 							viewport={{ once: true }} className={title({ class: "mb-10 md:mb-24 leading-relaxed", size: "lg" })}>Co nabízíme našim klientům</motion.h1>
 						<div className="flex flex-col w-full max-w-7xl space-y-4  md:space-y-0 md:grid grid-rows-6 md:grid-rows-2 grid-cols-3 gap-x-16">
 
 						<motion.div
 							initial={{ opacity: 0 }}
 							whileInView={{ opacity: 1, scale: 1 }}
-							transition={{ duration: 1, delay: 0.25 }}
+							transition={{ duration: 0.5}}
 							viewport={{ once: true }}
 							 className="flex flex-col pt-10 space-y-6 items-start ">
 								<ScaleW />
@@ -235,7 +235,7 @@ export default function Home() {
 							<motion.div
 							initial={{ opacity: 0 }}
 							whileInView={{ opacity: 1, scale: 1 }}
-							transition={{ duration: 1, delay: 0.25 }}
+							transition={{ duration: 0.5}}
 							viewport={{ once: true }}
 							 className="flex flex-col pt-10 space-y-6 items-start    ">
 								<SecureW />
@@ -247,7 +247,7 @@ export default function Home() {
 							<motion.div
 							initial={{ opacity: 0 }}
 							whileInView={{ opacity: 1, scale: 1 }}
-							transition={{ duration: 1, delay: 0.25 }}
+							transition={{ duration: 0.5}}
 							viewport={{ once: true }}
 							 className="flex flex-col pt-10 space-y-6 items-start    ">
 								<PerformanceW />
@@ -259,7 +259,7 @@ export default function Home() {
 							<motion.div
 							initial={{ opacity: 0 }}
 							whileInView={{ opacity: 1, scale: 1 }}
-							transition={{ duration: 1, delay: 0.25 }}
+							transition={{ duration: 0.5}}
 							viewport={{ once: true }}
 							 className="flex flex-col pt-10 space-y-6 items-start    ">
 								<TestW />
@@ -271,7 +271,7 @@ export default function Home() {
 							<motion.div
 							initial={{ opacity: 0 }}
 							whileInView={{ opacity: 1, scale: 1 }}
-							transition={{ duration: 1, delay: 0.25 }}
+							transition={{ duration: 0.5}}
 							viewport={{ once: true }}
 							 className="flex flex-col pt-10 space-y-6 items-start   ">
 								<LicenceW />
@@ -283,7 +283,7 @@ export default function Home() {
 							<motion.div
 							initial={{ opacity: 0 }}
 							whileInView={{ opacity: 1, scale: 1 }}
-							transition={{ duration: 1, delay: 0.25 }}
+							transition={{ duration: 0.5}}
 							viewport={{ once: true }}
 							 className="flex flex-col pt-10 space-y-6 items-start    ">
 								<SupportW />
@@ -300,13 +300,13 @@ export default function Home() {
 						<div className="flex flex-col w-full max-w-7xl items-center py-20 md:py-32 border-b border-slate-200 dark:border-slate-700">
 							<motion.h1 initial={{ opacity: 0 }}
 							whileInView={{ opacity: 1 }}
-							transition={{ duration: 1 }}
+							transition={{ duration: 0.5 }}
 							viewport={{ once: true }} className={title({ class: "mb-20 lg:mb-24", size: "lg" })}>Naše úspěchy</motion.h1>
 							<div className="flex flex-col md:grid grid-rows-1 grid-cols-3 gap-12">
 							<motion.div
 							initial={{ opacity: 0 }}
 							whileInView={{ opacity: 1, scale: 1 }}
-							transition={{ duration: 1, delay: 0.25 }}
+							transition={{ duration: 0.5}}
 							viewport={{ once: true }}>
 								<Card className="py-10 px-4 lg:px-6 h-full">
 									<CardHeader className="flex">
@@ -320,7 +320,7 @@ export default function Home() {
 								<motion.div
 							initial={{ opacity: 0 }}
 							whileInView={{ opacity: 1, scale: 1 }}
-							transition={{ duration: 1, delay: 0.25 }}
+							transition={{ duration: 0.5}}
 							viewport={{ once: true }}>
 								<Card className="py-10 px-4 lg:px-6 h-full">
 									<CardHeader className="flex">
@@ -333,7 +333,7 @@ export default function Home() {
 								<motion.div
 							initial={{ opacity: 0 }}
 							whileInView={{ opacity: 1, scale: 1 }}
-							transition={{ duration: 1, delay: 0.25 }}
+							transition={{ duration: 0.5}}
 							viewport={{ once: true }}>
 								<Card className="py-10 px-4 lg:px-6 h-full">
 									<CardHeader className="flex">
