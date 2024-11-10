@@ -10,16 +10,22 @@ import React from "react";
 import { ScaleW, SecureW, PerformanceW, TestW, LicenceW, SupportW } from "@/components/icons";
 import { GetStarted } from "@/components/get-started";
 import { motion } from "framer-motion"
+import { ReactLenis, useLenis } from '@studio-freight/react-lenis'
 import { useEffect } from 'react';
 
 
 export default function Home() {
 
-	useEffect(() => {
+
+	const lenis = useLenis(({ scroll }) => {
+		// called every scroll
+	  })
+	  useEffect(() => {
 		window.scrollTo(0, 1);
-	}, []);
+	  }, []);
 
 	return (
+		<ReactLenis root>
 		<motion.div initial={{ opacity: 0 }}
 			whileInView={{ opacity: 1 }}
 			transition={{ duration: 0.5 }}>
@@ -352,6 +358,6 @@ export default function Home() {
 				</div>
 			</section>
 		</motion.div>
-
+		</ReactLenis>
 	);
 }

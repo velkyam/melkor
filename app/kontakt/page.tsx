@@ -5,14 +5,20 @@ import { Card } from "@nextui-org/card";
 import { Link } from "@nextui-org/link"
 import { motion } from "framer-motion";
 import { useEffect } from "react";
+import { ReactLenis, useLenis } from '@studio-freight/react-lenis'
 
 
 export default function BlogPage() {
-	useEffect(() => {
+	const lenis = useLenis(({ scroll }) => {
+		// called every scroll
+	  })
+	  useEffect(() => {
 		window.scrollTo(0, 1);
 	  }, []);
 
+
 	return (
+		<ReactLenis root>
 		<motion.div initial={{ opacity: 0}}
 		whileInView={{ opacity: 1 }}
 		transition={{ duration: 0.5 }}>
@@ -59,5 +65,6 @@ export default function BlogPage() {
 			</div>
 		</div>
 		</motion.div>
+		</ReactLenis>
 	);
 }

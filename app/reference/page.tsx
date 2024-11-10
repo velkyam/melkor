@@ -4,12 +4,18 @@ import { Card, CardHeader, CardBody } from "@nextui-org/card";
 import { GetStarted } from "@/components/get-started";
 import { useEffect } from "react";
 import { motion } from "framer-motion";
+import { ReactLenis, useLenis } from '@studio-freight/react-lenis'
 
 export default function ReferencePage() {
-	useEffect(() => {
-		window.scrollTo(0, 0);
+
+	const lenis = useLenis(({ scroll }) => {
+		// called every scroll
+	  })
+	  useEffect(() => {
+		window.scrollTo(0, 1);
 	  }, []);
 	return (
+		<ReactLenis root>
 		<motion.div initial={{ opacity: 0}}
 		whileInView={{ opacity: 1 }}
 		transition={{ duration: 0.5 }}>
@@ -68,5 +74,6 @@ export default function ReferencePage() {
 			<GetStarted/>
 			</div>
 		</motion.div>
+		</ReactLenis>
 	);
 }

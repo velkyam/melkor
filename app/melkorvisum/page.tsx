@@ -6,16 +6,20 @@ import { Card } from "@nextui-org/card";
 import { Train, Panel, Factory, Building, Gas, Car } from "@/components/icons";
 import { motion } from "framer-motion"
 import { useEffect } from "react";
+import { ReactLenis, useLenis } from '@studio-freight/react-lenis'
 
 
 
 export default function DocsPage() {
 
-	useEffect(() => {
+	const lenis = useLenis(({ scroll }) => {
+		// called every scroll
+	  })
+	  useEffect(() => {
 		window.scrollTo(0, 1);
 	  }, []);
-
 	return (
+		<ReactLenis root>
 		<motion.div initial={{ opacity: 0}}
 		whileInView={{ opacity: 1 }}
 		transition={{ duration: 0.5 }}>
@@ -173,5 +177,6 @@ export default function DocsPage() {
 			</div>
 		</section>
 		</motion.div>
+		</ReactLenis>
 	);
 }

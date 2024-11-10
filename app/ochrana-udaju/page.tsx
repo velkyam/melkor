@@ -1,10 +1,18 @@
 "use client"
 import { title } from "@/components/primitives";
-import React from "react"; 
+import React, { useEffect } from "react"; 
 import {Accordion, AccordionItem} from "@nextui-org/react";
+import { ReactLenis, useLenis } from '@studio-freight/react-lenis'
+
 export default function PrivacyPage() {
-	
+  const lenis = useLenis(({ scroll }) => {
+    // called every scroll
+  })
+  useEffect(() => {
+		window.scrollTo(0, 1);
+	  }, []);
 	return (
+    <ReactLenis root>
 
 		<div className=" justify-center py-20 w-full">
 			<h1 className={title()}>Ochrana osobních údajů</h1>
@@ -60,6 +68,7 @@ Vaším právem je požádat Melkor Software, s.r.o o informace, jaké osobní �
 
 		
 		</div>
+    </ReactLenis>
 
 	);
 }

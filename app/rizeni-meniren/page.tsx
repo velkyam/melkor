@@ -10,7 +10,7 @@ import { useEffect, useState } from "react";
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import { GetStarted } from "@/components/get-started";
 import { motion } from "framer-motion";
-
+import { ReactLenis, useLenis } from '@studio-freight/react-lenis'
 
 
 
@@ -112,12 +112,16 @@ export default function RizeniPage() {
         initLightboxJS("9C64-9D7D-1161-2794", "Individual");
     });
 
-    useEffect(() => {
+    const lenis = useLenis(({ scroll }) => {
+        // called every scroll
+      })
+      useEffect(() => {
 		window.scrollTo(0, 1);
 	  }, []);
 
 
     return (
+        <ReactLenis root>
         <motion.div initial={{ opacity: 0}}
 		whileInView={{ opacity: 1 }}
 		transition={{ duration: 0.5 }}>
@@ -458,5 +462,6 @@ export default function RizeniPage() {
             </div>
         </div>
         </motion.div>
+        </ReactLenis>
     );
 }
