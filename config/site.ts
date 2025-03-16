@@ -8,10 +8,10 @@ export const siteConfig = {
       label: "MelkorVisum",
       href: "/melkorvisum",
     },
-	{
+/* 	{
 		label: "Řízení měníren",
 		href: "/rizeni-meniren",
-	  },
+	  }, */
     {
       label: "O nás",
       href: "/onas",
@@ -31,10 +31,10 @@ export const siteConfig = {
 			label: "MelkorVisum",
 			href: "/melkorvisum",
 		  },
-		{
+	/* 	{
 			label: "Řízení měníren",
 			href: "/rizeni-meniren",
-		  },
+		  }, */
 		  {
 			label: "O nás",
 			href: "/onas",

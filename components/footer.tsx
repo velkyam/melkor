@@ -21,9 +21,9 @@ export const Footer = () => {
                                                 <li>
                                                         <Link className="md:mr-10 text-default-600 lg:text-sm py-2" href='/melkorvisum'>MelkorVisum</Link>
                                                 </li>
-                                                <li>
+                                             {/*    <li>
                                                         <Link className="md:mr-10 text-default-600 lg:text-sm py-2" href="/rizeni-meniren">Řízení měníren</Link>
-                                                </li>
+                                                </li> */}
                                                 <li>
                                                         <Link className="md:mr-10 text-default-600 lg:text-sm py-2" href="/onas">O nás</Link>
                                                 </li>
