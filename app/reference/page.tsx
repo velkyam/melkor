@@ -35,7 +35,7 @@ export default function ReferencePage() {
 					whileInView={{ opacity: 1, scale: 1 }}
 					transition={{ duration: 1 }}
 					viewport={{ once: true }}
-					className=" w-36">
+					className=" w-24">
 						<Image removeWrapper alt="MelkorVisum_screenshot" src="/OHLA_LOGO.png"></Image>
 					</motion.div>
 						<CardHeader className="flex">
