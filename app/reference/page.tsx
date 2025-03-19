@@ -5,6 +5,7 @@ import { GetStarted } from "@/components/get-started";
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { ReactLenis, useLenis } from '@studio-freight/react-lenis'
+import { Image } from "@nextui-org/image";
 
 export default function ReferencePage() {
 
@@ -30,6 +31,13 @@ export default function ReferencePage() {
 							transition={{ duration: 0.5}}
 							viewport={{ once: true }}>
 					<Card isBlurred className="py-10 px-4 lg:px-6 dark:border dark:border-slate-700 h-full">
+					<motion.div initial={{ opacity: 0, scale: 0.75 }}
+					whileInView={{ opacity: 1, scale: 1 }}
+					transition={{ duration: 1 }}
+					viewport={{ once: true }}
+					className=" w-36">
+						<Image removeWrapper alt="MelkorVisum_screenshot" src="/OHLA_LOGO.png"></Image>
+					</motion.div>
 						<CardHeader className="flex">
 							<h4 className="font-semibold text-large text-left">Energetický dispečink Dopravní společnosti Zlín a Otrokovice</h4>
 						</CardHeader>
