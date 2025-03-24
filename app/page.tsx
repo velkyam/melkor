@@ -321,6 +321,14 @@ export default function Home() {
 									<CardBody>
 										<p>Na naší technologii běží dispečink, který má na starosti napájení trolejbusů v celém Zlíně a Otrokovicích. Zajišťujeme nepřetržitý provoz deseti měníren a jejich místní i dálkové řízení, které jsme dodali v rámci dvou zakázek ve spolupráci s firmou OHLA ŽS.</p>
 									</CardBody>
+									<motion.div initial={{ opacity: 0, scale: 0.75 }}
+					whileInView={{ opacity: 1, scale: 1 }}
+					transition={{ duration: 1 }}
+					viewport={{ once: true }}
+					className=" w-24">
+						<Image removeWrapper alt="OHLA_LOGO" src="/OHLA_LOGO.png"></Image>
+					</motion.div>
+
 								</Card>
 								</motion.div>
 								<motion.div
