@@ -307,7 +307,7 @@ export default function Home() {
 							<motion.h1 initial={{ opacity: 0 }}
 							whileInView={{ opacity: 1 }}
 							transition={{ duration: 0.5 }}
-							viewport={{ once: true }} className={title({ class: "mb-20 lg:mb-24", size: "lg" })}>Naše úspěchy</motion.h1>
+							viewport={{ once: true }} className={title({ class: "mb-20 lg:mb-24", size: "lg" })}>Naše dokončené projekty</motion.h1>
 							<div className="flex flex-col md:grid grid-rows-1 grid-cols-3 gap-12">
 							<motion.div
 							initial={{ opacity: 0 }}
