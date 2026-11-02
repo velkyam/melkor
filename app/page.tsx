@@ -316,6 +316,50 @@ export default function Home() {
 							viewport={{ once: true }}>
 								<Card className="py-10 px-4 lg:px-6 h-full">
 									<CardHeader className="flex">
+										<h2 className="font-semibold text-large text-left">Dálková diagnostika trakčních systémů pro LCRD Žilina</h2>
+									</CardHeader>
+									<CardBody>
+										<p>Pro Železnice Slovenskej republiky jsme dodali systém dálkové diagnostiky, který zajišťuje nepřetržitý dohled nad osvětlením nástupišť a vlakové trasy, elektrickým ohřevem výhybek, zabezpečením vstupů do kabelových šachet a dalšími pomocnými systémy v rámci dopravního uzlu Žilina a přilehlých stanic spadajících pod oblastní centrum řízení dopravy (LCRD). Projekt byl postaven na druhé generaci platformy MelkorVisum ve spolupráci s OHLA ŽS, a. s.</p>
+									</CardBody>
+									<motion.div initial={{ opacity: 0, scale: 0.75 }}
+					whileInView={{ opacity: 1, scale: 1 }}
+					transition={{ duration: 1 }}
+					viewport={{ once: true }}
+					className=" w-24">
+						<Image removeWrapper alt="OHLA_LOGO" src="/OHLA_LOGO.png"></Image>
+					</motion.div>
+
+								</Card>
+								</motion.div>
+							<motion.div
+							initial={{ opacity: 0 }}
+							whileInView={{ opacity: 1, scale: 1 }}
+							transition={{ duration: 0.5}}
+							viewport={{ once: true }}>
+								<Card className="py-10 px-4 lg:px-6 h-full">
+									<CardHeader className="flex">
+										<h2 className="font-semibold text-large text-left">Energetický dispečink Plzeňských městských dopravních podniků</h2>
+									</CardHeader>
+									<CardBody>
+										<p>Pro PMDP jsme vytvořili systém pro místní i dálkové řízení všech jedenácti měníren a jedné superkapacitorové posilovací stanice, které zajišťují provoz tramvají a trolejbusů v Plzni. Součástí řešení je redundantní dvojice centrálních serverů, jedenáct serverů místního řízení a zajištění primární komunikační cesty přes optickou linku, DSL a GSM i záložní komunikace přes rádiový vysílač. Projekt byl postaven na druhé generaci platformy MelkorVisum ve spolupráci s OHLA ŽS, a. s.</p>
+									</CardBody>
+									<motion.div initial={{ opacity: 0, scale: 0.75 }}
+					whileInView={{ opacity: 1, scale: 1 }}
+					transition={{ duration: 1 }}
+					viewport={{ once: true }}
+					className=" w-24">
+						<Image removeWrapper alt="OHLA_LOGO" src="/OHLA_LOGO.png"></Image>
+					</motion.div>
+
+								</Card>
+								</motion.div>
+							<motion.div
+							initial={{ opacity: 0 }}
+							whileInView={{ opacity: 1, scale: 1 }}
+							transition={{ duration: 0.5}}
+							viewport={{ once: true }}>
+								<Card className="py-10 px-4 lg:px-6 h-full">
+									<CardHeader className="flex">
 										<h2 className="font-semibold text-large text-left">Energetický dispečink Dopravní společnosti Zlín a Otrokovice</h2>
 									</CardHeader>
 									<CardBody>

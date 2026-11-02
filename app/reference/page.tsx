@@ -25,6 +25,52 @@ export default function ReferencePage() {
 			<div className="flex flex-col w-full max-w-7xl items-center py-20 md:pb-32 border-b border-slate-200 dark:border-slate-700 px-6">
 				<div className={title({ class: "mb-20", size: "lg" })}>Reference</div>
 				<div className="flex flex-col md:grid grid-rows-1 grid-cols-3 gap-12">
+					<motion.div
+							initial={{ opacity: 0 }}
+							whileInView={{ opacity: 1, scale: 1 }}
+							transition={{ duration: 0.5}}
+							viewport={{ once: true }}>
+					<Card isBlurred className="py-10 px-4 lg:px-6 dark:border dark:border-slate-700 h-full">
+						<CardHeader className="flex">
+							<h4 className="font-semibold text-large text-left">Dálková diagnostika trakčních systémů pro LCRD Žilina</h4>
+						</CardHeader>
+						<CardBody>
+							<p>Pro Železnice Slovenskej republiky jsme dodali systém dálkové diagnostiky, který zajišťuje nepřetržitý dohled nad osvětlením nástupišť a vlakové trasy, elektrickým ohřevem výhybek, zabezpečením vstupů do kabelových šachet a dalšími pomocnými systémy v rámci dopravního uzlu Žilina a přilehlých stanic spadajících pod oblastní centrum řízení dopravy (LCRD). Projekt byl postaven na druhé generaci platformy MelkorVisum ve spolupráci s OHLA ŽS, a. s.</p>
+						</CardBody>
+					
+						<motion.div initial={{ opacity: 0, scale: 0.75 }}
+					whileInView={{ opacity: 1, scale: 1 }}
+					transition={{ duration: 1 }}
+					viewport={{ once: true }}
+					className=" w-24">
+						<Image removeWrapper alt="OHLA_LOGO" src="/OHLA_LOGO.png"></Image>
+					</motion.div>
+
+					</Card>
+					</motion.div>
+					<motion.div
+							initial={{ opacity: 0 }}
+							whileInView={{ opacity: 1, scale: 1 }}
+							transition={{ duration: 0.5}}
+							viewport={{ once: true }}>
+					<Card isBlurred className="py-10 px-4 lg:px-6 dark:border dark:border-slate-700 h-full">
+						<CardHeader className="flex">
+							<h4 className="font-semibold text-large text-left">Energetický dispečink Plzeňských městských dopravních podniků</h4>
+						</CardHeader>
+						<CardBody>
+							<p>Pro PMDP jsme vytvořili systém pro místní i dálkové řízení všech jedenácti měníren a jedné superkapacitorové posilovací stanice, které zajišťují provoz tramvají a trolejbusů v Plzni. Součástí řešení je redundantní dvojice centrálních serverů, jedenáct serverů místního řízení a zajištění primární komunikační cesty přes optickou linku, DSL a GSM i záložní komunikace přes rádiový vysílač. Projekt byl postaven na druhé generaci platformy MelkorVisum ve spolupráci s OHLA ŽS, a. s.</p>
+						</CardBody>
+					
+						<motion.div initial={{ opacity: 0, scale: 0.75 }}
+					whileInView={{ opacity: 1, scale: 1 }}
+					transition={{ duration: 1 }}
+					viewport={{ once: true }}
+					className=" w-24">
+						<Image removeWrapper alt="OHLA_LOGO" src="/OHLA_LOGO.png"></Image>
+					</motion.div>
+
+					</Card>
+					</motion.div>
 				<motion.div
 							initial={{ opacity: 0 }}
 							whileInView={{ opacity: 1, scale: 1 }}
