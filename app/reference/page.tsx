@@ -6,6 +6,8 @@ import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { ReactLenis, useLenis } from '@studio-freight/react-lenis'
 import { Image } from "@nextui-org/image";
+import { ReferenceMap } from "@/components/reference-map";
+import { references } from "@/config/references";
 
 export default function ReferencePage() {
 
@@ -24,106 +26,34 @@ export default function ReferencePage() {
 			<div className=" md:bg-none bg-right bg-cover bg-melkor-pattern">
 			<div className="flex flex-col w-full max-w-7xl items-center py-20 md:pb-32 border-b border-slate-200 dark:border-slate-700 px-6">
 				<div className={title({ class: "mb-20", size: "lg" })}>Reference</div>
+				<ReferenceMap />
 				<div className="flex flex-col md:grid grid-rows-1 grid-cols-3 gap-12">
+					{references.map((r) => (
 					<motion.div
+							key={r.title}
 							initial={{ opacity: 0 }}
 							whileInView={{ opacity: 1, scale: 1 }}
 							transition={{ duration: 0.5}}
 							viewport={{ once: true }}>
 					<Card isBlurred className="py-10 px-4 lg:px-6 dark:border dark:border-slate-700 h-full">
 						<CardHeader className="flex">
-							<h4 className="font-semibold text-large text-left">Dálková diagnostika trakčních systémů pro LCRD Žilina</h4>
+							<h4 className="font-semibold text-large text-left">{r.title}</h4>
 						</CardHeader>
 						<CardBody>
-							<p>Pro Železnice Slovenskej republiky jsme dodali systém dálkové diagnostiky, který zajišťuje nepřetržitý dohled nad osvětlením nástupišť a vlakové trasy, elektrickým ohřevem výhybek, zabezpečením vstupů do kabelových šachet a dalšími pomocnými systémy v rámci dopravního uzlu Žilina a přilehlých stanic spadajících pod oblastní centrum řízení dopravy (LCRD). Projekt byl postaven na druhé generaci platformy MelkorVisum ve spolupráci s OHLA ŽS, a. s.</p>
+							<p>{r.description}</p>
 						</CardBody>
-					
+						{r.logo && (
 						<motion.div initial={{ opacity: 0, scale: 0.75 }}
 					whileInView={{ opacity: 1, scale: 1 }}
 					transition={{ duration: 1 }}
 					viewport={{ once: true }}
 					className=" w-24">
-						<Image removeWrapper alt="OHLA_LOGO" src="/OHLA_LOGO.png"></Image>
+						<Image removeWrapper alt={r.logo.alt} src={r.logo.src}></Image>
 					</motion.div>
-
+						)}
 					</Card>
 					</motion.div>
-					<motion.div
-							initial={{ opacity: 0 }}
-							whileInView={{ opacity: 1, scale: 1 }}
-							transition={{ duration: 0.5}}
-							viewport={{ once: true }}>
-					<Card isBlurred className="py-10 px-4 lg:px-6 dark:border dark:border-slate-700 h-full">
-						<CardHeader className="flex">
-							<h4 className="font-semibold text-large text-left">Energetický dispečink Plzeňských městských dopravních podniků</h4>
-						</CardHeader>
-						<CardBody>
-							<p>Pro PMDP jsme vytvořili systém pro místní i dálkové řízení všech jedenácti měníren a jedné superkapacitorové posilovací stanice, které zajišťují provoz tramvají a trolejbusů v Plzni. Součástí řešení je redundantní dvojice centrálních serverů, jedenáct serverů místního řízení a zajištění primární komunikační cesty přes optickou linku, DSL a GSM i záložní komunikace přes rádiový vysílač. Projekt byl postaven na druhé generaci platformy MelkorVisum ve spolupráci s OHLA ŽS, a. s.</p>
-						</CardBody>
-					
-						<motion.div initial={{ opacity: 0, scale: 0.75 }}
-					whileInView={{ opacity: 1, scale: 1 }}
-					transition={{ duration: 1 }}
-					viewport={{ once: true }}
-					className=" w-24">
-						<Image removeWrapper alt="OHLA_LOGO" src="/OHLA_LOGO.png"></Image>
-					</motion.div>
-
-					</Card>
-					</motion.div>
-				<motion.div
-							initial={{ opacity: 0 }}
-							whileInView={{ opacity: 1, scale: 1 }}
-							transition={{ duration: 0.5}}
-							viewport={{ once: true }}>
-					<Card isBlurred className="py-10 px-4 lg:px-6 dark:border dark:border-slate-700 h-full">
-				
-				
-
-						<CardHeader className="flex">
-							<h4 className="font-semibold text-large text-left">Energetický dispečink Dopravní společnosti Zlín a Otrokovice</h4>
-						</CardHeader>
-						<CardBody>
-							<p>Na naší technologii běží dispečink, který má na starosti napájení trolejbusů v celém Zlíně a Otrokovicích. Zajišťujeme nepřetržitý provoz deseti měníren a jejich místní i dálkové řízení, které jsme dodali v rámci dvou zakázek ve spolupráci s firmou OHLA ŽS.</p>
-						</CardBody>
-					
-						<motion.div initial={{ opacity: 0, scale: 0.75 }}
-					whileInView={{ opacity: 1, scale: 1 }}
-					transition={{ duration: 1 }}
-					viewport={{ once: true }}
-					className=" w-24">
-						<Image removeWrapper alt="OHLA_LOGO" src="/OHLA_LOGO.png"></Image>
-					</motion.div>
-
-					</Card>
-					</motion.div>
-					<motion.div
-							initial={{ opacity: 0 }}
-							whileInView={{ opacity: 1, scale: 1 }}
-							transition={{ duration: 0.5}}
-							viewport={{ once: true }}>
-					<Card isBlurred className=" py-10 px-4 lg:px-6 dark:border dark:border-slate-700 h-full">
-						<CardHeader className="flex">
-							<h4 className="font-semibold text-large text-left">Místní řízení měnírny Heršpice a transformátorové stanice Slatina		</h4>			</CardHeader>
-						<CardBody>
-						<p>Pro Dopravní podnik města Brna jsme dodali modernizovaný řídicí systém, který ovládá stávající technologii. Abychom zajistili plynulé pokračování obsluhy, celý systém byl navržen tak, aby (krom použití moderní techniky) přesně odpovídal řízení předešlému.</p>
-						</CardBody>
-					</Card>
-					</motion.div>
-					<motion.div
-							initial={{ opacity: 0 }}
-							whileInView={{ opacity: 1, scale: 1 }}
-							transition={{ duration: 0.5}}
-							viewport={{ once: true }}>
-					<Card isBlurred className=" py-10 px-4 lg:px-6 dark:border dark:border-slate-700 h-full">
-						<CardHeader className="flex">
-							<h4 className="font-semibold text-large text-left">Dálkové řízení vytápění Orlovny Brno-Obřany	</h4>				</CardHeader>
-						<CardBody>
-							<p>
-								Pro jednotu Orla Brno-Obřany jsme rozšířili existující řízení kotelny o soustavu bezdrátových snímačů teploty a webové rozhraní, které umožňuje sledování teploty, vzdálené ovládání kotlů i plánování automatického vytápění.</p>
-						</CardBody>
-					</Card>
-					</motion.div>
+					))}
 				</div>
 				</div>
 			</div>
