@@ -2,6 +2,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { references, Reference } from "@/config/references";
+import { RefLogo } from "@/components/ref-logo";
 import { MAP_WIDTH, MAP_HEIGHT, project, regions, countryOutlines } from "@/config/map-data";
 
 type Location = {
@@ -33,7 +34,7 @@ function groupByCity(refs: Reference[]): Location[] {
 	return Array.from(map.values());
 }
 
-function PopupContent({ loc }: { loc: Location }) {
+function PopupContent({ loc, onClose }: { loc: Location; onClose: () => void }) {
 	return (
 		<>
 			<div className="flex items-center gap-2 mb-3">
@@ -41,11 +42,24 @@ function PopupContent({ loc }: { loc: Location }) {
 				<span className="text-xs font-semibold uppercase tracking-wider text-melkorPurple dark:text-[#a5a7f0]">
 					{loc.city}
 				</span>
+				<button
+					type="button"
+					onClick={onClose}
+					aria-label="Zavřít"
+					className="ml-auto -mr-1 w-7 h-7 flex items-center justify-center rounded-full text-default-500 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-foreground transition-colors"
+				>
+					<svg viewBox="0 0 16 16" className="w-3.5 h-3.5" aria-hidden="true">
+						<path d="M3 3l10 10M13 3L3 13" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+					</svg>
+				</button>
 			</div>
 			<div className="space-y-4">
 				{loc.items.map((r) => (
-					<div key={r.title}>
-						<h4 className="font-semibold text-base leading-snug mb-1.5">{r.title}</h4>
+					<div key={r.title} className={loc.items.length > 1 ? "pt-4 first:pt-0 border-t first:border-t-0 border-slate-200 dark:border-slate-700" : ""}>
+						<div className="flex items-start gap-3 mb-1.5">
+							<h4 className="font-semibold text-base leading-snug flex-1">{r.title}</h4>
+							{r.client && <RefLogo logo={r.client} area={2600} maxWidth={120} maxHeight={36} className="shrink-0" />}
+						</div>
 						<p className="text-sm leading-relaxed text-default-600">{r.description}</p>
 					</div>
 				))}
@@ -58,17 +72,7 @@ export const ReferenceMap = () => {
 	const locations = useMemo(() => groupByCity(references), []);
 	const activeRegions = useMemo(() => new Set(locations.map((l) => l.region)), [locations]);
 	const [active, setActive] = useState<string | null>(null);
-	const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 	const wrapperRef = useRef<HTMLDivElement>(null);
-
-	const open = (city: string) => {
-		if (closeTimer.current) clearTimeout(closeTimer.current);
-		setActive(city);
-	};
-	const scheduleClose = () => {
-		if (closeTimer.current) clearTimeout(closeTimer.current);
-		closeTimer.current = setTimeout(() => setActive(null), 150);
-	};
 
 	// Zavření klávesou Esc nebo kliknutím mimo mapu (dotyková zařízení)
 	useEffect(() => {
@@ -139,20 +143,17 @@ export const ReferenceMap = () => {
 							type="button"
 							aria-label={`${loc.city}: ${loc.items.map((i) => i.title).join("; ")}`}
 							aria-expanded={isActive}
-							className="absolute -translate-x-1/2 -translate-y-1/2 z-10 p-2 rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-melkorPurple"
+							className="group absolute -translate-x-1/2 -translate-y-1/2 z-10 p-2 rounded-full cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-melkorPurple"
 							style={{ left: `${loc.x}%`, top: `${loc.y}%` }}
-							onMouseEnter={() => open(loc.city)}
-							onMouseLeave={scheduleClose}
-							onFocus={() => open(loc.city)}
-							onBlur={scheduleClose}
-							onClick={() => (isActive ? setActive(null) : open(loc.city))}
+							title={loc.city}
+							onClick={() => setActive(isActive ? null : loc.city)}
 						>
 							<span className="relative flex w-4 h-4 md:w-5 md:h-5">
 								<span className="absolute inline-flex h-full w-full rounded-full bg-melkorPurple dark:bg-cl3 opacity-60 animate-ping" />
 								<span
 									className={
 										"relative inline-flex w-full h-full rounded-full bg-melkorPurple dark:bg-cl3 border-2 border-white dark:border-slate-900 shadow-md transition-transform duration-200 " +
-										(isActive ? "scale-125" : "")
+										(isActive ? "scale-125" : "group-hover:scale-125")
 									}
 								/>
 							</span>
@@ -170,8 +171,6 @@ export const ReferenceMap = () => {
 							top: `calc(${activeLoc.y}% + 6px)`,
 							left: `clamp(0px, calc(${activeLoc.x}% - 11rem), calc(100% - 22rem))`,
 						}}
-						onMouseEnter={() => open(activeLoc.city)}
-						onMouseLeave={scheduleClose}
 					>
 						<motion.div
 							key={activeLoc.city}
@@ -181,7 +180,7 @@ export const ReferenceMap = () => {
 							data-lenis-prevent
 							className="max-h-[26rem] overflow-y-auto rounded-2xl p-5 bg-white/95 dark:bg-slate-900/95 backdrop-blur border border-slate-200 dark:border-slate-700 shadow-xl"
 						>
-							<PopupContent loc={activeLoc} />
+							<PopupContent loc={activeLoc} onClose={() => setActive(null)} />
 						</motion.div>
 					</div>
 				)}
@@ -198,7 +197,7 @@ export const ReferenceMap = () => {
 						transition={{ duration: 0.15 }}
 						className="md:hidden mt-6 rounded-2xl p-5 bg-white/90 dark:bg-slate-900/90 border border-slate-200 dark:border-slate-700 shadow-md"
 					>
-						<PopupContent loc={activeLoc} />
+						<PopupContent loc={activeLoc} onClose={() => setActive(null)} />
 					</motion.div>
 				) : (
 					<p key="hint" className="md:hidden mt-4 text-center text-sm text-default-500">
@@ -207,7 +206,7 @@ export const ReferenceMap = () => {
 				)}
 			</AnimatePresence>
 			<p className="hidden md:block mt-4 text-center text-sm text-default-500">
-				Najeďte myší na bod pro detail zakázky
+				Klikněte na bod pro detail zakázky
 			</p>
 		</div>
 	);

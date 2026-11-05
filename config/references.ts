@@ -12,11 +12,24 @@ export type Reference = {
 	lon: number;
 	/** Kód kraje dle ISO 3166-2 (např. "CZ-JM", "SK-ZI") – kraj se na mapě zvýrazní. */
 	region: string;
-	/** Logo partnera zobrazené na kartě (volitelné). */
-	logo?: { src: string; alt: string };
+	/** Logo zadavatele – na kartě v pravém horním rohu a v pop-upu na mapě (volitelné). */
+	client?: Logo;
+	/** Loga partnerů – zobrazí se dole na kartě, vycentrovaná / rovnoměrně rozložená. */
+	partners?: Logo[];
 };
 
-const OHLA = { src: "/OHLA_LOGO.png", alt: "OHLA_LOGO" };
+export type Logo = { src: string; alt: string };
+
+// Loga partnerů
+const OHLA: Logo = { src: "/OHLA_LOGO.png", alt: "OHLA ŽS" };
+
+// Loga zadavatelů (soubory ve složce /public)
+const ZSR: Logo = { src: "/zsr-logo.svg", alt: "Železnice Slovenskej republiky" };
+const DPMK: Logo = { src: "/dpmk-logo.svg", alt: "Dopravný podnik mesta Košice" };
+const PMDP: Logo = { src: "/pmdp-logo.png", alt: "Plzeňské městské dopravní podniky" };
+const DSZO: Logo = { src: "/dszo-logo.png", alt: "Dopravní společnost Zlín-Otrokovice" };
+const DPMB: Logo = { src: "/dpmb-logo.svg", alt: "Dopravní podnik města Brna" };
+const OREL: Logo = { src: "/orel_obrany-logo.png", alt: "Orel jednota Brno-Obřany" };
 
 export const references: Reference[] = [
 	{
@@ -27,7 +40,8 @@ export const references: Reference[] = [
 		lat: 49.2232,
 		lon: 18.7394,
 		region: "SK-ZI",
-		logo: OHLA,
+		client: ZSR,
+		partners: [OHLA],
 	},
 	{
 		title: "Místní řízení měnírny MET-K pro Dopravný podnik mesta Košice",
@@ -37,7 +51,8 @@ export const references: Reference[] = [
 		lat: 48.7164,
 		lon: 21.2611,
 		region: "SK-KI",
-		logo: OHLA,
+		client: DPMK,
+		partners: [OHLA],
 	},
 	{
 		title: "Energetický dispečink Plzeňských městských dopravních podniků",
@@ -47,7 +62,8 @@ export const references: Reference[] = [
 		lat: 49.7384,
 		lon: 13.3736,
 		region: "CZ-PL",
-		logo: OHLA,
+		client: PMDP,
+		partners: [OHLA],
 	},
 	{
 		title: "Energetický dispečink Dopravní společnosti Zlín a Otrokovice",
@@ -57,7 +73,8 @@ export const references: Reference[] = [
 		lat: 49.2244,
 		lon: 17.6628,
 		region: "CZ-ZL",
-		logo: OHLA,
+		client: DSZO,
+		partners: [OHLA],
 	},
 	{
 		title: "Místní řízení měnírny Heršpice a transformátorové stanice Slatina",
@@ -67,6 +84,7 @@ export const references: Reference[] = [
 		lat: 49.1951,
 		lon: 16.6068,
 		region: "CZ-JM",
+		client: DPMB,
 	},
 	{
 		title: "Dálkové řízení vytápění Orlovny Brno-Obřany",
@@ -76,5 +94,6 @@ export const references: Reference[] = [
 		lat: 49.1951,
 		lon: 16.6068,
 		region: "CZ-JM",
+		client: OREL,
 	},
 ];
