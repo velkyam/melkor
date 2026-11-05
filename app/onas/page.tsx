@@ -16,7 +16,7 @@ const partners = [
 	{
 		name: "Ortica Software s.r.o.",
 		url: "https://www.ortica.cz/",
-		logo: "",
+		logo: "/ortica-logo.png",
 		description: "Softwarová firma z Kopřivnice vyvíjející IT systémy na zakázku, od průmyslových aplikací přes systémy pro informování v reálném čase až po weby a automatizace. Podílí se s námi na vývoji systému MelkorVisum.",
 	},
 ];
