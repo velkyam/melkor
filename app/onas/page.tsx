@@ -6,6 +6,21 @@ import { motion } from "framer-motion"
 import { useEffect } from "react";
 import { ReactLenis, useLenis } from '@studio-freight/react-lenis'
 
+const partners = [
+	{
+		name: "OHLA ŽS, a.s.",
+		url: "https://ohla-zs.cz/",
+		logo: "/OHLA_LOGO.png",
+		description: "Přední česká stavební společnost s téměř sedmdesátiletou tradicí, od roku 2003 součást španělské skupiny OHLA. Zaměřuje se na výstavbu železnic, silnic, pozemních, vodohospodářských, technologických a energetických staveb.",
+	},
+	{
+		name: "Ortica Software s.r.o.",
+		url: "https://www.ortica.cz/",
+		logo: "",
+		description: "Softwarová firma z Kopřivnice vyvíjející IT systémy na zakázku, od průmyslových aplikací přes systémy pro informování v reálném čase až po weby a automatizace. Podílí se s námi na vývoji systému MelkorVisum.",
+	},
+];
+
 export default function AboutPage() {
 
 	const lenis = useLenis(({ scroll }) => {
@@ -77,6 +92,36 @@ export default function AboutPage() {
 					</CardBody>
 				</Card>
 				</motion.div>
+			</div>
+
+			<div className={title({ class: "block mt-32" })}>Naši partneři</div>
+
+			<div className="flex flex-col gap-8 mt-20">
+				{partners.map((p) => (
+				<motion.div
+							key={p.name}
+							initial={{ opacity: 0 }}
+							whileInView={{ opacity: 1, scale: 1 }}
+							transition={{ duration: 0.5 }}
+							viewport={{ once: true }}>
+				<Card className="py-4 lg:py-6 px-4 lg:px-6">
+					<CardBody className="flex flex-col md:flex-row md:items-center gap-6">
+						{p.logo && (
+						<div className="w-32 shrink-0 self-center">
+							<Image removeWrapper alt={p.name} src={p.logo} />
+						</div>
+						)}
+						<div className="flex flex-col gap-2 text-left">
+							<p className="text-xl">{p.name}</p>
+							<p>{p.description}</p>
+							<Link isExternal showAnchorIcon href={p.url}>
+								{p.url.replace(/^https?:\/\//, "").replace(/\/$/, "")}
+							</Link>
+						</div>
+					</CardBody>
+				</Card>
+				</motion.div>
+				))}
 			</div>
 
 		</div >
