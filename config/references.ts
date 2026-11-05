@@ -30,6 +30,16 @@ export const references: Reference[] = [
 		logo: OHLA,
 	},
 	{
+		title: "Místní řízení měnírny MET-K pro Dopravný podnik mesta Košice",
+		description:
+			"Pro Dopravný podnik mesta Košice jsme dodali modernizovaný řídicí systém měnírny MET-K, který ovládá stávající technologii. Abychom zajistili plynulé pokračování obsluhy, celý systém byl navržen tak, aby (krom použití moderní techniky) přesně odpovídal řízení předešlému. Projekt jsme realizovali ve spolupráci s OHLA ŽS, a. s.",
+		city: "Košice",
+		lat: 48.7164,
+		lon: 21.2611,
+		region: "SK-KI",
+		logo: OHLA,
+	},
+	{
 		title: "Energetický dispečink Plzeňských městských dopravních podniků",
 		description:
 			"Pro PMDP jsme vytvořili systém pro místní i dálkové řízení všech jedenácti měníren a jedné superkapacitorové posilovací stanice, které zajišťují provoz tramvají a trolejbusů v Plzni. Součástí řešení je redundantní dvojice centrálních serverů, jedenáct serverů místního řízení a zajištění primární komunikační cesty přes optickou linku, DSL a GSM i záložní komunikace přes rádiový vysílač. Projekt byl postaven na druhé generaci platformy MelkorVisum ve spolupráci s OHLA ŽS, a. s.",
