@@ -38,7 +38,10 @@ export default function AboutPage() {
 		<div className="inline-block max-w-7xl justify-center py-20 ">
 			<h1 className={title()}>O nás</h1>
 			<div className="flex w-full my-20">
-				<p className="text-left">Melkor Software je moderní IT firma, která Vám nabízí komplexní softwarová řešení na klíč. Naše softwarové řešení jsou postavená na nejnovějších technologiích a vychází z moderních principů tvorby uživatelských rozhraní, díky čemuž jsou stabilní, bezpečná a uživatelsky přívětivá. Máme zkušenosti s řadou různých protokolů a technologií, není proto problém náš systém zakomponovat do jakéhokoli existujícího provozu. Společně tvoříme tým s širokou paletou dovedností v oblastech elektrotechniky, programování a řízení komplexních projektů, díky čemuž jsme schopni našim klientům dodávat řešení flexibilně a efektivně.</p>
+				<div className="flex flex-col gap-4 text-left">
+					<p>Melkor Software, s.r.o. je moderní IT firma, která dodává softwarová řešení na klíč. Specializujeme se na vizualizační a řídicí aplikace pro kritickou infrastrukturu. Stavíme na nejnovějších technologiích, takže naše systémy jsou stabilní, bezpečné a snadno se ovládají.</p>
+					<p>Díky zkušenostem s řadou protokolů a technologií je zapojíme do jakéhokoli existujícího provozu. Náš tým propojuje elektrotechniku, programování a řízení projektů, a proto dodáváme řešení rychle a efektivně.</p>
+				</div>
 
 			</div>
 
